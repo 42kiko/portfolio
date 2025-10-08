@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+
+    <!--==================== SWIPER CSS====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--==================== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link id="apple-touch-icon" rel="apple-touch-icon" sizes="180x180"
+        href="/assets/img/favicon/kiko-favicon/favicon-y/apple-touch-icon.png">
+    <link id="icon-32x32" rel="icon" type="image/png" sizes="32x32"
+        href="/assets/img/favicon/kiko-favicon/favicon-y/favicon-32x32.png">
+    <link id="icon-16x16" rel="icon" type="image/png" sizes="16x16"
+        href="/assets/img/favicon/kiko-favicon/favicon-y/favicon-16x16.png">
+
+    <title>Kiko Portfolio</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+
+        <nav class="nav container">
+            <a href="#" class="nav__logo" id="header-name"></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i>
+                            <div id="tab-home"></div>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>
+                            <div id="tab-about"></div>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i>
+                            <div id="tab-skills"></div>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>
+                            <div id="tab-portfolio"></div>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>
+                            <div id="tab-contactme"></div>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <i class="uil uil-language color-theme" id="lang-toggle-btn"></i>
+                <!-- Theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+                <i class="uil uil-palette color-theme" id="theme-toggle-btn"></i>
+
+
+            </div>
+
+            <h1 id="name"></h1>
+            <h2 id="title"></h2>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+
+
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+
+                        <a href="https://dribbble.com/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-dribbble"></i>
+                        </a>
+
+                        <a href="https://github.com/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"
+                            viewBox="0 0 600 600" opacity="1">
+                            <path
+                                d="M425.5600448266467 14.779019439000905C376.76110480386023 -34.935723857304396 280.20983527261023 -72.614270762822 234.02745205320917 -73.13758364937799C187.84506883380817 -73.66089653593397 175.93968604165315 -31.403359965702833 148.46574551024042 11.639142119664967C120.99180497882767 54.68164420503288 70.6229186669787 123.75896684704136 69.18380886473261 185.1174288628293C67.74469906248652 246.47589087861707 81.48167822915318 345.77456387259474 139.83108669676386 379.78991421439173C198.18049516437458 413.80526455618826 354.781925421536 414.9827039279329 419.2802596703967 389.20953091361037C483.7785939192574 363.4363578992877 525.774461330553 287.55596137422253 526.821092189928 225.15087612845423C527.867723049303 162.74579088268618 474.35898484943306 64.49376273530632 425.5600448266467 14.779019439000905C376.76110480386023 -34.935723857304396 280.20983527261023 -72.614270762822 234.02745205320917 -73.13758364937799 "
+                                transform="matrix(-0.9141716824785884,0.3327312814312597,-0.3327312814312597,-0.9141716824785884,627.160523415411,372.3445018250747)"
+                                fill-opacity="0.29">
+                            </path>
+                            <defs>
+                                <pattern id="ssshape-pattern2" width="76" height="76" viewBox="0 0 40 40"
+                                    patternUnits="userSpaceOnUse">
+                                    <rect width="100%" height="100%">
+                                    </rect>
+                                    <path class="home__blob-lines"
+                                        d="M0 20v20l14-20L20 0l-20 20zM20 20v20l14-20L40 0l-20 20z" fill-opacity="0.5">
+                                    </path>
+                                    <path class="home__blob-lines"
+                                        d="M0 40v-20l20-20l-10 20zM20 40v-20l20-20l-10 20zM20 20v20l-20 20l9-20zM20-20v20l-20 20l9-20zM40 20v20l-20 20l9-20zM40-20v20l-20 20l9-20z">
+                                    </path>
+                                </pattern>
+                            </defs>
+                            <mask id="mask0" mask-type="alpha">
+                                <path
+                                    d="M372.8963486528131 80.45407911572798C324.09740863002673 30.739335819422678 227.54613909877668 -6.939211086094929 181.36375587937562 -7.462523972650914C135.1813726599746 -7.9858368592068985 123.27598986781959 34.27169971102421 95.80204933640687 77.31420179639204C68.32810880499414 120.3567038817599 17.95922249314515 189.43402652376759 16.520112690899055 250.79248853955505C15.08100288865296 312.15095055534164 28.81798205531959 411.44962354931954 87.1673905229303 445.4649738911164C145.51679899054102 479.48032423291335 302.1182292477025 480.657763604658 366.6165634965631 454.8845905903351C431.11489774542383 429.1114175760122 473.11076515671937 353.2310210509471 474.15739601609437 290.8259358051789C475.20402687546937 228.42085055941197 421.6952886755995 130.16882241203328 372.8963486528131 80.45407911572798C324.09740863002673 30.739335819422678 227.54613909877668 -6.939211086094929 181.36375587937562 -7.462523972650914 "
+                                    fill-opacity="1" fill="url(&quot;#ssshape-pattern2&quot;)" opacity="1"
+                                    stroke-opacity="1" stroke-width="0" stroke="hsl(340, 45%, 30%)"
+                                    transform="matrix(0.8291806643796716,0.3017970806632748,-0.3017970806632748,0.8291806643796716,181.80323066538816,25.555072447120665)">
+                                </path>
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path
+                                    d="M372.8963486528131 80.45407911572798C324.09740863002673 30.739335819422678 227.54613909877668 -6.939211086094929 181.36375587937562 -7.462523972650914C135.1813726599746 -7.9858368592068985 123.27598986781959 34.27169971102421 95.80204933640687 77.31420179639204C68.32810880499414 120.3567038817599 17.95922249314515 189.43402652376759 16.520112690899055 250.79248853955505C15.08100288865296 312.15095055534164 28.81798205531959 411.44962354931954 87.1673905229303 445.4649738911164C145.51679899054102 479.48032423291335 302.1182292477025 480.657763604658 366.6165634965631 454.8845905903351C431.11489774542383 429.1114175760122 473.11076515671937 353.2310210509471 474.15739601609437 290.8259358051789C475.20402687546937 228.42085055941197 421.6952886755995 130.16882241203328 372.8963486528131 80.45407911572798C324.09740863002673 30.739335819422678 227.54613909877668 -6.939211086094929 181.36375587937562 -7.462523972650914 "
+                                    fill-opacity="1" fill="url(&quot;#ssshape-pattern2&quot;)" opacity="1"
+                                    stroke-opacity="1" stroke-width="0" stroke="hsl(340, 45%, 30%)"
+                                    transform="matrix(0.8291806643796716,0.3017970806632748,-0.3017970806632748,0.8291806643796716,181.80323066538816,25.555072447120665)">
+                                </path>
+                                <image class="home__blob-img" x="130" y="70"
+                                    href="assets/img/me/2-removebg-preview.png" />
+                            </g>
+                        </svg>
+                    </div>
+
+
+                    <div class="home__data">
+                        <h1 class="home__title" id="home-title"></h1>
+                        <h3 class="home__subtitle" id="home-subtitle"></h3>
+                        <p class="home__description" id="home-text"></p>
+                        <a href="#contact" class="button button--flex">
+                            <div id="home-button"></div>
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name" id="scroll-down"></span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <h2 class="section__title" id="about-title"></h2>
+            <span class="section__subtitle" id="about-subtitle"></span>
+
+            <div class="about__container container grid">
+                <!--  <img src="assets/img/profil-quadratisch.gif" alt="" class="about__img" /> -->
+                <!--  <img src="assets/img/me/08-2025-removebg-preview.png" alt="" class="about__img" />-->
+
+                <video class="about__img" autoplay loop muted>
+                    <source src="assets/img/me/video6.mp4" type="video/mp4" />
+                </video>
+
+                <div class="about__data">
+                    <p class="about__description" id="about-text">
+                    </p>
+
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title" id="years-title"></span>
+                            <span class="about__info-name" id="years-name"></span>
+                        </div>
+
+                        <div>
+                            <span class="about__info-title" id="projects-title"></span>
+                            <span class="about__info-name" id="projects-name"></span>
+                        </div>
+
+                        <div>
+                            <span class="about__info-title" id="companies-title"></span>
+                            <span class="about__info-name" id="companies-name"></span>
+                        </div>
+                    </div>
+
+                    <div class="about__buttons">
+                        <!--==================== Change your CV ====================-->
+                        <a download="" href="#" class="button button--flex" id="cv-download-btn">
+                            <div id="about-button"></div>
+                            <i class="uil uil-download-alt button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title" id="skills-title"></h2>
+            <span class="section__subtitle" id="skills-subtitle"></span>
+
+            <div class="skills__container container grid">
+                <div>
+                    <!--=============== SKILLS 1 ===============-->
+                    <div class="skills__content skills__open" id="frontend">
+                        <div class="skills__header">
+                            <i class="uil uil-brackets-curly skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title" id="frontend-title"></h1>
+                                <span class="skills__subtitle" id="frontend-subtitle"></span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+
+
+                        <div class="skills__list grid" id="frontend-skills">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">HTML</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__html"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">CSS</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__css"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">JavaScript</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__js"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">TypeScript</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__ts"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">React</h3>
+                                    <span class="skills__number"></span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__react"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Angular</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__angular"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--=============== SKILLS 2 ===============-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-server-network skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title" id="backend-title"></h1>
+                                <span class="skills__subtitle" id="backend-subtitle"></span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Java</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__java"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Python</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__python"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">C#</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__ccharp"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Node.js</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__node"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Kotlin</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__kotlin"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!--=============== SKILLS 3 ===============-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-swatchbook skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title" id="design-title"></h1>
+                                <span class="skills__subtitle" id="design-subtitle"></span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Canva</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__canva"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Photoshop</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__photoshop"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Figma</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__figma"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--=============== SKILLS 4 ===============-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-flask skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title" id="ds-title"></h1>
+                                <span class="skills__subtitle" id="ds-subtitle"></span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Pandas, NumPy</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__pandas"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">SQL</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__sql"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Scikit-learn</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__scikit"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">TensorFlow, PyTorch</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__tensorflow"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Matplotlib, Seaborn</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__seaborn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== QUALIFICATION ====================-->
+
+        <!--============== QUALIFICATION ===============-->
+        <section class="qualification__section">
+            <h2 class="section__title" id="qualification-title"></h2>
+            <span class="section__subtitle" id="qualification-subtitle"></span>
+            <section class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period" id="edu-2-period"></div>
+                        <h3 class="timeline-title" id="edu-2-title"></h3>
+                        <p class="timeline-description" id="edu-2-desc"></p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag tag-education">
+                                <i class="uil uil-graduation-cap tag-icon"></i>
+                                <div id="education-title-2"></div>
+                            </span>
+                            <a href="https://masterschool.com/" target="_blank" class="timeline-tag tag-employer link">
+                                <i class="uil uil-university tag-icon"></i>
+                                <div id="edu-2-subtitle"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period" id="work-4-calendar"></div>
+                        <h3 class="timeline-title" id="work-4-title"></h3>
+                        <p class="timeline-description" id="work-4-description"></p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag tag-work">
+                                <i class="uil uil-briefcase-alt tag-icon"></i>
+                                <div id="work-title-4"></div>
+                            </span>
+                            <a href="https://www.hannover.de/" target="_blank" class="timeline-tag tag-employer link">
+                                <i class="uil uil-building tag-icon"></i>
+                                <div id="work-4-subtitle"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period" id="work-3-calendar"></div>
+                        <h3 class="timeline-title" id="work-3-title"></h3>
+                        <p class="timeline-description" id="work-3-description"></p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag tag-work">
+                                <i class="uil uil-briefcase-alt tag-icon"></i>
+                                <div id="work-title-3"></div>
+                            </span>
+                            <a href="https://www.ottogroup.com" target="_blank" class="timeline-tag tag-employer link">
+                                <i class="uil uil-building tag-icon"></i>
+                                <div id="work-3-subtitle"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period" id="work-2-calendar"></div>
+                        <h3 class="timeline-title" id="work-2-title"></h3>
+                        <p class="timeline-description" id="work-2-description"></p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag tag-work">
+                                <i class="uil uil-briefcase-alt tag-icon"></i>
+                                <div id="work-title-2"></div>
+                            </span>
+                            <a href="https://www.nt.ag/" target="_blank" class="timeline-tag tag-employer link">
+                                <i class="uil uil-building tag-icon"></i>
+                                <div id="work-2-subtitle"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period" id="work-1-calendar"></div>
+                        <h3 class="timeline-title" id="work-1-title"></h3>
+                        <p class="timeline-description" id="work-1-description"></p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag tag-work">
+                                <i class="uil uil-briefcase-alt tag-icon"></i>
+                                <div id="work-title-1"></div>
+                            </span>
+                            <a href="https://www.frobese.de/" target="_blank" class="timeline-tag tag-employer link">
+                                <i class="uil uil-building tag-icon"></i>
+                                <div id="work-1-subtitle"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period" id="edu-1-period"></div>
+                        <h3 class="timeline-title" id="edu-1-title"></h3>
+                        <p class="timeline-description" id="edu-1-desc"></p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag tag-education">
+                                <i class="uil uil-graduation-cap tag-icon"></i>
+                                <div id="education-title-1"></div>
+                            </span>
+                            <a href="https://www.tecracer.com/" target="_blank" class="timeline-tag tag-employer link">
+                                <i class="uil uil-university tag-icon"></i>
+                                <div id="edu-1-subtitle"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+        <!--==================== PORTFOLIO ====================-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title" id="portfolio-title"></h2>
+            <span class=" section__subtitle" id="portfolio-subtitle"></span>
+
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!--=============== PORTFOLIO 1 ===============-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/car3.webp" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title" id="portfolio1-title"></h3>
+                            <p class="portfolio__description" id="portfolio1-description"></p>
+                            <a href="https://github.com/42kiko/Fahrzeugdatenanalyse/blob/main/Fahrzeugdatenanalyse.ipynb"
+                                target="_blank" class="button button--flex button--small portfolio__button"
+                                id="github1-text">
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--=============== PORTFOLIO 2 ===============-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/Klimaschutz-Roadmap-2.0-1080x608.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title" id="portfolio2-title"></h3>
+                            <p class="portfolio__description" id="portfolio2-description"></p>
+                            <a href="https://www.parentsforfuture.de/de/buendnis/employees-for-future" target="_blank"
+                                class="button button--flex button--small portfolio__button" id="website2-text">
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--=============== PORTFOLIO 3 ===============-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/frorum-logo.svg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title" id="portfolio3-title"></h3>
+                            <p class="portfolio__description" id="portfolio3-description"></p>
+                            <a href="https://www.frobese.de/frorum/articles/201908_mit-okr-ziele-fokussiert-erreichen/"
+                                target="_blank" class="button button--flex button--small portfolio__button"
+                                id="website3-text">
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!--==================== PROJECT IN MIND ====================-->
+        <section class="project section">
+            <div class="project__bg">
+                <div class="project__container container grid">
+                    <div class="project__data">
+                        <h2 class="project__title" id="project-contact-title"></h2>
+                        <p class="project__description" id="project-contact-description"></p>
+                        <a href="#contact" class="button button--flex button--white" id="project-contact-button">
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+
+                    <img src="assets/img/me/busniess3.png" alt="" class="project__img">
+                </div>
+            </div>
+        </section>
+
+        <!--==================== TESTIMONIAL ====================-->
+        <section class="testimonial section">
+            <h2 class="section__title" id="job-ref"></h2>
+            <span class="section__subtitle__ref" id="job-ref-subtitle"></span>
+
+            <div class="testimonial__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!--=============== Otto Group ===============-->
+                    <div class="testimonial__content swiper-slide">
+                        <div class="testimonial__data">
+                            <div class="testimonial__header">
+                                <img src="assets/img/companys/otto_group.png" alt="" class="testimonial__img">
+
+                                <div>
+                                    <h3 class="testimonial__name" id="eos-title"></h3>
+                                    <span class="testimonial__client" id="eos-pos"></span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="uil uil-bookmark testimonial__icon-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="testimonial__description" id="eos-sub">
+                        </p>
+                    </div>
+
+                    <!--=============== NTAG ===============-->
+                    <div class="testimonial__content swiper-slide">
+                        <div class="testimonial__data">
+                            <div class="testimonial__header">
+                                <img src="assets/img/companys/ntag.png" alt="" class="testimonial__img">
+
+                                <div>
+                                    <h3 class="testimonial__name" id="ntag-title"></h3>
+                                    <span class="testimonial__client" id="ntag-pos"></span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="uil uil-bookmark testimonial__icon-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="testimonial__description" id="eos-sub"></p>
+                    </div>
+
+                    <!--=============== frobese ===============-->
+                    <div class="testimonial__content swiper-slide">
+                        <div class="testimonial__data">
+                            <div class="testimonial__header">
+                                <img src="assets/img/companys/frobese_favicon_256.png" alt="" class="testimonial__img">
+
+                                <div>
+                                    <h3 class="testimonial__name" id="frobese-title"></h3>
+                                    <span class="testimonial__client" id="frobese-pos"></span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="uil uil-bookmark testimonial__icon-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="testimonial__description" id="frobese-sub"></p>
+                    </div>
+
+                    <!--=============== tecRacer ===============-->
+                    <div class="testimonial__content swiper-slide">
+                        <div class="testimonial__data">
+                            <div class="testimonial__header">
+                                <img src="assets/img/companys/tecRacer-fav.png" alt="" class="testimonial__img">
+
+                                <div>
+                                    <h3 class="testimonial__name" id="tecRacer-title"></h3>
+                                    <span class="testimonial__client" id="tecRacer-pos"></span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="uil uil-bookmark testimonial__icon-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="testimonial__description" id="tecRacer-sub"></p>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-testimonial"></div>
+            </div>
+        </section>
+
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title" id="contact-title"></h2>
+            <span class="section__subtitle" id="contact-subtitle"></span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-phone contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title" id="contact-call-title"></h3>
+                            <span class="contact__subtitle">+49 157 366 4735</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title" id="contact-email-title"></h3>
+                            <span class="contact__subtitle">kiko97@tuta.io</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title" id="contact-location-title"></h3>
+                            <span class="contact__subtitle" id="contact-location-subtitle"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="contact__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Name</label>
+                            <input type="text" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Email</label>
+                            <input type="email" class="contact__input">
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="" class="contact__label" id="contact-label-title"></label>
+                        <input type="text" class="contact__input">
+                    </div>
+                    <div class="contact__content">
+                        <label for="" class="contact__label" id="contact-label-message"></label>
+                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                    </div>
+
+                    <div>
+                        <a href="#" type="submit" class="button button--flex" id="contact-button-text">
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+
+                        <input type="submit" id="button" value="Send Email">
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title" id="footer-title"></h1>
+                    <span class="footer__subtitle" id="footer-subtitle"></span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#impressum" class="footer__link button--link services__button">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="#impressum" class="footer__link button--link services__button">Datenschutz</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                        <i class="uil uil-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="footer__social">
+                        <i class="uil uil-twitter-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Bedimcode. All right reserved</p>
+        </div>
+    </footer>
+    <!--=============== Impressum ===============-->
+
+
+    <div class="services__modal">
+        <div class="services__modal-content">
+            <h4 class="services__modal-title" id="impressum-title"></h4>
+            <i class="uil uil-times services__modal-close"></i>
+
+            <div class="modal-content-text">
+                <h5 id="impressum-subtitle"></h5>
+
+                <h6 id="impressum-address-title"></h6>
+                <p class="impres" id="impressum-address"></p>
+
+                <h6 id="impressum-contact-title"></h6>
+                <p class="impres" id="impressum-contact"></p>
+
+                <h6 id="impressum-responsible-title"></h6>
+                <p class="impres" id="impressum-responsible"></p>
+
+                <h6 class="impres" id="impressum-liability-title"></h6>
+
+                <h7 id="impressum-content-title"></h7>
+                <p class="impres" id="impressum-content-text"></p>
+
+                <h7 id="impressum-links-title"></h7>
+                <p class="impres" id="impressum-links-text"></p>
+
+                <h7 id="impressum-copyright-title"></h7>
+                <p class="impres" id="impressum-copyright-text"></p>
+
+                <p><small id="impressum-update"></small></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--=============== legal note ===============-->
+
+
+
+    <div class="services__modal">
+        <div class="services__modal-content">
+            <h4 class="services__modal-title">Frontend <br> Developer</h4>
+            <i class="uil uil-times services__modal-close"></i>
+
+            <div class="modal-content-text">
+                <h5 id="privacy-subtitle"></h5>
+
+                <h6 id="privacy-general-title"></h6>
+                <p id="privacy-general-text"></p>
+
+                <h6 id="privacy-data-title"></h6>
+
+                <h7 id="privacy-who-title"></h7>
+                <p id="privacy-who-text"></p>
+
+                <h7 id="privacy-how-title"></h7>
+                <p id="privacy-how-text"></p>
+
+                <h7 id="privacy-purpose-title"></h7>
+                <p id="privacy-purpose-text"></p>
+
+                <h7 id="privacy-rights-title"></h7>
+                <p id="privacy-rights-text"></p>
+
+                <h6 id="privacy-contact-title"></h6>
+                <p id="privacy-contact-text"></p>
+
+                <p><small id="privacy-update"></small></p>
+            </div>
+
+            <ul class="services__modal-services grid">
+
+                <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I develop the user interface.</p>
+                </li>
+                <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Web page development.</p>
+                </li>
+                <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I create ux element interactions.</p>
+                </li>
+                <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>I position your company brand.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    </div>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrollup" id="scroll-top">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+
+    <!--==================== EmailJS ====================-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</body>
+
+</html>

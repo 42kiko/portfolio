@@ -863,7 +863,7 @@ document.getElementById('form')
 
 
 
-const btn = document.getElementById('button');
+const btn = document.getElementById('contact-button-text');
 
 document.getElementById('form')
     .addEventListener('submit', function (event) {

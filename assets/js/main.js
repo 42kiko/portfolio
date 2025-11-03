@@ -832,7 +832,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
+/*
 emailjs.init('RtGyWiRyTmv5ZM3Op');
 
 const btn = document.getElementById('button');
@@ -857,5 +857,29 @@ document.getElementById('form')
                 btn.textContent = 'Nachricht senden';
                 btn.disabled = false;
                 alert('Fehler: ' + JSON.stringify(err));
+            });
+    });
+*/
+
+
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+    .addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        btn.value = 'Sending...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_2klottr';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Send Email';
+                alert('Sent!');
+            }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
             });
     });

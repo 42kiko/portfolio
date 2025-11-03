@@ -784,6 +784,7 @@
             <h2 class="section__title" id="contact-title"></h2>
             <span class="section__subtitle" id="contact-subtitle"></span>
 
+            <!--
             <div class="contact__container container grid">
                 <div>
                     <div class="contact__information">
@@ -811,24 +812,24 @@
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid">
+                <form id="emailForm" action="" class="contact__form grid">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
-                            <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
+                            <label for="name" class="contact__label">Name</label>
+                            <input type="text" class="contact__input" id="name" required>
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input">
+                            <input type="email" class="contact__input" id="email" required>
                         </div>
                     </div>
                     <div class="contact__content">
                         <label for="" class="contact__label" id="contact-label-title"></label>
-                        <input type="text" class="contact__input">
+                        <input type="text" class="contact__input" id="subject" required>
                     </div>
                     <div class="contact__content">
                         <label for="" class="contact__label" id="contact-label-message"></label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        <textarea name="" id="message" cols="0" rows="7" class="contact__input" required></textarea>
                     </div>
 
                     <div>
@@ -836,10 +837,40 @@
                             <i class="uil uil-message button__icon"></i>
                         </a>
 
+                        <button type="submit">Send Email</button>
+
                         <input type="submit" id="button" value="Send Email">
                     </div>
                 </form>
+                <div id="status"></div>
             </div>
+-->
+            <form id="form" class="contact__form grid">
+                <div class="field">
+                    <label for="name">name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="field">
+                    <label for="time">time</label>
+                    <input type="text" name="time" id="time">
+                </div>
+                <div class="field">
+                    <label for="message">message</label>
+                    <input type="text" name="message" id="message">
+                </div>
+                <div class="field">
+                    <label for="title">title</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div class="field">
+                    <label for="email">email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+
+                <input type="submit" id="button" value="Send Email">
+            </form>
+
+
 
         </section>
     </main>
@@ -987,7 +1018,11 @@
     <script src="assets/js/main.js"></script>
 
     <!--==================== EmailJS ====================-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('RtGyWiRyTmv5ZM3Op')
+    </script>
 </body>
 
 </html>

@@ -28,6 +28,54 @@
     <title>Kiko Portfolio</title>
 </head>
 
+<!--==================== IMPRESSUM MODAL ====================-->
+<div id="impressum-popup" class="legal-popup">
+    <div class="legal-popup-content">
+        <h1 id="impressum-title">Impressum</h1>
+        <i class="uil uil-times legal-popup-close" id="impressum-close"></i>
+        <div class="legal-text">
+            <h3 id="impressum-subtitle"></h3>
+            <h4 id="impressum-address-title"></h4>
+            <p id="impressum-address"></p>
+            <h4 id="impressum-contact-title"></h4>
+            <p id="impressum-contact"></p>
+            <h4 id="impressum-responsible-title"></h4>
+            <p id="impressum-responsible"></p>
+            <h4 id="impressum-liability-title"></h4>
+            <h4 id="impressum-content-title"></h4>
+            <p id="impressum-content-text"></p>
+            <h4 id="impressum-links-title"></h4>
+            <p id="impressum-links-text"></p>
+            <h4 id="impressum-copyright-title"></h4>
+            <p id="impressum-copyright-text"></p>
+            <small id="impressum-update"></small>
+        </div>
+    </div>
+</div>
+
+<!--==================== DATENSCHUTZ MODAL ====================-->
+<div id="privacy-popup" class="legal-popup">
+    <div class="legal-popup-content">
+        <h1 id="privacy-title">Datenschutzerklärung</h1>
+        <i class="uil uil-times legal-popup-close" id="privacy-close"></i>
+        <div class="legal-text">
+            <h3 id="privacy-subtitle"></h3>
+            <h4 id="privacy-general-title"></h4>
+            <p id="privacy-general-text"></p>
+            <h4 id="privacy-how-title"></h4>
+            <p id="privacy-how-text"></p>
+            <h4 id="privacy-purpose-title"></h4>
+            <p id="privacy-purpose-text"></p>
+            <h4 id="privacy-rights-title"></h4>
+            <p id="privacy-rights-text"></p>
+            <h4 id="privacy-contact-title"></h4>
+            <p id="privacy-contact-text"></p>
+            <small id="privacy-update"></small>
+        </div>
+    </div>
+</div>
+
+
 <body>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
@@ -918,10 +966,9 @@
                         <a href="#impressum" class="footer__link button--link services__button">Impressum</a>
                     </li>
                     <li>
-                        <a href="#impressum" class="footer__link button--link services__button">Datenschutz</a>
+                        <a href="#privacy" class="footer__link button--link services__button">Datenschutz</a>
                     </li>
                 </ul>
-
 
                 <div class="footer__socials">
 
@@ -942,104 +989,9 @@
                 </div>
 
             </div>
-
-            <p class="footer__copy">&#169; Bedimcode. All right reserved</p>
+            <p class="footer__copy">&#169; 2025 Kiko – Crafted with ☕ & Code.</p>
         </div>
     </footer>
-    <!--=============== Impressum ===============-->
-
-
-    <div class="services__modal">
-        <div class="services__modal-content">
-            <h4 class="services__modal-title" id="impressum-title"></h4>
-            <i class="uil uil-times services__modal-close"></i>
-
-            <div class="modal-content-text">
-                <h5 id="impressum-subtitle"></h5>
-
-                <h6 id="impressum-address-title"></h6>
-                <p class="impres" id="impressum-address"></p>
-
-                <h6 id="impressum-contact-title"></h6>
-                <p class="impres" id="impressum-contact"></p>
-
-                <h6 id="impressum-responsible-title"></h6>
-                <p class="impres" id="impressum-responsible"></p>
-
-                <h6 class="impres" id="impressum-liability-title"></h6>
-
-                <h7 id="impressum-content-title"></h7>
-                <p class="impres" id="impressum-content-text"></p>
-
-                <h7 id="impressum-links-title"></h7>
-                <p class="impres" id="impressum-links-text"></p>
-
-                <h7 id="impressum-copyright-title"></h7>
-                <p class="impres" id="impressum-copyright-text"></p>
-
-                <p><small id="impressum-update"></small></p>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!--=============== legal note ===============-->
-
-
-
-    <div class="services__modal">
-        <div class="services__modal-content">
-            <h4 class="services__modal-title">Frontend <br> Developer</h4>
-            <i class="uil uil-times services__modal-close"></i>
-
-            <div class="modal-content-text">
-                <h5 id="privacy-subtitle"></h5>
-
-                <h6 id="privacy-general-title"></h6>
-                <p id="privacy-general-text"></p>
-
-                <h6 id="privacy-data-title"></h6>
-
-                <h7 id="privacy-who-title"></h7>
-                <p id="privacy-who-text"></p>
-
-                <h7 id="privacy-how-title"></h7>
-                <p id="privacy-how-text"></p>
-
-                <h7 id="privacy-purpose-title"></h7>
-                <p id="privacy-purpose-text"></p>
-
-                <h7 id="privacy-rights-title"></h7>
-                <p id="privacy-rights-text"></p>
-
-                <h6 id="privacy-contact-title"></h6>
-                <p id="privacy-contact-text"></p>
-
-                <p><small id="privacy-update"></small></p>
-            </div>
-
-            <ul class="services__modal-services grid">
-
-                <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I develop the user interface.</p>
-                </li>
-                <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Web page development.</p>
-                </li>
-                <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I create ux element interactions.</p>
-                </li>
-                <li class="services__modal-service">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>I position your company brand.</p>
-                </li>
-            </ul>
-        </div>
-    </div>
 
 
     </div>

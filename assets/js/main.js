@@ -578,8 +578,8 @@ function setLanguage() {
             en: "Kiko"
         },
         "footer-subtitle": {
-            de: "Data Scientist & Software Developer",
-            en: "Data Scientist & Softwareentwickler"
+            de: "Data Scientist & Softwareentwickler",
+            en: "Data Scientist & Software Developer"
         },
 
 

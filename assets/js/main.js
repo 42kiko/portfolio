@@ -589,18 +589,18 @@ function setLanguage() {
         "impressum-subtitle": { de: "Angaben gemäß § 5 TMG", en: "Information according to § 5 TMG" },
         "impressum-address-title": { de: "Kontaktadresse", en: "Contact Address" },
         "impressum-address": {
-            de: "Kiko Mustermann<br>Musterstraße 123<br>30167 Hannover<br>Deutschland",
-            en: "Kiko Mustermann<br>Musterstraße 123<br>30167 Hannover<br>Germany"
+            de: "Kiko<br>Hannover<br>Deutschland",
+            en: "Kiko<br>Hannover<br>Deutschland"
         },
         "impressum-contact-title": { de: "Kontaktmöglichkeiten", en: "Contact Options" },
         "impressum-contact": {
-            de: "E-Mail: kiko97@tuta.io<br>Telefon: +49 157 366 4735",
-            en: "Email: kiko97@tuta.io<br>Phone: +49 157 366 4735"
+            de: "E-Mail: kiko97@tuta.io",
+            en: "Email: kiko97@tuta.io"
         },
         "impressum-responsible-title": { de: "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV", en: "Responsible for content according to § 55 Abs. 2 RStV" },
         "impressum-responsible": {
-            de: "Kiko Mustermann<br>Musterstraße 123<br>30167 Hannover",
-            en: "Kiko Mustermann<br>Musterstraße 123<br>30167 Hannover"
+            de: "Kiko<br>Hannover",
+            en: "Kiko<br>Hannover"
         },
         "impressum-liability-title": { de: "Haftungsausschluss", en: "Disclaimer" },
         "impressum-content-title": { de: "Haftung für Inhalte", en: "Liability for Contents" },

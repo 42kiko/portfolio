@@ -44,7 +44,7 @@ cd portfolio
 # 📸 Sneak Peek
 Here’s a quick preview of the portfolio:
 
-Portfolio Screenshot
+![Portfolio Preview 📸](assets/img/portfolio-preview.gif)
 
 🤝 Connect With Me
 Let’s network! 🌍

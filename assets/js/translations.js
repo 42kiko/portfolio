@@ -402,8 +402,6 @@ export const translations = {
     },
 
     // Links
-    "footer-impressum": { de: "Impressum", en: "Legal Notice" },
-    "footer-privacy": { de: "Datenschutz", en: "Privacy Policy" },
     "back-to-home": { de: "Zurück zur Startseite", en: "Back to Home" },
 
 

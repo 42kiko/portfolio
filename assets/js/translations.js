@@ -360,7 +360,8 @@ export const translations = {
         en: "Last updated: September 2024"
     },
 
-    // Datenschutzerklärung
+    // Privacy Policy
+    "privacy-footer-title": { de: "Datenschutz", en: "Privacy Policy" },
     "privacy-title": { de: "Datenschutzerklärung", en: "Privacy Policy" },
     "privacy-subtitle": { de: "Informationen zur Datenerhebung", en: "Information on Data Collection" },
     "privacy-general-title": { de: "Allgemeine Hinweise", en: "General Information" },

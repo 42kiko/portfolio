@@ -1,13 +1,3 @@
-Perfekt, Kiko 👌
-Hier ist deine überarbeitete README.md –
-✅ mit professionellen Badges,
-✅ korrigiertem bash-Block,
-✅ besserem Markdown-Spacing und
-✅ sauberen Übergängen (GitHub-ready & modern).
-
-⸻
-
-
 # 🌟 Welcome to My Portfolio
 
 ![Static Badge](https://img.shields.io/badge/Made_with-HTML%2C_CSS%2C_JS-blue)
@@ -24,6 +14,15 @@ where I showcase my projects, skills, and journey as a developer 🚀
 
 ## 🔗 Live Preview
 👉 [🌍 View Live Portfolio](https://42kiko.github.io/portfolio/)
+
+---
+
+
+## 📸 Sneak Peek
+
+Here’s a quick preview of the portfolio:
+
+![Portfolio Preview 📸](assets/img/portfolio-preview.gif)
 
 ---
 
@@ -57,17 +56,8 @@ cd portfolio
 
 # Open the project (e.g. via VS Code Live Server)
 
-```bash
+```
 
-⸻
-
-📸 Sneak Peek
-
-Here’s a quick preview of the portfolio:
-
-![Portfolio Preview 📸](assets/img/portfolio-preview.gif)
-
-⸻
 
 🤝 Connect With Me
 

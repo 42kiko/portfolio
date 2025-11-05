@@ -321,7 +321,8 @@ export const translations = {
 
 
 
-    // Impressum
+    // Legal Notice
+    "impressum-footer-title": { de: "Impressum", en: "Legal Notice" },
     "impressum-title": { de: "Impressum", en: "Legal Notice" },
     "impressum-subtitle": { de: "Angaben gemäß § 5 TMG", en: "Information according to § 5 TMG" },
     "impressum-address-title": { de: "Kontaktadresse", en: "Contact Address" },

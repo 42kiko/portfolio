@@ -57,6 +57,7 @@ cd portfolio
 
 # Open the project (e.g. via VS Code Live Server)
 
+```bash
 
 ⸻
 

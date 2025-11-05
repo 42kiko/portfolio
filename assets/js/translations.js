@@ -22,8 +22,8 @@ export const translations = {
     "about-title": { de: "Alles über mich", en: "About Me" },
     "about-subtitle": { de: "Ein kleiner Überblick über meine Person", en: "A short overview about me" },
     "about-text": {
-        de: "Webentwickler mit umfangreichem Wissen und jahrelanger Erfahrung, tätig in den Bereichen Webtechnologien, UI-/UX-Design und Softwareentwicklung, um qualitativ hochwertige Arbeit zu liefern.",
-        en: "Data Scientist with a background in software development and consulting, currently transitioning into the data science field. Currently enrolled in the Data Science training program at Masterschool with a focus on Python, Exploratory Data Analysis and Machine Learning. Eager to leverage my skills to transform complex data into actionable insights, implement ML models and support data-driven strategies."
+        de: "Ich bin Data Scientist mit Erfahrung in Softwareentwicklung und Beratung, aktuell mit Fokus auf Data Science. Im Rahmen des Masterschool-Programms vertiefe ich meine Kenntnisse in Python, Datenanalyse und Machine Learning, um komplexe Daten in intelligente Lösungen und greifbare Erkenntnisse zu verwandeln.",
+        en: "I’m a Data Scientist with experience in software development and consulting, currently focusing on Data Science. Through the Masterschool program, I’m deepening my expertise in Python, data analysis, and machine learning to turn complex data into intelligent solutions and actionable insights."
     },
     "about-button": { de: "Download CV", en: "Download CV" },
 

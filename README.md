@@ -6,7 +6,7 @@ This is the repository for my **personal portfolio website**, where I showcase m
 ---
 
 ## 🔗 Live Preview
-👉 [Check out my portfolio here!](link)
+👉 [🌍 View Live Portfolio](https://42kiko.github.io/portfolio/)
 
 ---
 

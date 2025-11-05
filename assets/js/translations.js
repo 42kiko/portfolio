@@ -404,6 +404,8 @@ export const translations = {
     // Links
     "back-to-home": { de: "Zurück zur Startseite", en: "Back to Home" },
 
+    // copy
+    "footer-copy": { de: "© 2025 Kiko – Handgefertigt mit ☕ & Quellcode.", en: "© 2025 Kiko – Crafted with ☕ & Code." },
 
     // Status messages
     "status-success-title": {

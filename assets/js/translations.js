@@ -94,8 +94,8 @@ export const translations = {
         en: "Focus on Software Engineering and Clean Code"
     },
     "edu-1-period": {
-        de: "März 2025 - Heute",
-        en: "Mar 2025 - Today"
+        de: "Juli 2014 - Januar 2018",
+        en: "July 2014 - January 2018"
     },
 
 

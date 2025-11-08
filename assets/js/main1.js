@@ -28,8 +28,8 @@ window.LanguageStore = LanguageStore; // optional: for debugging
 
 
 // ================== CONSTANTS ==================
-const HUES = [270, 177, 201, 341, 48, 80, 12];
-const HUE_CHARS = ["v", "t", "b", "p", "y", "g", "o"];
+const HUES = [80, 177, 201, 341, 48, 270, 12];
+const HUE_CHARS = ["g", "t", "b", "p", "y", "v", "o"];
 
 
 // ================== INITIALIZATION ==================
@@ -152,8 +152,7 @@ function initColorTheme() {
         "icon-16x16": document.getElementById("icon-16x16"),
     };
 
-    let idx = Number(localStorage.getItem("hue-index"));
-    if (isNaN(idx)) idx = 5; // 5 init color Green ('g')
+    let idx = Number(localStorage.getItem("hue-index")) || 0;
 
     const applyHue = (i) => {
         const hue = HUES[i];

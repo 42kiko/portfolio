@@ -152,7 +152,8 @@ function initColorTheme() {
         "icon-16x16": document.getElementById("icon-16x16"),
     };
 
-    let idx = Number(localStorage.getItem("hue-index")) || 0;
+    let idx = Number(localStorage.getItem("hue-index"));
+    if (isNaN(idx)) idx = 5; // 5 init color Green ('g')
 
     const applyHue = (i) => {
         const hue = HUES[i];

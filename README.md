@@ -1,76 +1,42 @@
-# 🌟 Welcome to My Portfolio
+# kiko-portfolio-kit
 
-![Static Badge](https://img.shields.io/badge/Made_with-HTML%2C_CSS%2C_JS-blue)
-![Static Badge](https://img.shields.io/badge/Style-SCSS-pink)
-![Static Badge](https://img.shields.io/badge/Deployed_on-GitHub_Pages-brightgreen)
-![Static Badge](https://img.shields.io/badge/Status-Live-success)
-![Static Badge](https://img.shields.io/badge/License-MIT-yellow)
+Ein dynamisches, **Vanilla-JS**-basiertes Portfolio-Template. Alle Inhalte werden **aus Konfigurationsdateien** gerendert – kein manuelles Editieren von HTML nötig.
 
-Hey there! 👋
-This is the repository for my **personal portfolio website**,
-where I showcase my projects, skills, and journey as a developer 🚀
+## 🚀 Quickstart
+1) Repo klonen oder als Zip laden
+2) Deinen Ordner **/assets** ins Projektwurzelverzeichnis kopieren
+3) Öffne `index.html` im Browser (oder nutze einen lokalen Server)
 
----
+> Optional: Mit `npx serve` oder VS Code Live Server entwickeln.
 
-## 🔗 Live Preview
-👉 [🌍 View Live Portfolio](https://42kiko.github.io/portfolio/)
+## 🔧 Personalisieren
+- **`/src/config/content.config.js`** → Profil, Skills, Experience, Projekte, Testimonials
+- **`/src/config/translations.js`** → Texte in DE/EN (bereitgestellt)
+- **`/src/config/site.config.js`** → EmailJS Keys, Socials, Standard-Sprache, Footer-Text
 
----
+## 🌐 Deploy: GitHub Pages (Root‑Deploy)
+Mit Root‑Deploy liegen **alle Dateien im Repo‑Root**. GitHub Pages serviert direkt den `main`‑Branch – kein `/docs`‑Ordner und kein Build‑Step nötig.
 
+**Schritte**
+1. Neues Repo auf GitHub erstellen (z. B. `kiko-portfolio-kit`).
+2. Alle Dateien (inkl. **/assets**) ins Repo root pushen.
+3. **Settings → Pages**:
+   - *Source:* **Deploy from a branch**
+   - *Branch:* **main**
+   - *Directory:* **/** (root)
+   - **Save**
 
-## 📸 Sneak Peek
+4. Live unter: `https://<dein-username>.github.io/<repo-name>/`.
 
-Here’s a quick preview of the portfolio:
+**Hinweise**
+- Dieses Template nutzt **relative Pfade** (`assets/...`), damit es auf GitHub Pages (Projekt‑Pages) korrekt lädt.
+- Für ein **User‑Root** (`<username>.github.io`) oder **Custom Domain** kannst du auch absolute Pfade verwenden.
+- Nach Updates ggf. **Hard Reload** (Shift+Reload).
 
-![Portfolio Preview 📸](assets/img/portfolio-preview.gif)
+## 📄 Lizenz
+Dieses Projekt ist unter der **MIT-Lizenz** lizenziert. Siehe [LICENSE](./LICENSE).
 
----
+> Im Footer wird der **Name aus `content.profile.name`** angezeigt – also der Nutzer, der das Template befüllt.
 
-## 💡 About the Project
-My portfolio is designed to be:
-- 🎨 **Creative & modern** – sleek, minimalist design with personal flair
-- 💻 **Project hub** – a curated collection of my work & experiments
-- 🧑‍💼 **About me** – who I am, what I do, and where I’m headed
-- 📬 **Let’s connect** – simple ways to get in touch with me
-
----
-
-## 🛠️ Tech Stack
-Built with ❤️ using:
-- 🌐 **HTML5, CSS3, JavaScript**
-- 🎨 **SCSS**
-- 🚀 **Deployment via GitHub Pages**
-
----
-
-## ⚡ Getting Started
-
-Run it locally 👇
-
-```bash
-# Clone the repo
-git clone https://github.com/42kiko/portfolio.git
-
-# Navigate into the project folder
-cd portfolio
-
-# Open the project (e.g. via VS Code Live Server)
-
-```
-
-
-🤝 Connect With Me
-
-Let’s network! 🌍
-
-📧 Email: kiko97@tuta.io￼
-💼 LinkedIn: Kiko Ramon Lukas￼
-🐙 GitHub: 42kiko￼
-
-⭐ If you like this project, don’t forget to star the repo – it means a lot!
-
-⸻
-
-Made with 🤍 and lots of ☕
-
----
+## 🙌 Credits
+Original entwickelt von **Kiko**. Icons von Unicons. Slider via Swiper.

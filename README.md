@@ -208,25 +208,53 @@ If you **don’t want a contact form at all** you can:
 
 ### 6. CV files & file names
 
-The color theme and language are linked to specific CV files.
+The color theme and language are linked to CV files in `assets/cv/<lang>/`,
+but you can choose between **one CV for all colors** or **one CV per color**.
+
+#### Mode A: one CV per language (independent of color)
+
+Use this if you just want a single CV file per language.
 
 - Folder pattern: `assets/cv/<lang>/`
-- Expected file name pattern:
-  `<cvFileBaseName>-<lang>-<color>.pdf`
-  - Example with the default config: `Kiko-DS-de-v.pdf`
+- File name pattern: `<baseName>-<lang>.pdf`
+  - Example: `Kiko-DS-de.pdf`, `Kiko-DS-en.pdf`
 
-You can configure the static prefix via `src/config/site.config.js`:
+Config in `src/config/site.config.js`:
 
 ```js path=null start=null
 export const site = {
   // ...
-  cvFileBaseName: "Kiko-DS", // change this to your own base, e.g. "AlexDev-CV"
+  cv: {
+    mode: "single", // one CV per language
+    baseName: "Kiko-DS", // change this to your own base, e.g. "AlexDev-CV"
+  },
   // ...
 };
 ```
 
-To reuse the template without touching JavaScript, just keep the pattern
-and replace the PDFs with your own CVs using your chosen base name.
+#### Mode B (default): one CV per color & language
+
+Use this if you want different CVs for each color variant.
+
+- Folder pattern: `assets/cv/<lang>/`
+- File name pattern: `<baseName>-<lang>-<color>.pdf`
+  - Example: `Kiko-DS-de-v.pdf`, `Kiko-DS-de-t.pdf`, ...
+
+Config:
+
+```js path=null start=null
+export const site = {
+  // ...
+  cv: {
+    mode: "perColor", // default
+    baseName: "Kiko-DS",
+  },
+  // ...
+};
+```
+
+In both modes, you only need to drop the correctly named PDF files into the
+corresponding `assets/cv/<lang>/` folders – no JavaScript changes required.
 
 ---
 

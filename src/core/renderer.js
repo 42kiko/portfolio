@@ -22,6 +22,14 @@ export function renderAll() {
   applyTranslations();
   initSwipers();
   initImpressumPrivacyPopups();
+
+  // Ensure CV download link gets a real PDF href on first render as well
+  try {
+    const evt = new Event("kiko-sync-cv");
+    document.dispatchEvent(evt);
+  } catch {
+    // no-op; older browsers without Event ctor will just keep default href
+  }
 }
 function initSwipers() {
   if (window.swiperTestimonial) window.swiperTestimonial.destroy(true, true);

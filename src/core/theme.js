@@ -63,11 +63,25 @@ export function initColorTheme() {
   const updateCvHref = () => {
     const btn = document.getElementById("cv-download-btn");
     if (!btn) return;
+
     const i = Number(localStorage.getItem("hue-index")) || 0;
     const suffix = HUE_CHARS[i];
     const lang = LanguageStore.get();
-    const base = site.cvFileBaseName || "cv";
-    btn.setAttribute("href", `assets/cv/${lang}/${base}-${lang}-${suffix}.pdf`);
+
+    const cvCfg = site.cv || {};
+    const base = cvCfg.baseName || site.cvFileBaseName || "cv"; // keep fallback for older configs
+    const mode = cvCfg.mode || "perColor";
+
+    let href;
+    if (mode === "single") {
+      // One CV per language, independent of color
+      href = `assets/cv/${lang}/${base}-${lang}.pdf`;
+    } else {
+      // Default: one CV per color & language
+      href = `assets/cv/${lang}/${base}-${lang}-${suffix}.pdf`;
+    }
+
+    btn.setAttribute("href", href);
   };
 
   // Keep CV href in sync when language changes (even without hue change)

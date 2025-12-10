@@ -69,12 +69,20 @@ export function initColorTheme() {
     btn.setAttribute("href", `assets/cv/${lang}/Kiko-DS-${lang}-${suffix}.pdf`);
   };
 
+  // Keep CV href in sync when language changes (even without hue change)
+  LanguageStore.subscribe(() => {
+    updateCvHref();
+  });
+
+  // Allow external code (e.g. after a full re-render) to force a CV href sync
+  document.addEventListener("kiko-sync-cv", () => {
+    updateCvHref();
+  });
+
   toggleBtn?.addEventListener("click", () => {
     idx = (idx + 1) % HUES.length;
     applyHue(idx);
   });
 
   applyHue(idx);
-
-
 }

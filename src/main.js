@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
     LanguageStore.set(next);
     document.getElementById("app").innerHTML = ""; // re-render all sections
     renderAll();
-    /* Trigger blob color sync after re-render */
-    try { /* lazy call without having to change exports */
+    /* Trigger CV href sync after re-render (lazy, without changing exports) */
+    try {
       if (window.requestAnimationFrame) requestAnimationFrame(() => {
-        const evt = new Event('kiko-sync-blob');
+        const evt = new Event('kiko-sync-cv');
         document.dispatchEvent(evt);
       });
     } catch { }

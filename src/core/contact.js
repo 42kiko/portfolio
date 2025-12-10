@@ -10,7 +10,7 @@ export function initContactForm() {
   const closeBtn = document.getElementById("status-close");
   if (!form) return;
 
-  // EmailJS init
+  // Initialize EmailJS with public key
   if (window.emailjs && site.emailJS?.publicKey) {
     emailjs.init(site.emailJS.publicKey);
   }
@@ -34,12 +34,27 @@ export function initContactForm() {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const lang = LanguageStore.get();
-    btn.value = lang === "de" ? "Sende..." : "Sending...";
+    if (btn) btn.textContent = lang === "de" ? "Sende..." : "Sending...";
 
-    const { serviceId, templateId } = site.emailJS;
-    emailjs
+    const { serviceId, templateId } = site.emailJS || {};
+    if (!window.emailjs || !serviceId || !templateId) {
+      console.error("EmailJS is not configured or failed to load.");
+      if (btn) btn.textContent = lang === "de" ? "Nachricht senden" : "Send Message";
+      showStatus(false);
+      return;
+    }
+
+    window.emailjs
       .sendForm(serviceId, templateId, form)
-      .then(() => { btn.value = lang === "de" ? "Nachricht senden" : "Send Message"; showStatus(true); form.reset(); })
-      .catch((err) => { console.error(err); btn.value = lang === "de" ? "Nachricht senden" : "Send Message"; showStatus(false); });
+      .then(() => {
+        if (btn) btn.textContent = lang === "de" ? "Nachricht senden" : "Send Message";
+        showStatus(true);
+        form.reset();
+      })
+      .catch((err) => {
+        console.error(err);
+        if (btn) btn.textContent = lang === "de" ? "Nachricht senden" : "Send Message";
+        showStatus(false);
+      });
   });
 }

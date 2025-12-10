@@ -2,7 +2,7 @@ import { site } from "../config/site.config.js";
 import { LanguageStore } from "./language.js";
 
 const HUES = [80, 177, 201, 341, 48, 270, 12];
-const HUE_CHARS = ["g", "t", "b", "p", "y", "v", "o"];
+const HUE_CHARS = ["v", "t", "b", "p", "y", "g", "o"];
 
 export function initTheme() {
   const themeBtn = document.getElementById("theme-button");
@@ -59,7 +59,7 @@ export function initColorTheme() {
     const btn = document.getElementById("cv-download-btn");
     if (!btn) return;
     const i = Number(localStorage.getItem("hue-index")) || 0;
-    const suffix = ["v", "t", "b", "p", "y", "g", "o"][i];
+    const suffix = HUE_CHARS[i];
     const lang = LanguageStore.get();
     btn.setAttribute("href", `assets/cv/${lang}/Kiko-DS-${lang}-${suffix}.pdf`);
   };

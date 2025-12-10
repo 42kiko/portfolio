@@ -289,7 +289,7 @@ export const translations = {
     },
     "contact-location-subtitle": {
         de: "Deutschland - Niedersachsen",
-        en: "Germany - Lower Saxsoney"
+        en: "Germany - Lower Saxony"
     },
     "contact-label-name": {
         de: "Name",

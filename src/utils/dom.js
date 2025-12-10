@@ -1,4 +1,4 @@
-// Kleinere DOM-Utilities für sauberes Rendern
+// Small DOM utilities for clean rendering
 export const $ = (sel, root = document) => root.querySelector(sel);
 export const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 

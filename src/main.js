@@ -6,7 +6,7 @@ import { initTimelineAnimations } from "./core/timeline.js";
 import { initContactForm } from "./core/contact.js";
 import { renderAll } from "./core/renderer.js";
 
-// Initial Render
+// Initial render of the whole app
 document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.setAttribute("lang", site.defaultLang || "de");
   initNavigation();
@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
   langBtn?.addEventListener("click", () => {
     const next = LanguageStore.get() === "de" ? "en" : "de";
     LanguageStore.set(next);
-    document.getElementById("app").innerHTML = ""; // rerender all sections
+    document.getElementById("app").innerHTML = ""; // re-render all sections
     renderAll();
-    /* Nach dem Render die Blob-Farbe anstoßen */
-    try { /* lazy call, ohne export ändern zu müssen */
+    /* Trigger blob color sync after re-render */
+    try { /* lazy call without having to change exports */
       if (window.requestAnimationFrame) requestAnimationFrame(() => {
         const evt = new Event('kiko-sync-blob');
         document.dispatchEvent(evt);

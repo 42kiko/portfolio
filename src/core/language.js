@@ -18,7 +18,7 @@ export const LanguageStore = (() => {
 })();
 
 export function applyTranslations(root = document) {
-  // IDs (legacy-kompatibel) und data-i18n unterstützen
+  // Support old ID-based API and data-i18n attributes
   Object.keys(translations).forEach((key) => {
     const nodes = [
       ...$$(`[id="${key}"]`, root),

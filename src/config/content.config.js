@@ -1,9 +1,9 @@
-// Inhaltliche Daten (sprachneutral oder mit Kurztexten).
-// Längere Texte/Lables kommen aus translations.js
+// Content data (language-neutral or with short texts).
+// Longer texts/labels come from translations.js
 export const content = {
   profile: {
     name: "Kiko",
-    titleKey: "home-subtitle", // aus translations
+    titleKey: "home-subtitle", // from translations
     locationKey: "contact-location-subtitle",
     email: "kiko97@tuta.io",
   },
@@ -19,7 +19,7 @@ export const content = {
   about: {
     video: "assets/img/me/video6.mp4",
     cv: {
-      // Dateien müssen in assets/cv/<lang>/Kiko-DS-<lang>-<suffix>.pdf liegen (wie bei dir)
+      // Files must be placed in assets/cv/<lang>/Kiko-DS-<lang>-<suffix>.pdf
       colorSuffixes: ["v", "t", "b", "p", "y", "g", "o"],
     },
     stats: [

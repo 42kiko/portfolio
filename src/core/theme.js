@@ -1,7 +1,12 @@
 import { site } from "../config/site.config.js";
 import { LanguageStore } from "./language.js";
 
-const HUES = [80, 177, 201, 341, 48, 270, 12];
+// HUES and HUE_CHARS share the same index across:
+// - main accent color (HUES)
+// - favicon variant (HUE_CHARS)
+// - CV file suffixes (see content.config.js -> about.cv.colorSuffixes)
+// Order: Violet (v), Turquoise (t), Blue (b), Pink (p), Yellow (y), Green (g), Orange (o)
+const HUES = [270, 177, 201, 341, 48, 80, 12];
 const HUE_CHARS = ["v", "t", "b", "p", "y", "g", "o"];
 
 export function initTheme() {

@@ -66,7 +66,8 @@ export function initColorTheme() {
     const i = Number(localStorage.getItem("hue-index")) || 0;
     const suffix = HUE_CHARS[i];
     const lang = LanguageStore.get();
-    btn.setAttribute("href", `assets/cv/${lang}/Kiko-DS-${lang}-${suffix}.pdf`);
+    const base = site.cvFileBaseName || "cv";
+    btn.setAttribute("href", `assets/cv/${lang}/${base}-${lang}-${suffix}.pdf`);
   };
 
   // Keep CV href in sync when language changes (even without hue change)

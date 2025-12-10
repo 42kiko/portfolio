@@ -212,13 +212,21 @@ The color theme and language are linked to specific CV files.
 
 - Folder pattern: `assets/cv/<lang>/`
 - Expected file name pattern:
-  `Kiko-DS-<lang>-<color>.pdf` (e.g. `Kiko-DS-de-v.pdf`)
+  `<cvFileBaseName>-<lang>-<color>.pdf`
+  - Example with the default config: `Kiko-DS-de-v.pdf`
 
-To reuse without touching JavaScript, you can **keep the file names** but
-replace the PDFs with your own CV content.
+You can configure the static prefix via `src/config/site.config.js`:
 
-If you want to change the file naming pattern, you will need to adjust the
-logic in `src/core/theme.js` (`updateCvHref` function).
+```js path=null start=null
+export const site = {
+  // ...
+  cvFileBaseName: "Kiko-DS", // change this to your own base, e.g. "AlexDev-CV"
+  // ...
+};
+```
+
+To reuse the template without touching JavaScript, just keep the pattern
+and replace the PDFs with your own CVs using your chosen base name.
 
 ---
 

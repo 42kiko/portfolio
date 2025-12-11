@@ -8,6 +8,7 @@ import { renderTestimonials } from "./sections/testimonials.js";
 import { renderContact } from "./sections/contact.js";
 import { renderFooter } from "./sections/footer.js";
 import { applyTranslations } from "./language.js";
+import { renderCvLab } from "./sections/cv-lab.js";
 
 export function renderAll() {
   renderHome();
@@ -18,6 +19,7 @@ export function renderAll() {
   renderProjectCTA();
   renderTestimonials();
   renderContact();
+  renderCvLab(); // hidden CV preview/download lab near the bottom
   renderFooter();
   applyTranslations();
   initSwipers();

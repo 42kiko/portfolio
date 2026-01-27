@@ -1095,7 +1095,7 @@ img {
 /* Full-width Hero-Bereich oben über beiden Spalten */
 .cv-card__hero {
   max-width: 980px;
-  margin: 0 auto 1.6rem;
+  margin: 0 auto 2.4rem; /* mehr Abstand zum Content-Card unten */
   padding: 1.8rem 2.4rem;
   border-radius: 0.9rem;
   background:
@@ -1195,7 +1195,7 @@ body.dark-theme .cv-card {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
   gap: 2.25rem;
   max-width: 960px; /* noch kompaktere Spalten für bessere Lesbarkeit */
   margin: 0 auto;
@@ -1213,8 +1213,8 @@ body.dark-theme .cv-card {
 }
 
 .cv-card--pdf .cv-card__columns {
-  /* Gleiches Spaltenverhältnis wie in der Preview */
-  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  /* Gleiches Spaltenverhältnis wie in der Preview (nur etwas schmaler) */
+  grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
   gap: 2.25rem;
   max-width: 1080px;
 }
@@ -1247,16 +1247,17 @@ body.dark-theme .cv-card {
 }
 
 .cv-card--pdf .cv-card__timeline-item {
-  padding: 0.4rem 0 0.6rem;
-  margin-bottom: 0.25rem;
+  /* etwas kompakter und mehr Abstand zur Linie im PDF */
+  padding: 0.35rem 0 0.55rem 1.1rem;
+  margin-bottom: 0.22rem;
   page-break-inside: avoid;
   break-inside: avoid;
 }
 
-/* Verhindere unschöne Umbrüche quer durch ganze Blöcke */
+/* Blöcke dürfen im PDF über Seiten umbrechen, damit weniger Leerraum entsteht */
 .cv-card--pdf .cv-card__block {
-  page-break-inside: avoid;
-  break-inside: avoid;
+  page-break-inside: auto;
+  break-inside: auto;
 }
 
 .cv-card__side {
@@ -1495,7 +1496,7 @@ body.dark-theme .cv-card {
 @media screen and (max-width: 968px) {
   .cv-card__hero {
     max-width: 100%;
-    margin: 0 0 1.2rem;
+    margin: 0 0 1.8rem;
     padding: 1.4rem 1.5rem;
     flex-direction: column;
     align-items: flex-start;
@@ -1526,13 +1527,12 @@ body.dark-theme .cv-card {
   }
 }
 .cv-card__columns {
-  align-items: flex-start;   /* WICHTIG: nach oben ausrichten */
+  align-items: stretch; /* beide Spalten gleich hoch halten */
 }
 
-/* optional sicherstellen, dass beide Spalten oben anfangen */
 .cv-card__side,
 .cv-card__main {
-  align-self: flex-start;
+  align-self: stretch;
 }
 
 /*==================== CONTACT ME ====================*/

@@ -109,7 +109,6 @@ export function renderCvLab() {
     const prevCardWidth = cvCard.style.width;
     const prevCardMaxWidth = cvCard.style.maxWidth;
     const prevCardMargin = cvCard.style.margin;
-    const prevCardBoxShadow = cvCard.style.boxShadow;
 
     // Wrapper optisch neutral machen (kein Rand, volle Höhe)
     previewContainer.style.maxHeight = "none";
@@ -121,7 +120,6 @@ export function renderCvLab() {
     cvCard.style.width = "750px";
     cvCard.style.maxWidth = "750px";
     cvCard.style.margin = "0 auto";
-    cvCard.style.boxShadow = "none";
 
     const opt = {
       // kleiner Rand in pt, damit sicher nichts gekappt wird
@@ -157,7 +155,6 @@ export function renderCvLab() {
           cvCard.style.width = prevCardWidth;
           cvCard.style.maxWidth = prevCardMaxWidth;
           cvCard.style.margin = prevCardMargin;
-          cvCard.style.boxShadow = prevCardBoxShadow;
         });
     } catch (err) {
       console.error("Fehler beim PDF-Export:", err);
@@ -171,7 +168,6 @@ export function renderCvLab() {
       cvCard.style.width = prevCardWidth;
       cvCard.style.maxWidth = prevCardMaxWidth;
       cvCard.style.margin = prevCardMargin;
-      cvCard.style.boxShadow = prevCardBoxShadow;
     }
   };
 

@@ -76,7 +76,7 @@ export function renderCvLab() {
     previewContainer.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
-  // --- PDF-Download ---
+  // --- PDF-Download mit html2pdf (optimiert für A4, mit Foto) ---
   const handleDownloadPdf = (e) => {
     e.preventDefault();
 
@@ -115,14 +115,17 @@ export function renderCvLab() {
     previewContainer.style.maxHeight = "none";
     previewContainer.style.border = "none";
 
-    // Karte auf A4-Breite bringen
-    cvCard.style.width = "800px"; // ~A4-Inhalt, html2pdf skaliert ggf. noch
-    cvCard.style.maxWidth = "800px";
+    // Karte für A4-Export: etwas schmaler als A4, damit nichts abgeschnitten wird
+    // und spezielle Klasse setzen, um Foto als <img> statt SVG-Maske zu rendern.
+    cvCard.classList.add("cv-card--pdf");
+    cvCard.style.width = "750px";
+    cvCard.style.maxWidth = "750px";
     cvCard.style.margin = "0 auto";
     cvCard.style.boxShadow = "none";
 
     const opt = {
-      margin: [10, 10, 10, 10], // pt
+      // kleiner Rand in pt, damit sicher nichts gekappt wird
+      margin: [5, 5, 5, 5],
       filename: `Kiko-DS-${lang}-modern.pdf`,
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: {
@@ -130,31 +133,32 @@ export function renderCvLab() {
         useCORS: true,
         scrollX: 0,
         scrollY: 0,
-        backgroundColor: "#ffffff"
+        backgroundColor: "#ffffff",
       },
       jsPDF: {
         unit: "pt",
         format: "a4",
-        orientation: "portrait"
+        orientation: "portrait",
       },
-      pagebreak: { mode: ["css", "legacy"] }
+      pagebreak: { mode: ["css", "legacy"] },
     };
 
     try {
       h2p()
-          .set(opt)
-          .from(cvCard)
-          .save()
-          .finally(() => {
-            // Styles wieder zurücksetzen
-            previewContainer.style.maxHeight = prevMaxHeight;
-            previewContainer.style.border = prevBorder;
+        .set(opt)
+        .from(cvCard)
+        .save()
+        .finally(() => {
+          // Styles wieder zurücksetzen
+          previewContainer.style.maxHeight = prevMaxHeight;
+          previewContainer.style.border = prevBorder;
 
-            cvCard.style.width = prevCardWidth;
-            cvCard.style.maxWidth = prevCardMaxWidth;
-            cvCard.style.margin = prevCardMargin;
-            cvCard.style.boxShadow = prevCardBoxShadow;
-          });
+          cvCard.classList.remove("cv-card--pdf");
+          cvCard.style.width = prevCardWidth;
+          cvCard.style.maxWidth = prevCardMaxWidth;
+          cvCard.style.margin = prevCardMargin;
+          cvCard.style.boxShadow = prevCardBoxShadow;
+        });
     } catch (err) {
       console.error("Fehler beim PDF-Export:", err);
       alert("PDF-Export fehlgeschlagen. Details in der Konsole.");
@@ -163,6 +167,7 @@ export function renderCvLab() {
       previewContainer.style.maxHeight = prevMaxHeight;
       previewContainer.style.border = prevBorder;
 
+      cvCard.classList.remove("cv-card--pdf");
       cvCard.style.width = prevCardWidth;
       cvCard.style.maxWidth = prevCardMaxWidth;
       cvCard.style.margin = prevCardMargin;

@@ -870,6 +870,15 @@ export function buildCvHtml({ lang = "de" } = {}) {
     )
     .join("");
 
+  const profileLinksHtml = (data.profile.profiles || [])
+    .map(
+      (p) => `
+        <a href="${p.url}" class="cv-card__hero-link" target="_blank" rel="noreferrer">
+          ${escHtml(p.label)}
+        </a>`
+    )
+    .join("");
+
   const experienceHtml = data.experience
     .map(
       (exp) => `
@@ -927,74 +936,29 @@ export function buildCvHtml({ lang = "de" } = {}) {
     )
     .join("");
 
-  const avatarSrc = content?.home?.avatarImg || "";
-  const avatarX = content?.home?.imgPosition?.x ?? 130;
-  const avatarY = content?.home?.imgPosition?.y ?? 70;
-
   return `
   <div class="cv-card">
+    <header class="cv-card__hero">
+      <div class="cv-card__hero-left">
+        <p class="cv-card__hero-kicker">${
+          lang === "de" ? "Lebenslauf" : "Curriculum Vitae"
+        }</p>
+        <h1 class="cv-card__hero-name">${escHtml(data.profile.name)}</h1>
+        <p class="cv-card__hero-role">${escHtml(data.profile.title)}</p>
+        <p class="cv-card__hero-location">${escHtml(data.profile.location)}</p>
+      </div>
+      <div class="cv-card__hero-right">
+        <div class="cv-card__hero-contact">
+          <span>${escHtml(data.profile.email)}</span>
+          <span>${escHtml(data.profile.phone)}</span>
+        </div>
+        ${profileLinksHtml
+          ? `<div class="cv-card__hero-links">${profileLinksHtml}</div>`
+          : ""}
+      </div>
+    </header>
     <div class="cv-card__columns">
       <aside class="cv-card__side">
-        <div class="cv-card__avatar-wrap">
-          <div class="cv-card__avatar cv-card__avatar--blob">
-            <svg class="home__blob" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 600" aria-hidden="true">
-              <path
-                d="M425.5600448266467 14.779019439000905C376.76110480386023 -34.935723857304396 280.20983527261023 -72.614270762822 234.02745205320917 -73.13758364937799C187.84506883380817 -73.66089653593397 175.93968604165315 -31.403359965702833 148.46574551024042 11.639142119664967C120.99180497882767 54.68164420503288 70.6229186669787 123.75896684704136 69.18380886473261 185.1174288628293C67.74469906248652 246.47589087861707 81.48167822915318 345.77456387259474 139.83108669676386 379.78991421439173C198.18049516437458 413.80526455618826 354.781925421536 414.9827039279329 419.2802596703967 389.20953091361037C483.7785939192574 363.4363578992877 525.774461330553 287.55596137422253 526.821092189928 225.15087612845423C527.867723049303 162.74579088268618 474.35898484943306 64.49376273530632 425.5600448266467 14.779019439000905C376.76110480386023 -34.935723857304396 280.20983527261023 -72.614270762822 234.02745205320917 -73.13758364937799"
-                transform="matrix(-0.9141716824785884,0.3327312814312597,-0.3327312814312597,-0.9141716824785884,627.160523415411,372.3445018250747)"
-                fill-opacity="0.29">
-              </path>
-              <defs>
-                <pattern id="cv-blob-pattern" width="76" height="76" viewBox="0 0 40 40" patternUnits="userSpaceOnUse">
-                  <rect width="100%" height="100%"></rect>
-                  <path class="home__blob-lines"
-                    d="M0 20v20l14-20L20 0l-20 20zM20 20v20l14-20L40 0l-20 20z" fill-opacity="0.5">
-                  </path>
-                  <path class="home__blob-lines"
-                    d="M0 40v-20l20-20l-10 20zM20 40v-20l20-20l-10 20zM20 20v20l-20 20l9-20zM20-20v20l-20 20l9-20zM40 20v20l-20 20l9-20zM40-20v20l-20 20l9-20z">
-                  </path>
-                </pattern>
-              </defs>
-              <mask id="cv-mask" mask-type="alpha">
-                <path
-                  d="M372.8963486528131 80.45407911572798C324.09740863002673 30.739335819422678 227.54613909877668 -6.939211086094929 181.36375587937562 -7.462523972650914C135.1813726599746 -7.9858368592068985 123.27598986781959 34.27169971102421 95.80204933640687 77.31420179639204C68.32810880499414 120.3567038817599 17.95922249314515 189.43402652376759 16.520112690899055 250.79248853955505C15.08100288865296 312.15095055534164 28.81798205531959 411.44962354931954 87.1673905229303 445.4649738911164C145.51679899054102 479.48032423291335 302.1182292477025 480.657763604658 366.6165634965631 454.8845905903351C431.11489774542383 429.1114175760122 473.11076515671937 353.2310210509471 474.15739601609437 290.8259358051789C475.20402687546937 228.42085055941197 421.6952886755995 130.16882241203328 372.8963486528131 80.45407911572798C324.09740863002673 30.739335819422678 227.54613909877668 -6.939211086094929 181.36375587937562 -7.462523972650914"
-                  fill-opacity="1" fill="url(#cv-blob-pattern)" opacity="1"
-                  transform="matrix(0.8291806643796716,0.3017970806632748,-0.3017970806632748,0.8291806643796716,181.80323066538816,25.555072447120665)">
-                </path>
-              </mask>
-              <g mask="url(#cv-mask)">
-                <path
-                  d="M372.8963486528131 80.45407911572798C324.09740863002673 30.739335819422678 227.54613909877668 -6.939211086094929 181.36375587937562 -7.462523972650914C135.1813726599746 -7.9858368592068985 123.27598986781959 34.27169971102421 95.80204933640687 77.31420179639204C68.32810880499414 120.3567038817599 17.95922249314515 189.43402652376759 16.520112690899055 250.79248853955505C15.08100288865296 312.15095055534164 28.81798205531959 411.44962354931954 87.1673905229303 445.4649738911164C145.51679899054102 479.48032423291335 302.1182292477025 480.657763604658 366.6165634965631 454.8845905903351C431.11489774542383 429.1114175760122 473.11076515671937 353.2310210509471 474.15739601609437 290.8259358051789C475.20402687546937 228.42085055941197 421.6952886755995 130.16882241203328 372.8963486528131 80.45407911572798C324.09740863002673 30.739335819422678 227.54613909877668 -6.939211086094929 181.36375587937562 -7.462523972650914"
-                  fill-opacity="1" fill="url(#cv-blob-pattern)" opacity="1"
-                  transform="matrix(0.8291806643796716,0.3017970806632748,-0.3017970806632748,0.8291806643796716,181.80323066538816,25.555072447120665)">
-                </path>
-                ${avatarSrc
-                  ? `<image class="home__blob-img" x="${avatarX}" y="${avatarY}" href="${avatarSrc}" />`
-                  : `<text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="72" font-weight="700">${escHtml(
-                      data.profile.name[0] || "K"
-                    )}</text>`}
-              </g>
-            </svg>
-          </div>
-        </div>
-        <div class="cv-card__identity">
-          <h1 class="cv-card__name">${escHtml(data.profile.name)}</h1>
-          <p class="cv-card__role">${escHtml(data.profile.title)}</p>
-          <p class="cv-card__location">${escHtml(data.profile.location)}</p>
-        </div>
-        <div class="cv-card__contact">
-          <p>${escHtml(data.profile.email)}</p>
-          <p>${escHtml(data.profile.phone)}</p>
-        </div>
-        <div class="cv-card__profiles">
-          ${data.profile.profiles
-            .map(
-              (p) => `
-              <a href="${p.url}" class="cv-card__profile-link" target="_blank" rel="noreferrer">
-                ${escHtml(p.label)}
-              </a>`
-            )
-            .join("")}
-        </div>
         <section class="cv-card__block">
           <h3 class="cv-card__block-title">${buildSectionHeading("languages", lang)}</h3>
           <ul class="cv-card__meta-list">${languagesHtml}</ul>

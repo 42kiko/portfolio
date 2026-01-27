@@ -1092,6 +1092,47 @@ img {
   width: 100%;
 }
 
+/* Dark-Mode-Variante im Stil der restlichen Seite (nur für Preview, nicht für PDF) */
+body.dark-theme .cv-lab__preview {
+  background: radial-gradient(circle at top, #0b1220, #020617 55%);
+}
+
+body.dark-theme .cv-card .cv-card__hero {
+  background:
+    radial-gradient(circle at 0 0, rgba(148, 163, 184, 0.22), transparent 55%),
+    linear-gradient(135deg, var(--first-color-second), var(--first-color));
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+body.dark-theme .cv-card .cv-card__hero-link {
+  border-color: rgba(226, 232, 240, 0.5);
+  background: rgba(15, 23, 42, 0.8);
+  color: #e5e7eb;
+}
+
+body.dark-theme .cv-card .cv-card__hero-link:hover {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+body.dark-theme .cv-card .cv-card__columns {
+  border-color: rgba(30, 64, 175, 0.5);
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+  background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.45), rgba(15, 23, 42, 0.98));
+  gap: 0; /* keine helle Lücke mehr zwischen Sidebar und Content */
+}
+
+body.dark-theme .cv-card .cv-card__side {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
+}
+
+body.dark-theme .cv-card .cv-card__main {
+  background: rgba(15, 23, 42, 0.98);
+  border-left: 1px solid rgba(148, 163, 184, 0.4); /* dezente Trennlinie statt "Blank" */
+}
+
 /* Full-width Hero-Bereich oben über beiden Spalten */
 .cv-card__hero {
   max-width: 980px;
@@ -1201,9 +1242,13 @@ body.dark-theme .cv-card {
   margin: 0 auto;
   border-radius: 1rem;
   border: 1px solid rgba(148, 163, 184, 0.35);
-  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+  box-shadow:
+    0 24px 60px rgba(15, 23, 42, 0.16),  /* weicher, tiefer Shadow */
+    0 0 0 1px rgba(255, 255, 255, 0.7);  /* feiner Licht-Ring außen */
   overflow: hidden;
-  background: #ffffff;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.9));
+  backdrop-filter: blur(18px) saturate(130%);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
 }
 
 /* PDF-optimiertes Layout: kompakter und vollflächiger */
@@ -1212,20 +1257,28 @@ body.dark-theme .cv-card {
   max-width: 210mm;
 }
 
-.cv-card--pdf .cv-card__columns {
-  /* Gleiches Spaltenverhältnis wie in der Preview (nur etwas schmaler) */
-  grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
+body:not(.dark-theme) .cv-card--pdf .cv-card__columns {
+  /* Gleiches Spaltenverhältnis wie in der Preview */
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
   gap: 2.25rem;
   max-width: 1080px;
+  /* Im PDF im Lightmode helles, druckfreundliches Layout verwenden */
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
 }
 
 /* Paddings im PDF wie im Standard lassen – Verhältnis kommt aus den Columns */
-.cv-card--pdf .cv-card__side {
+body:not(.dark-theme) .cv-card--pdf .cv-card__side {
   padding: 2.4rem 2rem;
+  background: #f4f5fb;
 }
 
-.cv-card--pdf .cv-card__main {
+body:not(.dark-theme) .cv-card--pdf .cv-card__main {
   padding: 2.4rem 2.6rem;
+  background: #ffffff;
+  border-left: 1px solid rgba(226, 232, 240, 1);
 }
 
 /* leicht kompaktere Typografie nur im PDF */

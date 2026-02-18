@@ -26,6 +26,7 @@ export const translations = {
         en: "I’m a Data Scientist with experience in software development and consulting, currently focusing on Data Science. Through the Masterschool program, I’m deepening my expertise in Python, data analysis, and machine learning to turn complex data into intelligent solutions and actionable insights."
     },
     "about-button": { de: "Download CV", en: "Download CV" },
+    "about-button-hint": { de: "Aktuelles Design", en: "Current theme" },
 
     // Info Cards on About
     "years-title": { de: "07+", en: "07+" },

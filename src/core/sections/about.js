@@ -1,5 +1,6 @@
 import { content } from "../../config/content.config.js";
 import { $ } from "../../utils/dom.js";
+import { downloadModernCvPdf } from "./cv-lab.js";
 
 export function renderAbout() {
   const app = $("#app");
@@ -18,8 +19,25 @@ export function renderAbout() {
                 <span class="about__info-name" id="${s.nameKey}"></span>
               </div>`).join("")}
           </div>
-          <div class="about__buttons"><a download href="#" class="button button--flex" id="cv-download-btn"><div id="about-button"></div><i class="uil uil-download-alt button__icon"></i></a></div>
+          <div class="about__buttons">
+            <a href="#" class="button button--flex" id="cv-download-btn">
+              <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.3;">
+                <span id="about-button"></span>
+                <span id="about-button-hint" style="font-size: 0.65rem; opacity: 0.75;"></span>
+              </div>
+              <i class="uil uil-download-alt button__icon"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>`);
+
+  // Wire up the modern CV download
+  const downloadBtn = $("#cv-download-btn");
+  if (downloadBtn) {
+    downloadBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      downloadModernCvPdf();
+    });
+  }
 }

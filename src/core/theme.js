@@ -48,7 +48,6 @@ export function initColorTheme() {
     document.documentElement.style.setProperty("--hue-color", hue);
     localStorage.setItem("hue-index", i);
     updateFavicons(HUE_CHARS[i]);
-    updateCvHref();
   };
 
   const updateFavicons = (char) => {
@@ -60,39 +59,8 @@ export function initColorTheme() {
     }
   };
 
-  const updateCvHref = () => {
-    const btn = document.getElementById("cv-download-btn");
-    if (!btn) return;
-
-    const i = Number(localStorage.getItem("hue-index")) || 0;
-    const suffix = HUE_CHARS[i];
-    const lang = LanguageStore.get();
-
-    const cvCfg = site.cv || {};
-    const base = cvCfg.baseName || site.cvFileBaseName || "cv"; // keep fallback for older configs
-    const mode = cvCfg.mode || "perColor";
-
-    let href;
-    if (mode === "single") {
-      // One CV per language, independent of color
-      href = `assets/cv/${lang}/${base}-${lang}.pdf`;
-    } else {
-      // Default: one CV per color & language
-      href = `assets/cv/${lang}/${base}-${lang}-${suffix}.pdf`;
-    }
-
-    btn.setAttribute("href", href);
-  };
-
-  // Keep CV href in sync when language changes (even without hue change)
-  LanguageStore.subscribe(() => {
-    updateCvHref();
-  });
-
-  // Allow external code (e.g. after a full re-render) to force a CV href sync
-  document.addEventListener("kiko-sync-cv", () => {
-    updateCvHref();
-  });
+  // Note: CV download now uses downloadModernCvPdf() from cv-lab.js
+  // No href updates needed anymore
 
   toggleBtn?.addEventListener("click", () => {
     idx = (idx + 1) % HUES.length;

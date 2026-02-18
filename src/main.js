@@ -5,6 +5,7 @@ import { initNavigation, initScrollHandlers } from "./core/navigation.js";
 import { initTimelineAnimations } from "./core/timeline.js";
 import { initContactForm } from "./core/contact.js";
 import { renderAll } from "./core/renderer.js";
+import { initOnboarding } from "./core/onboarding.js";
 
 // Initial render of the whole app
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTimelineAnimations();
   initScrollHandlers();
   initContactForm();
+  initOnboarding();
 
   const langBtn = document.getElementById("lang-toggle-btn");
   langBtn?.addEventListener("click", () => {

@@ -1,6 +1,91 @@
 import { $ } from "../../utils/dom.js";
 import { LanguageStore } from "../language.js";
 import { renderCvHtmlInto } from "../../cv/cvGenerator.js";
+import { content } from "../../config/content.config.js";
+
+/**
+ * Trigger a PDF download of the modern CV
+ * Can be called from anywhere (e.g., About section)
+ */
+export function downloadModernCvPdf() {
+  const lang = LanguageStore.get();
+
+  // Get profile name from config for filename
+  const profileName = content.profile?.name?.toLowerCase().replace(/\s+/g, "-") || "cv";
+
+  // Create temporary container for rendering
+  const tempContainer = document.createElement("div");
+  tempContainer.style.position = "absolute";
+  tempContainer.style.left = "-9999px";
+  tempContainer.style.top = "0";
+  document.body.appendChild(tempContainer);
+
+  // Render CV into temp container
+  renderCvHtmlInto({ container: tempContainer, lang });
+
+  const cvCard = tempContainer.querySelector(".cv-card");
+  if (!cvCard) {
+    console.error("[downloadModernCvPdf] Failed to render CV");
+    document.body.removeChild(tempContainer);
+    return;
+  }
+
+  // Check if html2pdf is available
+  const h2p = window.html2pdf;
+  if (typeof h2p !== "function") {
+    console.error("html2pdf is not available");
+    alert("PDF export not available. html2pdf.js could not be loaded.");
+    document.body.removeChild(tempContainer);
+    return;
+  }
+
+  // Prepare for PDF export
+  cvCard.classList.add("cv-card--pdf");
+  cvCard.style.width = "750px";
+  cvCard.style.maxWidth = "750px";
+  cvCard.style.margin = "0 auto";
+
+  // Get current color and theme for filename
+  const hueIndex = Number(localStorage.getItem("hue-index")) || 0;
+  const COLOR_NAMES = ["violet", "turquoise", "blue", "pink", "yellow", "green", "orange"];
+  const colorName = COLOR_NAMES[hueIndex];
+  const isDark = document.body.classList.contains("dark-theme");
+  const themeSuffix = isDark ? "dark" : "light";
+
+  const opt = {
+    margin: [5, 5, 5, 5],
+    filename: `${profileName}-cv-${lang}-${colorName}-${themeSuffix}.pdf`,
+    image: { type: "jpeg", quality: 0.98 },
+    html2canvas: {
+      scale: 2,
+      useCORS: true,
+      scrollX: 0,
+      scrollY: 0,
+      backgroundColor: "#ffffff",
+    },
+    jsPDF: {
+      unit: "pt",
+      format: "a4",
+      orientation: "portrait",
+    },
+    pagebreak: { mode: ["css", "legacy"] },
+  };
+
+  try {
+    h2p()
+      .set(opt)
+      .from(cvCard)
+      .save()
+      .finally(() => {
+        // Cleanup
+        document.body.removeChild(tempContainer);
+      });
+  } catch (err) {
+    console.error("PDF export error:", err);
+    alert("PDF export failed. Check console for details.");
+    document.body.removeChild(tempContainer);
+  }
+}
 
 export function renderCvLab() {
   const app = $("#app");

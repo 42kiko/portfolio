@@ -26,6 +26,7 @@ export const translations = {
         en: "I’m a Data Scientist with experience in software development and consulting, currently focusing on Data Science. Through the Masterschool program, I’m deepening my expertise in Python, data analysis, and machine learning to turn complex data into intelligent solutions and actionable insights."
     },
     "about-button": { de: "Download CV", en: "Download CV" },
+    "about-button-hint": { de: "Aktuelles Design", en: "Current theme" },
 
     // Info Cards on About
     "years-title": { de: "07+", en: "07+" },
@@ -617,6 +618,40 @@ export const translations = {
     "cv-project-knowledge-bullet-2": {
         de: "Veröffentlichung einer Wissensplattform; ein Artikel zum Thema OKR steigerte die Besucher-Interaktion um 20%.",
         en: "Released a knowledge hub; an OKR article increased forum engagement by 20%."
+    },
+
+    // ============ ONBOARDING TUTORIAL ============
+    "onboarding-lang-title": {
+        de: "Sprache wählen",
+        en: "Choose Language"
+    },
+    "onboarding-lang-text": {
+        de: "Wechsle zwischen Deutsch und Englisch mit einem Klick.",
+        en: "Switch between German and English with one click."
+    },
+    "onboarding-theme-title": {
+        de: "Hell & Dunkel",
+        en: "Light & Dark"
+    },
+    "onboarding-theme-text": {
+        de: "Schalte zwischen hellem und dunklem Modus um.",
+        en: "Toggle between light and dark mode."
+    },
+    "onboarding-color-title": {
+        de: "Deine Farbe",
+        en: "Your Color"
+    },
+    "onboarding-color-text": {
+        de: "Wähle deine Lieblingsfarbe fürs Portfolio - sie wird auch im CV verwendet!",
+        en: "Choose your favorite color for the portfolio - it will also be used in your CV!"
+    },
+    "onboarding-next": {
+        de: "Weiter",
+        en: "Next"
+    },
+    "onboarding-finish": {
+        de: "Los geht's!",
+        en: "Let's go!"
     }
 
 };

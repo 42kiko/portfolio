@@ -128,4 +128,149 @@ export const content = {
     { logo: "assets/img/companys/frobese_favicon_256.png", titleKey: "frobese-title", posKey: "frobese-pos", subKey: "frobese-sub" },
     { logo: "assets/img/companys/tecRacer-fav.png", titleKey: "tecRacer-title", posKey: "tecRacer-pos", subKey: "tecRacer-sub" },
   ],
+
+  // ============ CV-SPECIFIC CONFIGURATION ============
+  cv: {
+    // Profile info - references to translations
+    profile: {
+      nameKey: "cv-full-name",
+      titleKey: "cv-title",
+      locationKey: "cv-location",
+      phoneKey: "cv-phone",
+      emailKey: "cv-email",
+      summaryKey: "cv-profile-summary",
+      linkedIn: "https://www.linkedin.com/in/kiko97/",
+      github: "https://github.com/42kiko",
+    },
+
+    // Sidebar sections (left column) - generic, can be extended
+    sidebarSections: [
+      {
+        titleKey: "cv-section-languages",
+        items: [
+          { nameKey: "cv-lang-german", levelKey: "cv-lang-german-level" },
+          { nameKey: "cv-lang-english", levelKey: "cv-lang-english-level" },
+          { nameKey: "cv-lang-spanish", levelKey: "cv-lang-spanish-level" },
+        ],
+      },
+      {
+        titleKey: "cv-section-certifications",
+        items: [
+          { nameKey: "cv-cert-scrum-name", issuerKey: "cv-cert-scrum-issuer", dateKey: "cv-cert-scrum-date" },
+          { nameKey: "cv-cert-sapui5-name", issuerKey: "cv-cert-sapui5-issuer", dateKey: "cv-cert-sapui5-date" },
+          { nameKey: "cv-cert-aws-name", issuerKey: "cv-cert-aws-issuer", dateKey: "cv-cert-aws-date" },
+        ],
+      },
+      {
+        titleKey: "cv-skill-cat-data-analytics",
+        chips: ["Exploratory Data Analysis", "Probability Visualization", "Pandas", "Seaborn"],
+      },
+      {
+        titleKey: "cv-skill-cat-programming",
+        chips: ["Python", "Java", "JavaScript", "C#", "TypeScript", "SQL"],
+      },
+      {
+        titleKey: "cv-skill-cat-tools",
+        chips: ["Git/GitHub", "Jenkins", "VS Code", "IntelliJ", "Excel (Pivot)", "Confluence", "Trello"],
+      },
+      {
+        titleKey: "cv-skill-cat-methodologies",
+        chips: ["Scrum", "Kanban", "Agile", "OKR"],
+      },
+      {
+        titleKey: "cv-skill-cat-web-dev",
+        chips: ["Angular", "React", "Node.js", "RESTful APIs"],
+      },
+      {
+        titleKey: "cv-skill-cat-cloud",
+        chips: ["Docker", "CI/CD"],
+      },
+      {
+        titleKey: "cv-section-soft-skills",
+        chips: [
+          { textKey: "cv-soft-analytical" },
+          { textKey: "cv-soft-problem-solving" },
+          { textKey: "cv-soft-collaboration" },
+          { textKey: "cv-soft-adaptability" },
+          { textKey: "cv-soft-learning" },
+        ],
+      },
+    ],
+
+    // Main content sections (right column)
+    experience: [
+      {
+        company: "Landeshauptstadt Hannover (LHH)",
+        roleKey: "work-4-title",
+        location: "Hannover",
+        fromKey: "work-4-calendar", // Will extract "from" part
+        toKey: "work-4-calendar",   // Will extract "to" part  
+        bulletKeys: ["cv-exp-lhh-bullet-1", "cv-exp-lhh-bullet-2", "cv-exp-lhh-bullet-3"],
+      },
+      {
+        company: "Otto Group",
+        roleKey: "work-3-title",
+        location: "Hamburg",
+        fromKey: "work-3-calendar",
+        toKey: "work-3-calendar",
+        bulletKeys: ["cv-exp-otto-bullet-1", "cv-exp-otto-bullet-2", "cv-exp-otto-bullet-3"],
+      },
+      {
+        company: "NT Neue Technologie AG",
+        roleKey: "work-2-title",
+        location: "Erfurt",
+        fromKey: "work-2-calendar",
+        toKey: "work-2-calendar",
+        bulletKeys: ["cv-exp-nt-bullet-1", "cv-exp-nt-bullet-2", "cv-exp-nt-bullet-3"],
+      },
+      {
+        company: "frobese GmbH",
+        roleKey: "work-1-title",
+        location: "Hannover",
+        fromKey: "work-1-calendar",
+        toKey: "work-1-calendar",
+        bulletKeys: ["cv-exp-frobese-bullet-1", "cv-exp-frobese-bullet-2", "cv-exp-frobese-bullet-3"],
+      },
+    ],
+
+    education: [
+      {
+        institutionKey: "edu-2-subtitle", // Masterschool
+        programKey: "edu-2-title",
+        location: "",
+        fromKey: "edu-2-period",
+        toKey: "edu-2-period",
+        bulletKeys: ["cv-edu-masterschool-bullet-1", "cv-edu-masterschool-bullet-2", "cv-edu-masterschool-bullet-3"],
+      },
+      {
+        institutionKey: "edu-1-subtitle", // tecRacer
+        programKey: "edu-1-title",
+        location: "",
+        fromKey: "edu-1-period",
+        toKey: "edu-1-period",
+        bulletKeys: ["cv-edu-tecracer-bullet-1", "cv-edu-tecracer-bullet-2"],
+      },
+    ],
+
+    projects: [
+      {
+        nameKey: "cv-project-vehicle-name",
+        dateKey: "cv-project-vehicle-date",
+        stackKey: "cv-project-vehicle-stack",
+        bulletKeys: ["cv-project-vehicle-bullet-1", "cv-project-vehicle-bullet-2"],
+      },
+      {
+        nameKey: "cv-project-climate-name",
+        dateKey: "cv-project-climate-date",
+        stackKey: "cv-project-climate-stack",
+        bulletKeys: ["cv-project-climate-bullet-1", "cv-project-climate-bullet-2"],
+      },
+      {
+        nameKey: "cv-project-knowledge-name",
+        dateKey: "cv-project-knowledge-date",
+        stackKey: "cv-project-knowledge-stack",
+        bulletKeys: ["cv-project-knowledge-bullet-1", "cv-project-knowledge-bullet-2"],
+      },
+    ],
+  },
 };

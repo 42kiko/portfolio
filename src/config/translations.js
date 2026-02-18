@@ -423,6 +423,200 @@ export const translations = {
     "status-error-text": {
         de: "Bitte versuche es später erneut oder kontaktiere mich direkt per E-Mail.",
         en: "Please try again later or contact me directly via email."
+    },
+
+    // ============ CV-SPECIFIC CONTENT ============
+    
+    // CV Profile
+    "cv-full-name": { de: "Kiko Ramon Lukas", en: "Kiko Ramon Lukas" },
+    "cv-title": { de: "Data Scientist", en: "Data Scientist" },
+    "cv-location": { de: "Hannover, Deutschland", en: "Hannover, Germany" },
+    "cv-phone": { de: "+49 1577 3664735", en: "+49 1577 3664735" },
+    "cv-email": { de: "kiko97@tuta.io", en: "kiko97@tuta.io" },
+    "cv-profile-summary": {
+        de: "Data Scientist mit Erfahrung in der Softwareentwicklung und Beratung, der sich derzeit auf den Bereich Data Science spezialisiert. Momentan nehme ich an einem Data-Science-Weiterbildungsprogramm bei Masterschool teil, mit Fokus auf Python, explorative Datenanalyse und maschinelles Lernen. Mein Ziel ist es, meine Fähigkeiten einzusetzen, um komplexe Daten in verwertbare Erkenntnisse zu verwandeln, Machine-Learning-Modelle zu implementieren und datenbasierte Strategien zu unterstützen.",
+        en: "Data Scientist with a background in software development and consulting, currently transitioning into the data science field. Currently enrolled in the Data Science training program at Masterschool with a focus on Python, Exploratory Data Analysis and Machine Learning. Eager to leverage my skills to transform complex data into actionable insights, implement ML models and support data-driven strategies."
+    },
+
+    // CV Section Titles
+    "cv-section-profile": { de: "Profil", en: "Profile" },
+    "cv-section-experience": { de: "Erfahrung", en: "Experience" },
+    "cv-section-education": { de: "Bildung", en: "Education" },
+    "cv-section-projects": { de: "Projekte", en: "Projects" },
+    "cv-section-skills": { de: "Skills", en: "Skills" },
+    "cv-section-languages": { de: "Sprachen", en: "Languages" },
+    "cv-section-certifications": { de: "Zertifikate", en: "Certifications" },
+    "cv-section-soft-skills": { de: "Soft Skills", en: "Soft Skills" },
+
+    // CV Languages
+    "cv-lang-german": { de: "Deutsch", en: "German" },
+    "cv-lang-german-level": { de: "Muttersprache", en: "Native" },
+    "cv-lang-english": { de: "Englisch", en: "English" },
+    "cv-lang-english-level": { de: "B1", en: "B1" },
+    "cv-lang-spanish": { de: "Spanisch", en: "Spanish" },
+    "cv-lang-spanish-level": { de: "A1", en: "A1" },
+
+    // CV Certifications
+    "cv-cert-scrum-name": { de: "Scrum Master", en: "Scrum Master" },
+    "cv-cert-scrum-issuer": { de: "Scrum.org", en: "Scrum.org" },
+    "cv-cert-scrum-date": { de: "Okt 2018", en: "Oct 2018" },
+    
+    "cv-cert-sapui5-name": { de: "Developing Web Apps with SAPUI5", en: "Developing Web Apps with SAPUI5" },
+    "cv-cert-sapui5-issuer": { de: "SAP", en: "SAP" },
+    "cv-cert-sapui5-date": { de: "Jun 2016", en: "Jun 2016" },
+    
+    "cv-cert-aws-name": { de: "AWS Technical Essentials", en: "AWS Technical Essentials" },
+    "cv-cert-aws-issuer": { de: "AWS", en: "AWS" },
+    "cv-cert-aws-date": { de: "Jan 2016", en: "Jan 2016" },
+
+    // CV Soft Skills
+    "cv-soft-analytical": { de: "Analytisches Denken", en: "Analytical Thinking" },
+    "cv-soft-problem-solving": { de: "Problemlösungsfähigkeit", en: "Problem-Solving" },
+    "cv-soft-collaboration": { de: "Teamarbeit & Kollaboration", en: "Collaboration" },
+    "cv-soft-adaptability": { de: "Anpassungsfähigkeit", en: "Adaptability" },
+    "cv-soft-learning": { de: "Lernbereitschaft", en: "Continuous Learning" },
+
+    // CV Skills Categories
+    "cv-skill-cat-data-analytics": { de: "Datenanalyse und Visualisierung", en: "Data Analytics and Visualization" },
+    "cv-skill-cat-programming": { de: "Programmier- & Datenbank-Sprachen", en: "Programming and Query Languages" },
+    "cv-skill-cat-tools": { de: "Tools und Software", en: "Tools and Software" },
+    "cv-skill-cat-methodologies": { de: "Methodiken & Frameworks", en: "Methodologies & Frameworks" },
+    "cv-skill-cat-web-dev": { de: "Webentwicklung", en: "Web Development" },
+    "cv-skill-cat-cloud": { de: "Cloud & Deployment", en: "Cloud & Deployment" },
+
+    // CV Experience Bullets - Job 1 (LHH)
+    "cv-exp-lhh-bullet-1": {
+        de: "Betreuung und Weiterentwicklung zentraler Applikationen für über 300 Mitarbeitende.",
+        en: "Maintained and supported core applications used by over 300 employees, acting as a vital link between business units and software providers."
+    },
+    "cv-exp-lhh-bullet-2": {
+        de: "Verbesserung von Workflows und digitalen Prozessen durch ein automatisiertes Skript, das die wöchentliche Update-Zeit um 30 Minuten reduzierte und so die Systemeffizienz für alle Beteiligten steigerte.",
+        en: "Improved workflows and digital processes by implementing an automated script that reduced weekly update time by 30 minutes, raising system efficiency for all stakeholders."
+    },
+    "cv-exp-lhh-bullet-3": {
+        de: "Einführung von Grafana und Erstellung von Dashboards in Zusammenarbeit mit Kollegen, um monatliche Reports zu automatisieren, die zuvor manuell erstellt wurden.",
+        en: "Collaborated with colleagues to introduce Grafana and create dashboards, automating reports that were previously compiled manually on a monthly basis."
+    },
+
+    // CV Experience Bullets - Job 2 (Otto Group)
+    "cv-exp-otto-bullet-1": {
+        de: "Entwicklung eines Inkasso-Systems mit React, Angular und C# im Scrum-Team mit 8 Personen.",
+        en: "Developed an internal collections system with React, Angular, and C# as part of an agile Scrum team of 8 people."
+    },
+    "cv-exp-otto-bullet-2": {
+        de: "Umsetzung von Modulen und Schnittstellen, reduzierte Prozesszeiten um über 20%.",
+        en: "Implemented modules and interfaces, reducing processing times by over 20%."
+    },
+    "cv-exp-otto-bullet-3": {
+        de: "Enge Zusammenarbeit mit Projektmanagement und Business Analysts, um robuste und effiziente Lösungen zu liefern.",
+        en: "Collaborated with project management and business analysts to deliver robust and efficient solutions."
+    },
+
+    // CV Experience Bullets - Job 3 (NT AG)
+    "cv-exp-nt-bullet-1": {
+        de: "Entwicklung und Pflege von drei großen Webanwendungen (FinAdvisory, FINService, FinProcess) mit einer gemeldeten Kundenzufriedenheit von 99%.",
+        en: "Developed and maintained three large-scale web applications (FinAdvisory, FINService, FinProcess) with a reported customer satisfaction rate of 99%."
+    },
+    "cv-exp-nt-bullet-2": {
+        de: "Übernahme von Key-Account-Verantwortlichkeiten im FinProcess-Projekt, einschließlich direkter Kundenkommunikation und -support.",
+        en: "Took on key account responsibilities within the FinProcess project, including direct customer communication and support."
+    },
+    "cv-exp-nt-bullet-3": {
+        de: "Steigerung der Kundenzufriedenheit durch individuelle Anpassung der Kreditbearbeitungssoftware an spezifische Kundenbedürfnisse.",
+        en: "Increased customer satisfaction by customizing the loan processing software to unique client needs."
+    },
+
+    // CV Experience Bullets - Job 4 (frobese)
+    "cv-exp-frobese-bullet-1": {
+        de: "Entwicklung und Implementierung von Web-Tools und Anwendungen für externe und interne Kunden, inklusive der Migration von über 1 Million Kundendatensätzen für die KKH.",
+        en: "Developed and implemented web tools and applications for both external and internal clientele, including the migration of over 1 million customer records for KKH."
+    },
+    "cv-exp-frobese-bullet-2": {
+        de: "Management diverser Projekte, u. a. einer Visitenkarten-Scanner-App (Hackathon), Onboarding-Tools und bedeutenden Framework-Erweiterungen, die die Onboarding-Effizienz um 40% steigerten.",
+        en: "Managed diverse projects including a business card scanner (Hackathon), onboarding tools, and significant framework enhancements that improved onboarding efficiency by 40%."
+    },
+    "cv-exp-frobese-bullet-3": {
+        de: "Einführung agiler Methodiken und Modernisierung der Team-Workflows.",
+        en: "Championed the adoption of agile methodologies and spearheaded the modernization of team workflows."
+    },
+
+    // CV Education Bullets - Masterschool
+    "cv-edu-masterschool-bullet-1": {
+        de: "Praktische Erfahrung in der Analyse großer Datensätze mit Python, SQL und Pandas, um aussagekräftige Erkenntnisse zu gewinnen.",
+        en: "Acquired hands-on experience analyzing large datasets using Python, SQL, and Pandas to extract meaningful insights."
+    },
+    "cv-edu-masterschool-bullet-2": {
+        de: "Erstellung datengestützter Berichte und Visualisierungen mit Tableau, Power BI und Matplotlib zur Verbesserung der Business Intelligence und Entscheidungsfindung.",
+        en: "Developed data-driven reports and visualizations with Tableau, Power BI, and Matplotlib to enhance business intelligence and decision-making."
+    },
+    "cv-edu-masterschool-bullet-3": {
+        de: "Anwendung statistischer Analysen und prädiktiver Modellierungstechniken; Implementierung von Machine-Learning-Algorithmen, Regressionsmodellen und Clustering-Methoden zur Trendidentifikation.",
+        en: "Applied statistical analysis and predictive modeling techniques, implementing machine learning algorithms, regression models, and clustering methods to identify trends."
+    },
+
+    // CV Education Bullets - tecRacer
+    "cv-edu-tecracer-bullet-1": {
+        de: "Praxisorientierte Berufsausbildung mit Schwerpunkt auf Softwareentwicklung und agilen Methodiken (Scrum, Kanban).",
+        en: "Hands-on vocational training focused on software development with emphasis on agile methodologies (Scrum, Kanban)."
+    },
+    "cv-edu-tecracer-bullet-2": {
+        de: "Verwendung solider Java-Kenntnisse und Anwendung von Clean-Code-Prinzipien.",
+        en: "Gained solid Java skills and applied Clean Code principles in production contexts."
+    },
+
+    // CV Projects
+    "cv-project-vehicle-name": {
+        de: "Fahrzeug-Datenanalyse (Exploratives Data-Science-Projekt)",
+        en: "Vehicle Data Analysis (Exploratory Data Science Project)"
+    },
+    "cv-project-vehicle-date": { de: "Jul 2025", en: "Jul 2025" },
+    "cv-project-vehicle-stack": {
+        de: "Python (Pandas, NumPy, Matplotlib, Seaborn), Jupyter Notebook",
+        en: "Python (Pandas, NumPy, Matplotlib, Seaborn), Jupyter Notebook"
+    },
+    "cv-project-vehicle-bullet-1": {
+        de: "Analyse eines Fahrzeugdatensatzes zur Aufdeckung von Mustern in Effizienz, Motorgröße und Preisgestaltung.",
+        en: "Explored a vehicle dataset to uncover patterns in efficiency, engine size, and pricing."
+    },
+    "cv-project-vehicle-bullet-2": {
+        de: "Identifizierung von Korrelationen und Visualisierung zentraler Trends für Markt- und Effizienz-Einblicke.",
+        en: "Identified correlations and visualized key trends for market and efficiency insights."
+    },
+
+    "cv-project-climate-name": {
+        de: "Klimaschutzmaßnahmen in Unternehmen – Digitale Klimastrategie",
+        en: "Bring Climate Action into Your Company – Digital Climate Roadmap"
+    },
+    "cv-project-climate-date": { de: "Okt 2022", en: "Oct 2022" },
+    "cv-project-climate-stack": {
+        de: "JavaScript, TypeScript, Angular, PostgreSQL, Kollaborationstools (GitLab, Agile)",
+        en: "JavaScript, TypeScript, Angular, PostgreSQL, GitLab, Agile"
+    },
+    "cv-project-climate-bullet-1": {
+        de: "Entwicklung eines digitalen Tools zur Unterstützung von Unternehmen bei der Umsetzung konkreter Klimamaßnahmen.",
+        en: "Developed a digital tool to help companies implement concrete climate actions."
+    },
+    "cv-project-climate-bullet-2": {
+        de: "Start einer Roadmap mit über 60 Nachhaltigkeitsmaßnahmen, die von mehreren Organisationen übernommen wurde.",
+        en: "Launched a roadmap with 60+ sustainability actions, adopted by several organizations."
+    },
+
+    "cv-project-knowledge-name": {
+        de: "Frobese IT Berater Wissenszentrum",
+        en: "Frobese IT Consulting Knowledge Hub"
+    },
+    "cv-project-knowledge-date": { de: "Aug 2019", en: "Aug 2019" },
+    "cv-project-knowledge-stack": {
+        de: "Hugo (Static Site Generator), GitHub, Markdown-basiertes Content-Management",
+        en: "Hugo (static site generator), GitHub, Markdown-based content management"
+    },
+    "cv-project-knowledge-bullet-1": {
+        de: "Erstellung einer zentralen Plattform für Wissensaustausch und Zusammenarbeit innerhalb des Unternehmens.",
+        en: "Created a central platform for knowledge-sharing and collaboration within the company."
+    },
+    "cv-project-knowledge-bullet-2": {
+        de: "Veröffentlichung einer Wissensplattform; ein Artikel zum Thema OKR steigerte die Besucher-Interaktion um 20%.",
+        en: "Released a knowledge hub; an OKR article increased forum engagement by 20%."
     }
 
 };

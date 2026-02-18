@@ -1844,6 +1844,144 @@ body:not(.dark-theme) .cv-card--pdf .cv-card__main {
   color: var(--text-color-light);
 }
 
+/*==================== ONBOARDING TUTORIAL ====================*/
+#onboarding-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.onboarding-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.onboarding-spotlight {
+  position: absolute;
+  border-radius: 12px;
+  box-shadow: 
+    0 0 0 9999px rgba(0, 0, 0, 0.75),
+    0 0 30px rgba(255, 255, 255, 0.3),
+    inset 0 0 0 3px var(--first-color);
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: scale(0.9);
+  z-index: 10001;
+}
+
+.onboarding-spotlight.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.onboarding-tooltip {
+  position: absolute;
+  max-width: 360px;
+  background: var(--container-color);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  pointer-events: all;
+  z-index: 10002;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.onboarding-tooltip.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.onboarding-tooltip__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.onboarding-tooltip__text {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.onboarding-tooltip__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.onboarding-tooltip__counter {
+  font-size: 0.85rem;
+  color: var(--text-color-light);
+  font-weight: 500;
+}
+
+.onboarding-tooltip__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--first-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.onboarding-tooltip__btn:hover {
+  background: var(--first-color-alt);
+  transform: translateX(3px);
+}
+
+.onboarding-tooltip__btn i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.onboarding-tooltip__btn:hover i {
+  transform: translateX(3px);
+}
+
+#onboarding-overlay.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Mobile optimizations */
+@media screen and (max-width: 768px) {
+  .onboarding-tooltip {
+    max-width: calc(100vw - 2rem);
+    left: 1rem !important;
+    right: 1rem !important;
+    transform: none !important;
+  }
+
+  .onboarding-tooltip.active {
+    transform: none !important;
+  }
+
+  .onboarding-spotlight {
+    box-shadow: 
+      0 0 0 9999px rgba(0, 0, 0, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.2),
+      inset 0 0 0 2px var(--first-color);
+  }
+}
+
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 @media screen and (max-width: 350px) {

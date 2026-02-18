@@ -618,6 +618,40 @@ export const translations = {
     "cv-project-knowledge-bullet-2": {
         de: "Veröffentlichung einer Wissensplattform; ein Artikel zum Thema OKR steigerte die Besucher-Interaktion um 20%.",
         en: "Released a knowledge hub; an OKR article increased forum engagement by 20%."
+    },
+
+    // ============ ONBOARDING TUTORIAL ============
+    "onboarding-lang-title": {
+        de: "Sprache wählen",
+        en: "Choose Language"
+    },
+    "onboarding-lang-text": {
+        de: "Wechsle zwischen Deutsch und Englisch mit einem Klick.",
+        en: "Switch between German and English with one click."
+    },
+    "onboarding-theme-title": {
+        de: "Hell & Dunkel",
+        en: "Light & Dark"
+    },
+    "onboarding-theme-text": {
+        de: "Schalte zwischen hellem und dunklem Modus um.",
+        en: "Toggle between light and dark mode."
+    },
+    "onboarding-color-title": {
+        de: "Deine Farbe",
+        en: "Your Color"
+    },
+    "onboarding-color-text": {
+        de: "Wähle deine Lieblingsfarbe fürs Portfolio - sie wird auch im CV verwendet!",
+        en: "Choose your favorite color for the portfolio - it will also be used in your CV!"
+    },
+    "onboarding-next": {
+        de: "Weiter",
+        en: "Next"
+    },
+    "onboarding-finish": {
+        de: "Los geht's!",
+        en: "Let's go!"
     }
 
 };

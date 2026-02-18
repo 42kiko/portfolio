@@ -6,7 +6,7 @@ let currentLang = "de";
 
 const hues = [270, 177, 201, 341, 48, 80, 12];
 const hueChars = ['v', 't', 'b', 'p', 'y', 'g', 'o'];
-// Violet (v), Türkis (t), Blue (b), Pink (p), Yellow (y), Green (g), Orange (o)
+// Violet (v), Turquoise (t), Blue (b), Pink (p), Yellow (y), Green (g), Orange (o)
 
 const faviconLinks = {
     'apple-touch-icon': document.getElementById('apple-touch-icon'),
@@ -42,7 +42,7 @@ const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction() {
     const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
+    // When we click on each nav__link, we remove the show-menu class on mobile
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
@@ -173,7 +173,7 @@ window.addEventListener('scroll', scrollHeader)
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
     let scrollTop = document.getElementById('scroll-top');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    // When the scroll is higher than 200px, add the show-scroll class to the scroll-top button
     if (this.scrollY >= 200) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollTop)
@@ -230,10 +230,10 @@ function setColorTheme() {
     const hues = [270, 177, 201, 341, 48, 80, 12];
 
 
-    // get color index or default to 0
+    // Get stored color index or default to 0
     let currentIndex = Number(localStorage.getItem('hue-index')) || 0;
 
-    // set hue colors
+    // Apply given hue and persist index/color
     function applyHue(index) {
         const hue = hues[index];
         document.documentElement.style.setProperty('--hue-color', hue);
@@ -242,7 +242,7 @@ function setColorTheme() {
         updateFavicon(hueChars[currentIndex])
     }
 
-    // Eventlistener für Buttonklick zum Durchschalten
+    // Button click cycles through available hue values
     document.getElementById('theme-toggle-btn').addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % hues.length;
         applyHue(currentIndex);
@@ -258,7 +258,7 @@ function updateFavicon(colorChar) {
     for (const key in faviconLinks) {
         if (faviconLinks.hasOwnProperty(key)) {
             let href = faviconLinks[key].getAttribute('href');
-            // Ersetze den Buchstaben im Pfad
+            // Replace the color character in the favicon path
             href = href.replace(/favicon-[btpvogy]/i, 'favicon-' + colorChar);
             faviconLinks[key].setAttribute('href', href);
         }
@@ -337,55 +337,55 @@ function setCVs() {
 
 }
 
-// Event-Listener für Impressum und Datenschutz Popups
+// Event listeners for legal notice (Impressum) and privacy policy popups
 document.addEventListener('DOMContentLoaded', function () {
-    // Popup-Elemente
+    // Popup elements
     const impressumPopup = document.getElementById('impressum-popup');
     const privacyPopup = document.getElementById('privacy-popup');
 
-    // Schließen-Buttons
+    // Close buttons
     const impressumClose = document.getElementById('impressum-close');
     const privacyClose = document.getElementById('privacy-close');
 
-    // Footer-Links
+    // Footer links
     const footerImpressum = document.querySelector('a[href="#impressum"]');
     const footerPrivacy = document.querySelector('a[href="#privacy"]');
 
-    // Impressum Popup öffnen
+    // Open legal notice popup
     if (footerImpressum) {
         footerImpressum.addEventListener('click', function (e) {
             e.preventDefault();
             impressumPopup.classList.add('active-popup');
-            document.body.style.overflow = 'hidden'; // Scrollen im Hintergrund verhindern
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
         });
     }
 
-    // Datenschutz Popup öffnen
+    // Open privacy popup
     if (footerPrivacy) {
         footerPrivacy.addEventListener('click', function (e) {
             e.preventDefault();
             privacyPopup.classList.add('active-popup');
-            document.body.style.overflow = 'hidden'; // Scrollen im Hintergrund verhindern
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
         });
     }
 
-    // Impressum Popup schließen
+    // Close legal notice popup
     if (impressumClose) {
         impressumClose.addEventListener('click', function () {
             impressumPopup.classList.remove('active-popup');
-            document.body.style.overflow = 'auto'; // Scrollen wieder erlauben
+            document.body.style.overflow = 'auto'; // Allow background scrolling again
         });
     }
 
-    // Datenschutz Popup schließen
+    // Close privacy popup
     if (privacyClose) {
         privacyClose.addEventListener('click', function () {
             privacyPopup.classList.remove('active-popup');
-            document.body.style.overflow = 'auto'; // Scrollen wieder erlauben
+            document.body.style.overflow = 'auto'; // Allow background scrolling again
         });
     }
 
-    // Popup schließen bei Klick außerhalb des Inhalts
+    // Close popup when clicking outside the content
     if (impressumPopup) {
         impressumPopup.addEventListener('click', function (e) {
             if (e.target === impressumPopup) {
@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Popup mit ESC-Taste schließen
+    // Close popup using ESC key
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             if (impressumPopup.classList.contains('active-popup')) {

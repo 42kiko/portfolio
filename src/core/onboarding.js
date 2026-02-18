@@ -40,6 +40,9 @@ function createOverlay() {
     <div class="onboarding-spotlight"></div>
     <div class="onboarding-tooltip">
       <div class="onboarding-tooltip__content">
+        <div class="onboarding-tooltip__icon">
+          <i class="onboarding-tooltip__icon-element"></i>
+        </div>
         <h3 class="onboarding-tooltip__title"></h3>
         <p class="onboarding-tooltip__text"></p>
         <div class="onboarding-tooltip__footer">
@@ -112,6 +115,7 @@ function positionSpotlight(target, spotlight, tooltip) {
 function showStep(overlay, step, currentIndex, totalSteps) {
   const spotlight = overlay.querySelector(".onboarding-spotlight");
   const tooltip = overlay.querySelector(".onboarding-tooltip");
+  const icon = overlay.querySelector(".onboarding-tooltip__icon-element");
   const title = overlay.querySelector(".onboarding-tooltip__title");
   const text = overlay.querySelector(".onboarding-tooltip__text");
   const counter = overlay.querySelector(".onboarding-tooltip__counter");
@@ -125,6 +129,7 @@ function showStep(overlay, step, currentIndex, totalSteps) {
   }
 
   // Update content
+  icon.className = `onboarding-tooltip__icon-element ${step.iconClass}`;
   title.textContent = t(step.titleKey);
   text.textContent = t(step.textKey);
   counter.textContent = `${currentIndex + 1} / ${totalSteps}`;
@@ -165,16 +170,19 @@ function startOnboarding() {
       selector: "#lang-toggle-btn",
       titleKey: "onboarding-lang-title",
       textKey: "onboarding-lang-text",
+      iconClass: "uil uil-globe",
     },
     {
       selector: "#theme-button",
       titleKey: "onboarding-theme-title",
       textKey: "onboarding-theme-text",
+      iconClass: "uil uil-moon",
     },
     {
       selector: "#theme-toggle-btn",
       titleKey: "onboarding-color-title",
       textKey: "onboarding-color-text",
+      iconClass: "uil uil-palette",
     },
   ];
 

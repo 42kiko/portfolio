@@ -22,6 +22,21 @@ sections required.
 You can use this repository as a starting point and fully replace the
 content with your own profile.
 
+## 📚 Table of Contents
+
+- [📸 Preview](#-preview)
+- [💡 What You Get](#-what-you-get)
+- [🛠️ Tech Stack](#%EF%B8%8F-tech-stack)
+- [⚡ Quick Start](#-quick-start-as-your-own-portfolio)
+- [🧩 How the Template Is Structured](#-how-the-template-is-structured)
+- [✅ Required Changes for a New User](#-required-changes-for-a-new-user)
+- [📝 CV Lab – Dynamic Resume Generator](#-cv-lab--dynamic-resume-generator)
+- [📱 Optional Customization](#-optional-customization)
+- [🌐 Deploy to GitHub Pages](#-deploy-to-github-pages)
+- [📦 Development Tips](#-development-tips)
+- [📝 License](#-license)
+- [🙌 Credits](#-credits)
+
 ---
 
 ## 📸 Preview
@@ -278,7 +293,326 @@ the existing structure and replace the images in
 
 ---
 
-## 🎛 Optional Customization
+## 📝 CV Lab – Dynamic Resume Generator
+
+This portfolio includes a **CV Lab** feature that generates a modern, styled resume (CV) from your configuration files. The CV is available in both **preview mode** (on-page) and **PDF export** (via html2pdf.js).
+
+### 🎯 Key Features
+
+- ✅ **Config-driven**: All CV content lives in `translations.js` + `content.config.js`
+- ✅ **Single source of truth**: No duplicate content between portfolio and CV
+- ✅ **Generic & extensible**: Add new sidebar sections without touching rendering code
+- ✅ **Multi-language**: Automatically switches between German/English
+- ✅ **Theme-aware**: Uses your selected color theme in both light and dark mode
+- ✅ **PDF export**: One-click download to PDF with html2pdf.js
+
+### 🏛️ Architecture Overview
+
+The CV system is split into three layers:
+
+1. **Content structure** (`src/config/content.config.js`)
+   - Defines the CV layout: sidebar sections, experience, education, projects
+   - References translation keys instead of hardcoded text
+
+2. **Translations** (`src/config/translations.js`)
+   - All CV-specific text in both languages
+   - Section titles, skills, certifications, job bullets, etc.
+
+3. **Renderer** (`src/cv/cvGenerator.js`)
+   - Reads config + translations
+   - Builds HTML dynamically
+   - Supports generic rendering for extensibility
+
+### 🛠️ How to Customize Your CV
+
+#### 1. Update Profile Information
+
+File: `src/config/translations.js`
+
+```js path=null start=null
+// CV Profile
+"cv-full-name": { de: "Max Mustermann", en: "Max Mustermann" },
+"cv-title": { de: "Software Engineer", en: "Software Engineer" },
+"cv-location": { de: "Berlin, Deutschland", en: "Berlin, Germany" },
+"cv-phone": { de: "+49 123 456789", en: "+49 123 456789" },
+"cv-email": { de: "max@example.com", en: "max@example.com" },
+"cv-profile-summary": {
+  de: "Ihre Zusammenfassung hier...",
+  en: "Your summary here..."
+},
+```
+
+File: `src/config/content.config.js`
+
+```js path=null start=null
+cv: {
+  profile: {
+    nameKey: "cv-full-name",
+    // ... other keys
+    linkedIn: "https://www.linkedin.com/in/your-profile/",
+    github: "https://github.com/your-username",
+  },
+  // ...
+}
+```
+
+#### 2. Add/Edit Experience
+
+**Step A:** Add translation keys for job details
+
+File: `src/config/translations.js`
+
+```js path=null start=null
+// CV Experience Bullets - Your Company
+"cv-exp-yourcompany-bullet-1": {
+  de: "Entwickelte ein System mit React und Node.js...",
+  en: "Developed a system using React and Node.js..."
+},
+"cv-exp-yourcompany-bullet-2": {
+  de: "Verbesserte die Performance um 40%...",
+  en: "Improved performance by 40%..."
+},
+```
+
+**Step B:** Reference the keys in your CV config
+
+File: `src/config/content.config.js`
+
+```js path=null start=null
+cv: {
+  experience: [
+    {
+      company: "Your Company Name",
+      roleKey: "work-1-title", // reuses existing translation
+      location: "City",
+      fromKey: "work-1-calendar", // e.g. "January 2023 - December 2023"
+      toKey: "work-1-calendar",
+      bulletKeys: [
+        "cv-exp-yourcompany-bullet-1",
+        "cv-exp-yourcompany-bullet-2",
+      ],
+    },
+    // ... more jobs
+  ],
+}
+```
+
+> **Note:** The `fromKey` and `toKey` point to a period string like "Juli 2024 - Dezember 2024". The CV generator automatically splits this into "from" and "to" parts.
+
+#### 3. Add New Sidebar Sections (Generic!)
+
+The sidebar is **fully generic**. You can add any type of section without modifying rendering code.
+
+**Example: Adding a "Hobbies" section**
+
+File: `src/config/translations.js`
+
+```js path=null start=null
+"cv-section-hobbies": { de: "Hobbys", en: "Hobbies" },
+"cv-hobby-photography": { de: "Fotografie", en: "Photography" },
+"cv-hobby-hiking": { de: "Wandern", en: "Hiking" },
+```
+
+File: `src/config/content.config.js`
+
+```js path=null start=null
+cv: {
+  sidebarSections: [
+    // ... existing sections (languages, certifications, skills)
+    {
+      titleKey: "cv-section-hobbies",
+      chips: [
+        { textKey: "cv-hobby-photography" },
+        { textKey: "cv-hobby-hiking" },
+        "Cooking", // plain string (no translation)
+      ],
+    },
+  ],
+}
+```
+
+That's it! The new section will automatically appear in your CV.
+
+#### 4. Update Skills
+
+Skills are organized by category in the sidebar:
+
+File: `src/config/content.config.js`
+
+```js path=null start=null
+cv: {
+  sidebarSections: [
+    {
+      titleKey: "cv-skill-cat-programming", // "Programming Languages"
+      chips: ["Python", "JavaScript", "Go", "Rust"],
+    },
+    {
+      titleKey: "cv-skill-cat-tools",
+      chips: ["Docker", "Kubernetes", "GitHub Actions"],
+    },
+    // ... add more categories
+  ],
+}
+```
+
+You can add new skill category titles in `translations.js`:
+
+```js path=null start=null
+"cv-skill-cat-your-category": { de: "Ihre Kategorie", en: "Your Category" },
+```
+
+#### 5. Manage Sidebar Section Types
+
+The sidebar supports two types of sections:
+
+##### A) **Items** (structured data)
+
+Use `items` for sections with name + metadata (e.g., Languages, Certifications):
+
+```js path=null start=null
+{
+  titleKey: "cv-section-languages",
+  items: [
+    { nameKey: "cv-lang-german", levelKey: "cv-lang-german-level" },
+    { nameKey: "cv-lang-english", levelKey: "cv-lang-english-level" },
+  ],
+}
+```
+
+For certifications:
+
+```js path=null start=null
+{
+  titleKey: "cv-section-certifications",
+  items: [
+    {
+      nameKey: "cv-cert-aws-name",
+      issuerKey: "cv-cert-aws-issuer",
+      dateKey: "cv-cert-aws-date"
+    },
+  ],
+}
+```
+
+##### B) **Chips** (tags/badges)
+
+Use `chips` for simple lists (e.g., Skills, Soft Skills):
+
+```js path=null start=null
+{
+  titleKey: "cv-section-soft-skills",
+  chips: [
+    { textKey: "cv-soft-analytical" },
+    { textKey: "cv-soft-problem-solving" },
+    "Creativity", // plain string
+  ],
+}
+```
+
+> **Pro tip:** You can mix plain strings and `{ textKey: "..." }` objects in the same `chips` array!
+
+### 📦 How the CV Generator Works
+
+```js path=null start=null
+// src/cv/cvGenerator.js
+
+// 1. Helper function to resolve translation keys
+function t(key, lang) {
+  const entry = translations[key];
+  return entry[lang] || entry.de || key;
+}
+
+// 2. Build CV data from config
+function buildCvData(lang) {
+  const cvConfig = content.cv;
+  
+  // Resolve all translation keys to actual text
+  const profile = {
+    name: t(cvConfig.profile.nameKey, lang),
+    title: t(cvConfig.profile.titleKey, lang),
+    // ...
+  };
+  
+  // Build experience with translated bullets
+  const experience = cvConfig.experience.map(exp => ({
+    company: exp.company,
+    role: t(exp.roleKey, lang),
+    bullets: exp.bulletKeys.map(key => t(key, lang)),
+  }));
+  
+  // Build sidebar sections (generic!)
+  const sidebarSections = cvConfig.sidebarSections.map(section => {
+    const result = { title: t(section.titleKey, lang) };
+    
+    if (section.items) {
+      result.items = section.items.map(item => {
+        // Resolve all keys ending with "Key"
+        const obj = {};
+        Object.keys(item).forEach(key => {
+          const cleanKey = key.replace(/Key$/, "");
+          obj[cleanKey] = t(item[key], lang);
+        });
+        return obj;
+      });
+    }
+    
+    if (section.chips) {
+      result.chips = section.chips.map(chip => {
+        if (typeof chip === "string") return chip;
+        if (chip.textKey) return t(chip.textKey, lang);
+        return chip;
+      });
+    }
+    
+    return result;
+  });
+  
+  return { profile, experience, education, projects, sidebarSections };
+}
+
+// 3. Generate HTML from data
+export function buildCvHtml({ lang = "de" }) {
+  const data = buildCvData(lang);
+  // ... render HTML
+}
+```
+
+### 🎨 Styling & Theme Integration
+
+The CV automatically uses your selected color theme:
+
+- **Light mode:** Clean, professional layout with theme-colored accents
+- **Dark mode:** Dark gradient with theme-colored highlights
+- **Colors:** All CSS uses `var(--hue-color)` to match your portfolio theme
+
+Styles are located in `styles/main.css` under the `/*==================== CV LAB / MODERN CV ====================*/` section.
+
+### 💾 PDF Export
+
+The PDF export uses **html2pdf.js** to convert the CV HTML to PDF:
+
+1. User clicks "Download PDF" in the CV Lab
+2. The CV is temporarily rendered with PDF-optimized styles
+3. html2pdf captures the content and generates a PDF
+4. Styles are restored to normal after export
+
+PDF-specific adjustments:
+- Compact typography for better fit on A4
+- Adjusted spacing and margins
+- Page break hints to avoid splitting sections awkwardly
+
+### ✨ Benefits of This Architecture
+
+✅ **No duplication**: Portfolio timeline and CV experience share the same data  
+✅ **Easy maintenance**: Update once in translations.js, reflects everywhere  
+✅ **Extensible**: Add new sections without touching renderer code  
+✅ **Type-safe**: Clear structure with keys, easy to validate  
+✅ **Multi-language**: Automatic switching between DE/EN  
+✅ **Theme-aware**: CV colors match your portfolio theme automatically
+
+---
+
+## 📱 Optional Customization
 
 None of the following is strictly required, but recommended for a clean
 personalized result:

@@ -1,7 +1,7 @@
 // Global site/integration configuration
 export const site = {
   defaultLang: "de",
-  hueIndex: 0, // initial color variant
+  hueIndex: 6, // initial color variant
 
   // CV configuration:
   // - mode: "perColor" → one CV per color & language (default)

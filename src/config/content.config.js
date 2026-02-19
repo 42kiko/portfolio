@@ -15,6 +15,11 @@ export const content = {
       x: "130",
       y: "70",
     },
+    // Roles for the typewriter effect on the home subtitle
+    typedRoles: {
+      de: ["Data-Driven Software Engineer", "Full-Stack Developer", "Data Scientist", "Problem Solver"],
+      en: ["Data-Driven Software Engineer", "Full-Stack Developer", "Data Scientist", "Problem Solver"],
+    },
   },
   about: {
     video: "assets/img/me/video6.mp4",
@@ -23,9 +28,9 @@ export const content = {
       colorSuffixes: ["v", "t", "b", "p", "y", "g", "o"],
     },
     stats: [
-      { titleKey: "years-title", nameKey: "years-name" },
-      { titleKey: "projects-title", nameKey: "projects-name" },
-      { titleKey: "companies-title", nameKey: "companies-name" },
+      { titleKey: "years-title",    nameKey: "years-name",    count: 7 },
+      { titleKey: "projects-title", nameKey: "projects-name", count: 8 },
+      { titleKey: "companies-title",nameKey: "companies-name",count: 6 },
     ],
   },
   skills: [

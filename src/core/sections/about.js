@@ -15,7 +15,7 @@ export function renderAbout() {
           <div class="about__info">
             ${content.about.stats.map(s => `
               <div>
-                <span class="about__info-title" id="${s.titleKey}"></span>
+                <span class="about__info-title" id="${s.titleKey}"${s.count != null ? ` data-count="${s.count}"` : ""}></span>
                 <span class="about__info-name" id="${s.nameKey}"></span>
               </div>`).join("")}
           </div>

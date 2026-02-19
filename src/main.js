@@ -6,7 +6,7 @@ import { initTimelineAnimations } from "./core/timeline.js";
 import { initContactForm } from "./core/contact.js";
 import { renderAll } from "./core/renderer.js";
 import { initOnboarding } from "./core/onboarding.js";
-import { initEffects } from "./core/effects.js";
+import { initEffects, initDomEffects } from "./core/effects.js";
 
 // Initial render of the whole app
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initOnboarding();
   initEffects();
+  initDomEffects();
 
   const langBtn = document.getElementById("lang-toggle-btn");
   langBtn?.addEventListener("click", () => {
@@ -36,5 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     } catch { }
     initTimelineAnimations();
+    initDomEffects();
   });
 });

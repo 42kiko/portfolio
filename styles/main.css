@@ -413,15 +413,14 @@ img {
               transform       0.2s ease;
 }
 
+
 .button:hover {
   background-color: var(--first-color-alt);
-  box-shadow: 0 6px 22px hsla(var(--hue-color), 69%, 61%, 0.45);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 14px hsla(var(--hue-color), 69%, 61%, 0.3);
 }
 
 .button:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 8px hsla(var(--hue-color), 69%, 61%, 0.3);
+  box-shadow: 0 1px 4px hsla(var(--hue-color), 69%, 61%, 0.2);
 }
 
 /* Ripple element injected by effects.js */
@@ -2034,6 +2033,64 @@ body:not(.dark-theme) .cv-card--pdf .cv-card__main {
   .onboarding-tooltip__icon-element {
     font-size: 2rem;
   }
+}
+
+/*==================== MICRO-EFFECTS ====================*/
+
+/* ── Floating hero avatar ── */
+.home__img {
+  animation: heroFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 0px transparent);
+  transition: filter 0.4s ease;
+}
+
+.home__img:hover {
+  filter: drop-shadow(0 0 18px hsla(var(--hue-color), 69%, 61%, 0.45));
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+
+/* ── Typewriter blinking cursor on home subtitle ── */
+.typing-cursor::after {
+  content: '|';
+  display: inline-block;
+  color: var(--first-color);
+  animation: cursorBlink 0.75s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Scroll reveal ── */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Portfolio card: 3D tilt base (transform set via JS) ── */
+.portfolio__content {
+  will-change: transform;
+  border-radius: .5rem;
+}
+
+/* ── Respect user motion preferences ── */
+@media (prefers-reduced-motion: reduce) {
+  .home__img              { animation: none; }
+  .typing-cursor::after   { animation: none; }
+  .reveal-hidden          { opacity: 1; transform: none; transition: none; }
+  .skills__percentage::after { animation: none; }
 }
 
 /*==================== MEDIA QUERIES ====================*/

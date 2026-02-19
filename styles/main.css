@@ -405,10 +405,40 @@ img {
   padding: 1rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
+  /* Effects */
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease,
+              box-shadow      0.3s ease,
+              transform       0.2s ease;
 }
 
 .button:hover {
   background-color: var(--first-color-alt);
+  box-shadow: 0 6px 22px hsla(var(--hue-color), 69%, 61%, 0.45);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px hsla(var(--hue-color), 69%, 61%, 0.3);
+}
+
+/* Ripple element injected by effects.js */
+.button .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.38);
+  transform: scale(0);
+  animation: rippleEffect 0.65s linear;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 
 .button__icon {
@@ -439,6 +469,8 @@ img {
   padding: 0;
   background-color: transparent;
   color: var(--first-color);
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 .button--link:hover {
@@ -495,6 +527,13 @@ img {
   align-items: center;
   margin-bottom: var(--mb-2-5);
   cursor: pointer;
+  padding: .3rem .4rem;
+  border-radius: .5rem;
+  transition: background-color 0.2s ease;
+}
+
+.skills__header:hover {
+  background-color: hsla(var(--hue-color), 69%, 61%, 0.08);
 }
 
 .skills__icon, .skills__arrow {
@@ -517,12 +556,16 @@ img {
 
 .skills__arrow {
   margin-left: auto;
-  transition: .4s;
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              color    0.3s ease;
 }
 
 .skills__list {
   row-gap: 1.5rem;
   padding-left: 2.7rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.45s ease, margin-bottom 0.45s ease;
 }
 
 .skills__titles {
@@ -536,112 +579,63 @@ img {
   font-weight: var(--font-medium);
 }
 
-.skills__bar, .skills__percentage {
-  height: 5px;
-  border-radius: .25rem;
-}
-
+/* ── Track ── */
 .skills__bar {
+  height: 8px;
+  border-radius: 4px;
   background-color: var(--first-color-lighter);
-}
-
-.skills__percentage {
-  display: block;
-  background-color: var(--first-color);
-}
-
-.skills__html {
-  width: 90%;
-}
-
-.skills__css {
-  width: 80%;
-}
-
-.skills__js {
-  width: 65%;
-}
-
-.skills__ts {
-  width: 75%;
-}
-
-.skills__react {
-  width: 65%;
-}
-
-.skills__angular {
-  width: 80%;
-}
-
-.skills__node {
-  width: 40%;
-}
-
-.skills__java {
-  width: 89%;
-}
-
-.skills__ccharp {
-  width: 70%;
-}
-
-.skills__kotlin {
-  width: 55%;
-}
-
-.skills__firebase {
-  width: 90%;
-}
-
-.skills__python {
-  width: 85%;
-}
-
-.skills__figma {
-  width: 40%;
-}
-
-.skills__canva {
-  width: 80%;
-}
-
-.skills__photoshop {
-  width: 50%;
-}
-
-.skills__pandas {
-  width: 80%;
-}
-
-.skills__sql {
-  width: 95%;
-}
-
-.skills__scikit {
-  width: 70%;
-}
-
-.skills__tensorflow {
-  width: 30%;
-}
-
-.skills__seaborn {
-  width: 80%;
-}
-
-.skills__close .skills__list {
-  height: 0px;
   overflow: hidden;
 }
 
+/* ── Filled portion (width set via JS + --skill-level) ── */
+.skills__percentage {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    var(--first-color),
+    hsl(var(--hue-color), 85%, 68%)
+  );
+  box-shadow: 0 0 10px hsla(var(--hue-color), 69%, 61%, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Shimmer sweep ── */
+.skills__percentage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.48) 50%,
+    transparent 100%
+  );
+  transform: translateX(-200%);
+  animation: skillShimmer 2.6s ease-in-out infinite 1s;
+}
+
+@keyframes skillShimmer {
+  0%   { transform: translateX(-200%); }
+  100% { transform: translateX(200%);  }
+}
+
+/* ── Accordion open / close ── */
+.skills__close .skills__list {
+  max-height: 0;
+}
+
 .skills__open .skills__list {
-  height: max-content;
+  max-height: 1200px;
   margin-bottom: var(--mb-2-5);
 }
 
 .skills__open .skills__arrow {
   transform: rotate(-180deg);
+  color: var(--first-color-alt);
 }
 
 

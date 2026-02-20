@@ -169,6 +169,7 @@ export const content = {
       summaryKey: "cv-profile-summary",
       linkedIn: "https://www.linkedin.com/in/kiko97/",
       github: "https://github.com/42kiko",
+      website: "https://42kiko.github.io/portfolio/",
     },
 
     // Sidebar sections (left column) - generic, can be extended

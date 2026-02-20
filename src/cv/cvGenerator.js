@@ -50,6 +50,7 @@ function buildCvData(lang) {
     profiles: [
       { label: "LinkedIn", url: cvConfig.profile.linkedIn },
       { label: "GitHub", url: cvConfig.profile.github },
+      ...(cvConfig.profile.website ? [{ label: "Portfolio", url: cvConfig.profile.website }] : []),
     ],
   };
 

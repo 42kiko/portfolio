@@ -121,39 +121,42 @@ function _initTypewriter() {
 function _initCounters() {
   if (_counterObserver) { _counterObserver.disconnect(); _counterObserver = null; }
 
-  const elements = document.querySelectorAll("[data-count]");
+  const elements = Array.from(document.querySelectorAll("[data-count]"));
   if (!elements.length) return;
+
+  // Observe the parent container — more reliable than observing tiny spans
+  const container = elements[0].closest(".about__info") || elements[0].parentElement;
+  if (!container) return;
+
+  if (container.dataset.counted) return;
 
   _counterObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      const el = entry.target;
-      if (el.dataset.counted) return;          // already ran
-      el.dataset.counted = "true";
-      _counterObserver.unobserve(el);
+      if (container.dataset.counted) return;
+      container.dataset.counted = "true";
+      _counterObserver.disconnect();
 
-      const startDelay = parseInt(el.dataset.counterIdx || "0", 10) * 350;
+      // Start each counter with a stagger delay
+      elements.forEach((el, i) => {
+        setTimeout(() => {
+          const target = parseInt(el.dataset.count, 10);
+          const steps  = 44;
+          const delay  = Math.round(1400 / steps);
+          let   n      = 0;
 
-      setTimeout(() => {
-        const target = parseInt(el.dataset.count, 10);
-        const steps  = 44;
-        const delay  = 1400 / steps;
-        let   n      = 0;
-
-        const timer = setInterval(() => {
-          n = Math.min(n + 1, target);
-          el.textContent = (n < 10 ? "0" : "") + n + "+";
-          if (n >= target) clearInterval(timer);
-        }, delay);
-      }, startDelay);
+          const timer = setInterval(() => {
+            n = Math.min(n + 1, target);
+            el.textContent = (n < 10 ? "0" : "") + n + "+";
+            if (n >= target) clearInterval(timer);
+          }, delay);
+        }, i * 350);
+      });
     });
-  }, { threshold: 0.4 });
+  }, { threshold: 0.1 });
 
-  elements.forEach((el, i) => {
-    el.dataset.counterIdx = i;     // stagger index
-    delete el.dataset.counted;     // reset on re-render
-    _counterObserver.observe(el);
-  });
+  delete container.dataset.counted;   // reset on re-render
+  _counterObserver.observe(container);
 }
 
 // ============================================================================

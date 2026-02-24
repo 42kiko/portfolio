@@ -50,7 +50,7 @@ export const translations = {
 
     // Design Skills
     "design-title": { de: "Designer", en: "Designer" },
-    "design-subtitle": { de: "Mehr als 2 Jahr", en: "More than 2 year" },
+    "design-subtitle": { de: "Mehr als 2 Jahre", en: "More than 2 years" },
 
     // Design Skills
     "ds-title": { de: "Data Science", en: "Data Science" },
@@ -65,7 +65,7 @@ export const translations = {
     "education-title-2": { de: "Bildung", en: "Education" },
     "education-title-1": { de: "Bildung", en: "Education" },
     "edu-2-title": {
-        de: "Zertifizerte Weiterbildung als AI Data Scientist",
+        de: "Zertifizierte Weiterbildung als AI Data Scientist",
         en: "Training Program as AI Data Scientist"
     },
     "edu-2-subtitle": {
@@ -78,7 +78,7 @@ export const translations = {
     },
     "edu-2-period": {
         de: "März 2025 - Heute",
-        en: "March 2025 - Today"
+        en: "March 2025 - Present"
     },
 
     "edu-1-title": {
@@ -106,7 +106,7 @@ export const translations = {
     "work-title-3": { de: "Berufserfahrung", en: "Work experience" },
     "work-title-2": { de: "Berufserfahrung", en: "Work experience" },
     "work-title-1": { de: "Berufserfahrung", en: "Work experience" },
-    "work-4-title": { de: "Organisations-programmierer", en: "Organizational Programmer" },
+    "work-4-title": { de: "Organisationsprogrammierer", en: "Organizational Programmer" },
     "work-4-subtitle": { de: "LHH Landeshauptstadt Hannover", en: "LHH City of Hannover" },
     "work-4-calendar": { de: "Juli 2024 - Dezember 2024", en: "July 2024 - December 2024" },
     "work-4-description": {
@@ -183,7 +183,7 @@ export const translations = {
         en: "Knowledge Hub"
     },
     "portfolio3-description": {
-        de: "Entwicklung einer zentralen Plattform für Wissensaustausch.Mein Artikel über OKRs(Objectives and Key Results) war außerordentlich erfolgreich und half dem Unternehmen, die Methodik intern einzuführen.Ich wende OKRs bis heute erfolgreich privat an.",
+        de: "Entwicklung einer zentralen Plattform für Wissensaustausch. Mein Artikel über OKRs (Objectives and Key Results) war außerordentlich erfolgreich und half dem Unternehmen, die Methodik intern einzuführen.Ich wende OKRs bis heute erfolgreich privat an.",
         en: "Development of a central platform for knowledge sharing. My article on OKRs (Objectives and Key Results) was exceptionally successful and helped the company implement the methodology internally. I continue to apply OKRs successfully in my personal life to this day."
     },
     "website3-text": {
@@ -248,7 +248,7 @@ export const translations = {
         en: "Mr. Lukas pursued his apprenticeship with great commitment and a high willingness to learn. He was characterized by a strong sense of duty and mastered his projects, such as a cloud calculator, with increasing independence."
     },
     "tecRacer-pos": {
-        de: "Fachinformatiker Anwendungsetwicklung",
+        de: "Fachinformatiker Anwendungsentwicklung",
         en: "IT Specialist"
     },
 

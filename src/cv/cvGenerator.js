@@ -85,7 +85,7 @@ function buildCvData(lang) {
     name: t(proj.nameKey, lang),
     date: t(proj.dateKey, lang),
     stack: t(proj.stackKey, lang),
-    url: "#",
+    url: proj.url || null,
     bullets: proj.bulletKeys.map((key) => t(key, lang)),
   }));
 
@@ -152,10 +152,13 @@ function _timelineItemHtml(item, isEdu = false) {
 
 /** Render a single project item */
 function _projectItemHtml(p) {
+  const titleHtml = p.url
+    ? `<a href="${p.url}" class="cv-card__project-link" target="_blank" rel="noreferrer">${escHtml(p.name)}</a>`
+    : escHtml(p.name);
   return `
     <article class="cv-card__project">
       <header class="cv-card__project-header">
-        <h3 class="cv-card__project-title">${escHtml(p.name)}</h3>
+        <h3 class="cv-card__project-title">${titleHtml}</h3>
         <span class="cv-card__project-meta">${escHtml(p.date)} · ${escHtml(p.stack)}</span>
       </header>
       <ul class="cv-card__timeline-list">

@@ -149,6 +149,20 @@ export const content = {
       ctaKey: "website3-text",
       href: "https://www.frobese.de/frorum/articles/201908_mit-okr-ziele-fokussiert-erreichen/",
     },
+    {
+      img: "assets/img/traveltide.png",  // TODO: Vorschaubild hinzufügen
+      titleKey: "portfolio4-title",
+      descKey: "portfolio4-description",
+      ctaKey: "github4-text",
+      href: "https://github.com/42kiko/traveltide",
+    },
+    {
+      img: "assets/img/cifar10.png",     // TODO: Vorschaubild hinzufügen
+      titleKey: "portfolio5-title",
+      descKey: "portfolio5-description",
+      ctaKey: "github5-text",
+      href: "https://42kiko.github.io/Computer-Vision-CIFAR10/",
+    },
   ],
   testimonials: [
     { logo: "assets/img/companys/otto_group.png", titleKey: "eos-title", posKey: "eos-pos", subKey: "eos-sub" },
@@ -283,21 +297,38 @@ export const content = {
 
     projects: [
       {
+        nameKey: "cv-project-traveltide-name",
+        dateKey: "cv-project-traveltide-date",
+        stackKey: "cv-project-traveltide-stack",
+        url: "https://github.com/42kiko/traveltide",
+        bulletKeys: ["cv-project-traveltide-bullet-1", "cv-project-traveltide-bullet-2"],
+      },
+      {
+        nameKey: "cv-project-cifar10-name",
+        dateKey: "cv-project-cifar10-date",
+        stackKey: "cv-project-cifar10-stack",
+        url: "https://42kiko.github.io/Computer-Vision-CIFAR10/",
+        bulletKeys: ["cv-project-cifar10-bullet-1", "cv-project-cifar10-bullet-2"],
+      },
+      {
         nameKey: "cv-project-vehicle-name",
         dateKey: "cv-project-vehicle-date",
         stackKey: "cv-project-vehicle-stack",
+        url: "https://github.com/42kiko/Fahrzeugdatenanalyse",
         bulletKeys: ["cv-project-vehicle-bullet-1", "cv-project-vehicle-bullet-2"],
       },
       {
         nameKey: "cv-project-climate-name",
         dateKey: "cv-project-climate-date",
         stackKey: "cv-project-climate-stack",
+        url: "https://www.parentsforfuture.de/de/buendnis/employees-for-future",
         bulletKeys: ["cv-project-climate-bullet-1", "cv-project-climate-bullet-2"],
       },
       {
         nameKey: "cv-project-knowledge-name",
         dateKey: "cv-project-knowledge-date",
         stackKey: "cv-project-knowledge-stack",
+        url: "https://www.frobese.de/frorum/articles/201908_mit-okr-ziele-fokussiert-erreichen/",
         bulletKeys: ["cv-project-knowledge-bullet-1", "cv-project-knowledge-bullet-2"],
       },
     ],

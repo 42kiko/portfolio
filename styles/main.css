@@ -1592,6 +1592,18 @@ body:not(.dark-theme) .cv-card--pdf .cv-card__main {
   color: var(--text-color-light);
 }
 
+.cv-card__project-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cv-card__project-link:hover {
+  color: var(--first-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media screen and (max-width: 968px) {
   .cv-card__hero {
     max-width: 100%;

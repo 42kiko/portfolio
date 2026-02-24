@@ -620,6 +620,72 @@ export const translations = {
         en: "Released a knowledge hub; an OKR article increased forum engagement by 20%."
     },
 
+    // Portfolio 4 - TravelTide
+    "portfolio4-title": {
+        de: "Kundensegmentierung für TravelTide",
+        en: "Customer Segmentation for TravelTide"
+    },
+    "portfolio4-description": {
+        de: "Datengetriebene Segmentierung von 5.998 aktiven Nutzern einer Reiseplattform in 8 Reisenden-Personas mittels K-Means-Clustering. Aus Buchungsverhalten, Ausgaben und Engagement wurden personalisierte Treueprogramme abgeleitet, die gezielt Kundenbindung und Umsatz steigern.",
+        en: "Data-driven segmentation of 5,998 active users of a travel platform into 8 traveler personas using K-Means clustering. Insights from booking behavior, spending, and engagement power personalized loyalty programs that drive retention and revenue growth."
+    },
+    "github4-text": {
+        de: "Auf GitHub ansehen",
+        en: "View on GitHub"
+    },
+
+    // Portfolio 5 - Computer Vision CIFAR-10
+    "portfolio5-title": {
+        de: "CNN-Bildklassifikation mit CIFAR-10",
+        en: "CNN Image Classification with CIFAR-10"
+    },
+    "portfolio5-description": {
+        de: "Kompaktes CNN auf CIFAR-10 trainiert \u2013 mit Fokus auf Interpretierbarkeit statt reiner Genauigkeit. Interaktive Plotly-Visualisierungen erm\u00f6glichen tiefe Einblicke in Konfidenzverteilungen, klassenweise Performance und Fehlklassifikations-Muster.",
+        en: "Lightweight CNN trained on CIFAR-10 \u2013 focusing on interpretability over raw accuracy. Interactive Plotly visualizations provide deep insights into confidence distributions, per-class performance, and misclassification patterns."
+    },
+    "github5-text": {
+        de: "Live Demo ansehen",
+        en: "View Live Demo"
+    },
+
+    // CV Projects - TravelTide
+    "cv-project-traveltide-name": {
+        de: "Kundensegmentierung für TravelTide",
+        en: "Customer Segmentation for TravelTide"
+    },
+    "cv-project-traveltide-date": { de: "Nov 2025", en: "Nov 2025" },
+    "cv-project-traveltide-stack": {
+        de: "Python (pandas, scikit-learn, seaborn, matplotlib), SQL, Tableau, Jupyter Notebook",
+        en: "Python (pandas, scikit-learn, seaborn, matplotlib), SQL, Tableau, Jupyter Notebook"
+    },
+    "cv-project-traveltide-bullet-1": {
+        de: "Segmentierung von 5.998 aktiven Nutzern in 8 Reisenden-Personas mittels K-Means-Clustering (Silhouette \u2248 0,19) auf Basis von Buchungsverhalten, Ausgaben und Engagement.",
+        en: "Segmented 5,998 active users into 8 traveler personas using K-Means clustering (Silhouette \u2248 0.19) based on booking behavior, spending, and engagement patterns."
+    },
+    "cv-project-traveltide-bullet-2": {
+        de: "Identifiziert: 3 Segmente generieren \u00fcber 70\u00a0% des Umsatzes \u2013 personalisierte Treueprogramme f\u00fcr jede Persona abgeleitet, um Kundenbindung und Wachstum zu f\u00f6rdern.",
+        en: "Identified that 3 segments generate over 70% of revenue and derived personalized loyalty perks per persona to boost retention and revenue growth."
+    },
+
+    // CV Projects - CIFAR-10
+    "cv-project-cifar10-name": {
+        de: "Computer Vision mit CIFAR-10 (CNN-Bildklassifikation)",
+        en: "Computer Vision with CIFAR-10 (CNN Image Classification)"
+    },
+    "cv-project-cifar10-date": { de: "Nov 2025", en: "Nov 2025" },
+    "cv-project-cifar10-stack": {
+        de: "Python, TensorFlow/Keras, Plotly, Jupyter Notebook",
+        en: "Python, TensorFlow/Keras, Plotly, Jupyter Notebook"
+    },
+    "cv-project-cifar10-bullet-1": {
+        de: "Kompaktes CNN auf CIFAR-10 trainiert; Schwerpunkt auf Interpretierbarkeit \u2013 Analyse von klassenweiser Performance, Konfidenzverteilung und Fehlermustern statt reiner Genauigkeit.",
+        en: "Trained a lightweight CNN on CIFAR-10 focusing on interpretability beyond raw accuracy; analyzed per-class performance, confidence distribution, and misclassification patterns."
+    },
+    "cv-project-cifar10-bullet-2": {
+        de: "Interaktive Plotly-Visualisierungen umgesetzt: Konfidenzhistogramme, Konfusions-Matrix, klassenweise Accuracy sowie Fehleranalyse-Grids f\u00fcr detailliertes Modell-Debugging.",
+        en: "Built interactive Plotly visualizations: confidence histograms, confusion matrix, per-class accuracy, and misclassification grids for in-depth model debugging."
+    },
+
     // ============ ONBOARDING TUTORIAL ============
     "onboarding-lang-title": {
         de: "Sprache wählen",

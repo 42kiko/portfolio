@@ -51,7 +51,7 @@ export const translations = {
 
     // Design Skills
     "design-title": { de: "Designer", en: "Designer" },
-    "design-subtitle": { de: "Mehr als 2 Jahr", en: "More than 2 year" },
+    "design-subtitle": { de: "Mehr als 2 Jahre", en: "More than 2 years" },
 
     // Design Skills
     "ds-title": { de: "Data Science", en: "Data Science" },
@@ -427,7 +427,7 @@ export const translations = {
     },
 
     // ============ CV-SPECIFIC CONTENT ============
-    
+
     // CV Profile
     "cv-full-name": { de: "Kiko Ramon Lukas", en: "Kiko Ramon Lukas" },
     "cv-title": { de: "Data Scientist", en: "Data Scientist" },
@@ -461,11 +461,11 @@ export const translations = {
     "cv-cert-scrum-name": { de: "Scrum Master", en: "Scrum Master" },
     "cv-cert-scrum-issuer": { de: "Scrum.org", en: "Scrum.org" },
     "cv-cert-scrum-date": { de: "Okt 2018", en: "Oct 2018" },
-    
+
     "cv-cert-sapui5-name": { de: "Developing Web Apps with SAPUI5", en: "Developing Web Apps with SAPUI5" },
     "cv-cert-sapui5-issuer": { de: "SAP", en: "SAP" },
     "cv-cert-sapui5-date": { de: "Jun 2016", en: "Jun 2016" },
-    
+
     "cv-cert-aws-name": { de: "AWS Technical Essentials", en: "AWS Technical Essentials" },
     "cv-cert-aws-issuer": { de: "AWS", en: "AWS" },
     "cv-cert-aws-date": { de: "Jan 2016", en: "Jan 2016" },

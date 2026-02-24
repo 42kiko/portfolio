@@ -1317,14 +1317,41 @@ body:not(.dark-theme) .cv-card--pdf .cv-card__main {
   /* etwas kompakter und mehr Abstand zur Linie im PDF */
   padding: 0.35rem 0 0.55rem 1.1rem;
   margin-bottom: 0.22rem;
-  page-break-inside: avoid;
   break-inside: avoid;
+  page-break-inside: avoid;
 }
 
-/* Blöcke dürfen im PDF über Seiten umbrechen, damit weniger Leerraum entsteht */
-.cv-card--pdf .cv-card__block {
-  page-break-inside: auto;
-  break-inside: auto;
+/* Kleinste inhaltliche Einheiten nie mittendurch trennen */
+.cv-card__chip {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv-card__meta-item {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv-card__timeline-header {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv-card__timeline-bullet {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Titel + erstes Element niemals trennen (Wrapper hält beide zusammen) */
+.cv-card__section-anchor {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Sidebar-Blöcke sind klein genug, um komplett zusammenzubleiben */
+.cv-card__side .cv-card__block {
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 .cv-card__side {

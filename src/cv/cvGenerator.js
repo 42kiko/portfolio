@@ -131,6 +131,54 @@ function buildCvData(lang) {
 /**
  * Erzeugt ein HTML-Fragment (String) für einen modernen CV im Karten-Layout.
  */
+/** Render a single experience/education timeline item */
+function _timelineItemHtml(item, isEdu = false) {
+  const title = isEdu ? item.program : item.role;
+  const sub   = isEdu ? item.institution : `${item.company} · ${item.location}`;
+  return `
+    <article class="cv-card__timeline-item">
+      <header class="cv-card__timeline-header">
+        <div>
+          <h3 class="cv-card__timeline-title">${escHtml(title)}</h3>
+          <p class="cv-card__timeline-sub">${escHtml(sub)}</p>
+        </div>
+        <span class="cv-card__timeline-period">${escHtml(item.from)} – ${escHtml(item.to)}</span>
+      </header>
+      <ul class="cv-card__timeline-list">
+        ${(item.bullets || []).map((b) => `<li class="cv-card__timeline-bullet">${escHtml(b)}</li>`).join("")}
+      </ul>
+    </article>`;
+}
+
+/** Render a single project item */
+function _projectItemHtml(p) {
+  return `
+    <article class="cv-card__project">
+      <header class="cv-card__project-header">
+        <h3 class="cv-card__project-title">${escHtml(p.name)}</h3>
+        <span class="cv-card__project-meta">${escHtml(p.date)} · ${escHtml(p.stack)}</span>
+      </header>
+      <ul class="cv-card__timeline-list">
+        ${(p.bullets || []).map((b) => `<li class="cv-card__timeline-bullet">${escHtml(b)}</li>`).join("")}
+      </ul>
+    </article>`;
+}
+
+/**
+ * Wrap section heading + first item together so they can never be split
+ * across pages. Remaining items follow outside the anchor.
+ */
+function _anchoredSection(sectionTitle, items, renderFn) {
+  if (!items.length) return sectionTitle;
+  const [first, ...rest] = items;
+  return `
+    <div class="cv-card__section-anchor">
+      ${sectionTitle}
+      ${renderFn(first)}
+    </div>
+    ${rest.map(renderFn).join("")}`.trim();
+}
+
 export function buildCvHtml({ lang = "de" } = {}) {
   const data = buildCvData(lang);
 
@@ -144,65 +192,17 @@ export function buildCvHtml({ lang = "de" } = {}) {
     )
     .join("");
 
-  // Experience
-  const experienceHtml = data.experience
-    .map(
-      (exp) => `
-      <article class="cv-card__timeline-item">
-        <header class="cv-card__timeline-header">
-          <div>
-            <h3 class="cv-card__timeline-title">${escHtml(exp.role)}</h3>
-            <p class="cv-card__timeline-sub">${escHtml(exp.company)} · ${escHtml(exp.location)}</p>
-          </div>
-          <span class="cv-card__timeline-period">${escHtml(exp.from)} – ${escHtml(exp.to)}</span>
-        </header>
-        <ul class="cv-card__timeline-list">
-          ${(exp.bullets || [])
-            .map((b) => `<li class="cv-card__timeline-bullet">${escHtml(b)}</li>`)
-            .join("")}
-        </ul>
-      </article>`
-    )
-    .join("");
+  // Experience — title anchored to first item
+  const expTitle      = `<h2 class="cv-card__section-title">${t("cv-section-experience", lang)}</h2>`;
+  const experienceHtml = _anchoredSection(expTitle, data.experience, (e) => _timelineItemHtml(e, false));
 
-  // Education
-  const educationHtml = data.education
-    .map(
-      (edu) => `
-      <article class="cv-card__timeline-item">
-        <header class="cv-card__timeline-header">
-          <div>
-            <h3 class="cv-card__timeline-title">${escHtml(edu.program)}</h3>
-            <p class="cv-card__timeline-sub">${escHtml(edu.institution)}</p>
-          </div>
-          <span class="cv-card__timeline-period">${escHtml(edu.from)} – ${escHtml(edu.to)}</span>
-        </header>
-        <ul class="cv-card__timeline-list">
-          ${(edu.bullets || [])
-            .map((b) => `<li class="cv-card__timeline-bullet">${escHtml(b)}</li>`)
-            .join("")}
-        </ul>
-      </article>`
-    )
-    .join("");
+  // Education — title anchored to first item
+  const eduTitle      = `<h2 class="cv-card__section-title">${t("cv-section-education", lang)}</h2>`;
+  const educationHtml = _anchoredSection(eduTitle, data.education, (e) => _timelineItemHtml(e, true));
 
-  // Projects
-  const projectsHtml = data.projects
-    .map(
-      (p) => `
-      <article class="cv-card__project">
-        <header class="cv-card__project-header">
-          <h3 class="cv-card__project-title">${escHtml(p.name)}</h3>
-          <span class="cv-card__project-meta">${escHtml(p.date)} · ${escHtml(p.stack)}</span>
-        </header>
-        <ul class="cv-card__timeline-list">
-          ${(p.bullets || [])
-            .map((b) => `<li class="cv-card__timeline-bullet">${escHtml(b)}</li>`)
-            .join("")}
-        </ul>
-      </article>`
-    )
-    .join("");
+  // Projects — title anchored to first item
+  const projTitle    = `<h2 class="cv-card__section-title">${t("cv-section-projects", lang)}</h2>`;
+  const projectsHtml = _anchoredSection(projTitle, data.projects, _projectItemHtml);
 
   // Sidebar sections (generic rendering)
   const sidebarHtml = data.sidebarSections
@@ -273,19 +273,18 @@ export function buildCvHtml({ lang = "de" } = {}) {
       </aside>
       <main class="cv-card__main">
         <section class="cv-card__block cv-card__block--summary">
-          <h2 class="cv-card__section-title">${t("cv-section-profile", lang)}</h2>
-          <p class="cv-card__summary">${escHtml(data.profile.summary)}</p>
+          <div class="cv-card__section-anchor">
+            <h2 class="cv-card__section-title">${t("cv-section-profile", lang)}</h2>
+            <p class="cv-card__summary">${escHtml(data.profile.summary)}</p>
+          </div>
         </section>
         <section class="cv-card__block">
-          <h2 class="cv-card__section-title">${t("cv-section-experience", lang)}</h2>
           ${experienceHtml}
         </section>
         <section class="cv-card__block">
-          <h2 class="cv-card__section-title">${t("cv-section-education", lang)}</h2>
           ${educationHtml}
         </section>
         <section class="cv-card__block">
-          <h2 class="cv-card__section-title">${t("cv-section-projects", lang)}</h2>
           ${projectsHtml}
         </section>
       </main>

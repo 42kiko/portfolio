@@ -68,7 +68,18 @@ export function downloadModernCvPdf() {
       format: "a4",
       orientation: "portrait",
     },
-    pagebreak: { mode: ["css", "legacy"] },
+    pagebreak: {
+      mode: ["css", "legacy"],
+      avoid: [
+        ".cv-card__section-anchor",     // title + first item, always together
+        ".cv-card__side .cv-card__block", // sidebar blocks (small, keep whole)
+        ".cv-card__chip",
+        ".cv-card__meta-item",
+        ".cv-card__timeline-item",
+        ".cv-card__timeline-header",
+        ".cv-card__timeline-bullet",
+      ],
+    },
   };
 
   try {
@@ -223,7 +234,18 @@ export function renderCvLab() {
         format: "a4",
         orientation: "portrait",
       },
-      pagebreak: { mode: ["css", "legacy"] },
+      pagebreak: {
+        mode: ["css", "legacy"],
+        avoid: [
+          ".cv-card__section-anchor",       // title + first item, always together
+          ".cv-card__side .cv-card__block",  // sidebar blocks (small, keep whole)
+          ".cv-card__chip",
+          ".cv-card__meta-item",
+          ".cv-card__timeline-item",
+          ".cv-card__timeline-header",
+          ".cv-card__timeline-bullet",
+        ],
+      },
     };
 
     try {

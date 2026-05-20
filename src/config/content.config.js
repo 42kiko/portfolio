@@ -17,7 +17,7 @@ export const content = {
     },
   },
   about: {
-    video: "assets/img/me/video6.mp4",
+    video: "assets/img/me/about-video.mp4",
     stats: [
       { titleKey: "years-title", nameKey: "years-name" },
       { titleKey: "projects-title", nameKey: "projects-name" },

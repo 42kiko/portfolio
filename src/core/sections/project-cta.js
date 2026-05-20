@@ -11,7 +11,7 @@ export function renderProjectCTA() {
             <p class="project__description" id="project-contact-description"></p>
             <a href="#contact" class="button button--flex button--white" id="project-contact-button"><i class="uil uil-message button__icon"></i></a>
           </div>
-          <img src="assets/img/me/busniess3.png" alt="" class="project__img" />
+          <img src="assets/img/me/busniess3.png" alt="" class="project__img" loading="lazy" decoding="async" />
         </div>
       </div>
     </section>`);

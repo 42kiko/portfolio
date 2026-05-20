@@ -4,7 +4,7 @@ import { $ } from "../../utils/dom.js";
 export function renderPortfolio() {
   const slides = content.portfolio.map((p) => `
     <div class="portfolio__content grid swiper-slide">
-      <img src="${p.img}" alt="" class="portfolio__img" />
+      <img src="${p.img}" alt="" class="portfolio__img" loading="lazy" decoding="async" />
       <div class="portfolio__data">
         <h3 class="portfolio__title" id="${p.titleKey}"></h3>
         <p class="portfolio__description" id="${p.descKey}"></p>

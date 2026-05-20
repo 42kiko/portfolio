@@ -343,6 +343,19 @@ img {
 .home__blob {
   width: 330px;
   fill: var(--first-color);
+  animation: home-blob-float 4s ease-in-out infinite;
+}
+
+/* Sanftes Auf-und-Ab der Foto-Bubble */
+@keyframes home-blob-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home__blob {
+    animation: none;
+  }
 }
 
 
@@ -363,6 +376,21 @@ img {
   color: var(--text-color);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-75);
+  min-height: 2.6em;
+}
+
+/* Blinkender Cursor des Schreibmaschinen-Effekts */
+.typewriter__cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--first-color);
+  font-weight: 400;
+  animation: typewriter-blink 1s step-end infinite;
+}
+
+@keyframes typewriter-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .home__description {

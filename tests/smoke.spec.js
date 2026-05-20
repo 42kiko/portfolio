@@ -25,4 +25,13 @@ test.describe("Smoke", () => {
   test("footer is rendered", async ({ page }) => {
     await expect(page.locator("footer#footer")).toBeVisible();
   });
+
+  test("hero shows the animated typewriter title", async ({ page }) => {
+    await expect(page.locator(".typewriter__cursor")).toBeVisible();
+    await expect
+      .poll(async () =>
+        ((await page.locator(".typewriter").textContent()) || "").length
+      )
+      .toBeGreaterThan(0);
+  });
 });

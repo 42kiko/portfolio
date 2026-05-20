@@ -1,6 +1,34 @@
 import { content } from "../../config/content.config.js";
 import { $ } from "../../utils/dom.js";
 
+// Schreibmaschinen-Effekt: tippt jeden Titel, haelt kurz, loescht, naechster.
+// Bricht von selbst ab, sobald das Element nach einem Re-Render abgehaengt ist.
+function runTypewriter(el, phrases) {
+  if (!phrases || !phrases.length) return;
+  let phraseIdx = 0;
+  let charIdx = 0;
+  let deleting = false;
+
+  const tick = () => {
+    if (!el.isConnected) return;
+    const phrase = phrases[phraseIdx];
+    charIdx += deleting ? -1 : 1;
+    el.textContent = phrase.slice(0, charIdx);
+
+    let delay = deleting ? 45 : 75;
+    if (!deleting && charIdx === phrase.length) {
+      deleting = true;
+      delay = 1700;
+    } else if (deleting && charIdx === 0) {
+      deleting = false;
+      phraseIdx = (phraseIdx + 1) % phrases.length;
+      delay = 450;
+    }
+    setTimeout(tick, delay);
+  };
+  tick();
+}
+
 export function renderHome() {
   const app = $("#app");
 
@@ -64,7 +92,7 @@ export function renderHome() {
 
                     <div class="home__data">
                         <h1 class="home__title" id="home-title"></h1>
-                        <h3 class="home__subtitle" id="home-subtitle"></h3>
+                        <h3 class="home__subtitle"><span class="typewriter"></span><span class="typewriter__cursor" aria-hidden="true">|</span></h3>
                         <p class="home__description" id="home-text"></p>
                         <a href="#contact" class="button button--flex">
                             <div id="home-button"></div>
@@ -83,4 +111,16 @@ export function renderHome() {
                 </div>
             </div>
         </section>`);
+
+  // Rotierende Titel im Hero
+  const tw = document.querySelector("#home .typewriter");
+  if (tw) {
+    const phrases = content.home.titles || [];
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      tw.textContent = phrases[0] || "";
+    } else {
+      runTypewriter(tw, phrases);
+    }
+  }
 }

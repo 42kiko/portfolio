@@ -15,6 +15,13 @@ export const content = {
       x: "130",
       y: "70",
     },
+    // Rotierende Titel im Hero (Schreibmaschinen-Effekt)
+    titles: [
+      "AI & Data Science Consultant",
+      "Data-Driven Software Engineer",
+      "Machine Learning Practitioner",
+      "Full-Stack Developer",
+    ],
   },
   about: {
     video: "assets/img/me/about-video.mp4",

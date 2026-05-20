@@ -254,6 +254,18 @@ export const translations = {
         de: "Die folgenden Aussagen fassen die Kernbewertungen aus meinen originalen Arbeitszeugnissen zusammen. Das vollständige Dokument stelle ich Ihnen gerne auf Anfrage im weiteren Bewerbungsprozess zur Verfügung.",
         en: "The following testimonials summarize the key feedback from my original job references. The full documentation is gladly available upon request as we progress in the application process."
     },
+    "pcf-title": {
+        de: "Pawsitive Care Foundation",
+        en: "Pawsitive Care Foundation"
+    },
+    "pcf-pos": {
+        de: "Chief of Staff Intern",
+        en: "Chief of Staff Intern"
+    },
+    "pcf-sub": {
+        de: "Herr Lukas verfügt über ein außergewöhnlich breites Spektrum – von strategischer Konzeption über technische Umsetzung bis zur operativen Steuerung. Er erschloss sein Aufgabengebiet eigenständig, lieferte auch unter Termindruck durchgängig hohe Qualität und erledigte alle Aufgaben stets zu unserer vollsten Zufriedenheit.",
+        en: "Mr. Lukas has an exceptionally wide professional range – from strategic conception through technical implementation to operational execution. He took ownership of his remit independently, delivered consistently high quality even under time pressure, and performed all tasks to our complete and full satisfaction."
+    },
     "eos-title": {
         de: "Otto Gruppe",
         en: "Otto Group"

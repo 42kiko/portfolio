@@ -31,28 +31,28 @@ export const content = {
       titleKey: "frontend-title",
       subtitleKey: "frontend-subtitle",
       level: 85,
-      items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Angular"],
+      items: ["HTML / CSS", "JavaScript", "TypeScript", "React", "Next.js", "Angular"],
     },
     {
       icon: "uil uil-server-network",
       titleKey: "backend-title",
       subtitleKey: "backend-subtitle",
       level: 80,
-      items: ["Java", "Python", "C#", "Node.js", "Kotlin"],
+      items: ["Python", "Node.js", "Java", "C#", "SQL", "Supabase", "REST APIs"],
     },
     {
       icon: "uil uil-swatchbook",
       titleKey: "design-title",
       subtitleKey: "design-subtitle",
       level: 60,
-      items: ["Canva", "Photoshop", "Figma"],
+      items: ["UI/UX-Design", "Branding & Logo", "Figma", "Photoshop"],
     },
     {
       icon: "uil uil-flask",
       titleKey: "ds-title",
       subtitleKey: "ds-subtitle",
       level: 90,
-      items: ["Pandas, NumPy", "SQL", "Scikit-learn", "TensorFlow, PyTorch", "Matplotlib, Seaborn"],
+      items: ["Machine Learning", "Deep Learning", "Computer Vision (CNN)", "NLP & LLMs", "Generative AI", "TensorFlow / PyTorch", "scikit-learn"],
     },
   ],
   experience: [
@@ -62,6 +62,7 @@ export const content = {
       descKey: "work-6-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-6" },
       tagRight: { icon: "uil uil-building", labelKey: "work-6-subtitle" },
+      tags: ["KI-Strategie", "Datenanalyse", "Prozessoptimierung", "Datenschutz"],
     },
     {
       periodKey: "work-5-calendar",
@@ -73,6 +74,7 @@ export const content = {
         { de: "assets/docs/pawpro-zeugnis-de.pdf", en: "assets/docs/pawpro-zeugnis-en.pdf", labelKey: "doc-pawpro-zeugnis" },
         { de: "assets/docs/pawpro-empfehlung-en.pdf", en: "assets/docs/pawpro-empfehlung-en.pdf", labelKey: "doc-pawpro-empfehlung" },
       ],
+      tags: ["Roadmap", "Business Case", "React", "CI/CD", "Team-Leitung"],
     },
     {
       periodKey: "edu-2-period",
@@ -83,6 +85,7 @@ export const content = {
       docs: [
         { de: "assets/docs/masterschool-zeugnis-de.pdf", en: "assets/docs/masterschool-zeugnis-en.pdf", labelKey: "doc-masterschool-zeugnis" },
       ],
+      tags: ["Machine Learning", "Computer Vision", "NLP & LLMs", "Python", "Generative AI"],
     },
     {
       periodKey: "work-4-calendar",
@@ -90,6 +93,7 @@ export const content = {
       descKey: "work-4-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-4" },
       tagRight: { icon: "uil uil-building", labelKey: "work-4-subtitle", href: "https://www.hannover.de/" },
+      tags: ["Anwendungsbetreuung", "Fachbereich-Schnittstelle", "Optimierung"],
     },
     {
       periodKey: "work-3-calendar",
@@ -97,6 +101,7 @@ export const content = {
       descKey: "work-3-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-3" },
       tagRight: { icon: "uil uil-building", labelKey: "work-3-subtitle", href: "https://www.ottogroup.com" },
+      tags: ["Fullstack", "React", "Angular", "C#", "Hexagonale Architektur"],
     },
     {
       periodKey: "work-2-calendar",
@@ -104,6 +109,7 @@ export const content = {
       descKey: "work-2-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-2" },
       tagRight: { icon: "uil uil-building", labelKey: "work-2-subtitle", href: "https://www.nt.ag/" },
+      tags: ["Kreditbearbeitung", "Softwareentwicklung", "FinProcess"],
     },
     {
       periodKey: "work-1-calendar",
@@ -111,6 +117,7 @@ export const content = {
       descKey: "work-1-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-1" },
       tagRight: { icon: "uil uil-building", labelKey: "work-1-subtitle", href: "https://www.frobese.de/" },
+      tags: ["Web-Entwicklung", "JavaScript", "React", "EESSI"],
     },
     {
       periodKey: "edu-1-period",
@@ -118,6 +125,7 @@ export const content = {
       descKey: "edu-1-desc",
       tagLeft: { icon: "uil uil-graduation-cap", key: "education-title-1" },
       tagRight: { icon: "uil uil-university", labelKey: "edu-1-subtitle", href: "https://www.tecracer.com/" },
+      tags: ["Software Engineering", "Clean Code", "Ausbildung"],
     },
   ],
   portfolio: [
@@ -127,6 +135,7 @@ export const content = {
       descKey: "portfolio4-description",
       ctaKey: "website4-text",
       href: "https://pawsitive.fund/",
+      tags: ["React", "Vite", "Stripe", "CI/CD-Deployment", "Admin-Dashboard"],
     },
     {
       img: "assets/img/pawcare-fund.jpeg",
@@ -134,6 +143,7 @@ export const content = {
       descKey: "portfolio5-description",
       ctaKey: "website5-text",
       href: "https://pawcare.fund/",
+      tags: ["Next.js", "TypeScript", "Supabase", "Claude API", "Stripe"],
     },
     {
       img: "assets/img/cnn-cifar10.jpeg",
@@ -141,6 +151,7 @@ export const content = {
       descKey: "portfolio6-description",
       ctaKey: "website6-text",
       href: "https://42kiko.github.io/Computer-Vision-CIFAR10/",
+      tags: ["Computer Vision", "CNN", "TensorFlow", "CIFAR-10", "Plotly"],
     },
     {
       img: "assets/img/Klimaschutz-Roadmap-2.0-1080x608.png",
@@ -148,6 +159,7 @@ export const content = {
       descKey: "portfolio2-description",
       ctaKey: "website2-text",
       href: "https://www.parentsforfuture.de/de/buendnis/employees-for-future",
+      tags: ["Nachhaltigkeit", "Roadmap", "Tool"],
     },
     {
       img: "assets/img/frorum-logo.svg",
@@ -155,9 +167,11 @@ export const content = {
       descKey: "portfolio3-description",
       ctaKey: "website3-text",
       href: "https://www.frobese.de/frorum/articles/201908_mit-okr-ziele-fokussiert-erreichen/",
+      tags: ["OKR", "Wissensmanagement", "Fachartikel"],
     },
   ],
   testimonials: [
+    { logo: "assets/img/companys/pawsitive-care.png", titleKey: "pcf-title", posKey: "pcf-pos", subKey: "pcf-sub" },
     { logo: "assets/img/companys/otto_group.png", titleKey: "eos-title", posKey: "eos-pos", subKey: "eos-sub" },
     { logo: "assets/img/companys/ntag.png", titleKey: "ntag-title", posKey: "ntag-pos", subKey: "ntag-sub" },
     { logo: "assets/img/companys/frobese_favicon_256.png", titleKey: "frobese-title", posKey: "frobese-pos", subKey: "frobese-sub" },

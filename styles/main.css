@@ -878,6 +878,25 @@ img {
   text-decoration: underline;
 }
 
+/* Dezente Aufgaben-/Themen-Hashtags (Timeline + Portfolio) */
+.entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 12px;
+  margin-top: 14px;
+}
+
+.hashtag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-color-light);
+  transition: color .25s ease;
+}
+
+.hashtag:hover {
+  color: var(--first-color);
+}
+
 @media (max-width: 768px) {
   .timeline::before {
       left: 30px;

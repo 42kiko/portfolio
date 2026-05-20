@@ -20,6 +20,11 @@ export function renderQualification() {
       ? `<a href="${tr.href}" target="_blank" class="timeline-tag tag-employer link"><i class="${tr.icon} tag-icon"></i><div id="${tr.labelKey}"></div></a>`
       : `<span class="timeline-tag tag-employer"><i class="${tr.icon} tag-icon"></i><div id="${tr.labelKey}"></div></span>`;
 
+    // Aufgaben-/Themen-Hashtags
+    const hashtags = (e.tags && e.tags.length)
+      ? `<div class="entry-tags">${e.tags.map((t) => `<span class="hashtag">#${t.replace(/\s+/g, "")}</span>`).join("")}</div>`
+      : "";
+
     return `
     <div class="timeline-item">
       <div class="timeline-dot"></div>
@@ -32,6 +37,7 @@ export function renderQualification() {
           ${employer}
         </div>
         ${docs}
+        ${hashtags}
       </div>
     </div>`;
   }).join("");

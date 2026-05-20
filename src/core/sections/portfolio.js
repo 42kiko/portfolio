@@ -2,7 +2,12 @@ import { content } from "../../config/content.config.js";
 import { $ } from "../../utils/dom.js";
 
 export function renderPortfolio() {
-  const slides = content.portfolio.map((p) => `
+  const slides = content.portfolio.map((p) => {
+    const hashtags = (p.tags && p.tags.length)
+      ? `<div class="entry-tags">${p.tags.map((t) => `<span class="hashtag">#${t.replace(/\s+/g, "")}</span>`).join("")}</div>`
+      : "";
+
+    return `
     <div class="portfolio__content grid swiper-slide">
       <img src="${p.img}" alt="" class="portfolio__img" loading="lazy" decoding="async" />
       <div class="portfolio__data">
@@ -11,8 +16,10 @@ export function renderPortfolio() {
         <a href="${p.href}" target="_blank" class="button button--flex button--small portfolio__button" id="${p.ctaKey}">
           <i class="uil uil-arrow-right button__icon"></i>
         </a>
+        ${hashtags}
       </div>
-    </div>`).join("");
+    </div>`;
+  }).join("");
 
   const app = $("#app");
   app.insertAdjacentHTML("beforeend", `

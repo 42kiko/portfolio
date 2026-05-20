@@ -4,8 +4,8 @@ export const site = {
   hueIndex: 0, // initial color variant
 
   emailJS: {
-    publicKey: "RtGyWiRyTmv5ZM3Op", // from your EmailJS project
-    serviceId: "default_service",
+    publicKey: "RtGyWiRyTmv5ZM3Op",
+    serviceId: "service_dg7ifqh",
     templateId: "template_2klottr",
   },
   socials: {

@@ -52,7 +52,7 @@ export const content = {
       titleKey: "ds-title",
       subtitleKey: "ds-subtitle",
       level: 90,
-      items: ["Machine Learning", "Deep Learning", "Computer Vision (CNN)", "NLP & LLMs", "Generative AI", "TensorFlow / PyTorch", "scikit-learn"],
+      items: ["Machine Learning", "Deep Learning", "Computer Vision (CNN)", "NLP & LLMs", "Generative AI", "Hugging Face", "TensorFlow / PyTorch", "scikit-learn"],
     },
   ],
   experience: [

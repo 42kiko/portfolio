@@ -18,10 +18,6 @@ export const content = {
   },
   about: {
     video: "assets/img/me/video6.mp4",
-    cv: {
-      // Files must be placed in assets/cv/<lang>/Kiko-DS-<lang>-<suffix>.pdf
-      colorSuffixes: ["v", "t", "b", "p", "y", "g", "o"],
-    },
     stats: [
       { titleKey: "years-title", nameKey: "years-name" },
       { titleKey: "projects-title", nameKey: "projects-name" },

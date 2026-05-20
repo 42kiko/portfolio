@@ -27,4 +27,14 @@ test.describe("Content – Werdegang & Portfolio", () => {
     await expect(portfolio).toContainText("Pawsitive Care Foundation");
     await expect(portfolio).toContainText("PawCare");
   });
+
+  test("skills section renders the radar chart and category cards", async ({
+    page,
+  }) => {
+    await expect(page.locator("#skills .radar__svg")).toBeVisible();
+    expect(await page.locator("#skills .radar__dot").count()).toBe(4);
+    expect(await page.locator("#skills .skillcard").count()).toBe(4);
+    // Chips tragen die konkreten Skill-Namen
+    await expect(page.locator("#skills")).toContainText("Python");
+  });
 });

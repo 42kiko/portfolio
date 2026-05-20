@@ -24,30 +24,34 @@ export const content = {
       { titleKey: "companies-title", nameKey: "companies-name" },
     ],
   },
+  // level (0-100): Schwerpunkt-Gewichtung, steuert die Radar-Flaeche
   skills: [
     {
       icon: "uil uil-brackets-curly",
       titleKey: "frontend-title",
       subtitleKey: "frontend-subtitle",
-      open: true,
+      level: 85,
       items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Angular"],
     },
     {
       icon: "uil uil-server-network",
       titleKey: "backend-title",
       subtitleKey: "backend-subtitle",
+      level: 80,
       items: ["Java", "Python", "C#", "Node.js", "Kotlin"],
     },
     {
       icon: "uil uil-swatchbook",
       titleKey: "design-title",
       subtitleKey: "design-subtitle",
+      level: 60,
       items: ["Canva", "Photoshop", "Figma"],
     },
     {
       icon: "uil uil-flask",
       titleKey: "ds-title",
       subtitleKey: "ds-subtitle",
+      level: 90,
       items: ["Pandas, NumPy", "SQL", "Scikit-learn", "TensorFlow, PyTorch", "Matplotlib, Seaborn"],
     },
   ],

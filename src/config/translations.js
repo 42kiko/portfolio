@@ -66,7 +66,7 @@ export const translations = {
     "education-title-2": { de: "Bildung", en: "Education" },
     "education-title-1": { de: "Bildung", en: "Education" },
     "edu-2-title": {
-        de: "Zertifizerte Weiterbildung als AI Data Scientist",
+        de: "Zertifizierte Weiterbildung als AI Data Scientist",
         en: "Training Program as AI Data Scientist"
     },
     "edu-2-subtitle": {
@@ -74,12 +74,12 @@ export const translations = {
         en: "Masterschool"
     },
     "edu-2-desc": {
-        de: "14-monatige Fortbildung bei Masterschool mit Fokus auf Python, EDA und Machine Learning",
-        en: "14-month training at Masterschool focusing on Python, EDA and Machine Learning"
+        de: "Intensive Weiterbildung über 3000 Stunden (56 Wochen) mit Spezialisierung AI Data Science – von SQL und Python über Machine Learning, Computer Vision und NLP bis zu Generative AI.",
+        en: "Intensive 3000-hour (56-week) program specialising in AI Data Science – from SQL and Python through machine learning, computer vision and NLP to generative AI."
     },
     "edu-2-period": {
-        de: "März 2025 - Heute",
-        en: "March 2025 - Today"
+        de: "März 2025 - Mai 2026",
+        en: "March 2025 - May 2026"
     },
 
     "edu-1-title": {
@@ -139,6 +139,31 @@ export const translations = {
         en: "Developed web applications for EESSI and internal tools using JavaScript and React."
     },
 
+    // Work experience - Janus (current)
+    "work-title-6": { de: "Berufserfahrung", en: "Work experience" },
+    "work-6-title": { de: "Berater für AI & Data Science", en: "AI & Data Science Consultant" },
+    "work-6-subtitle": { de: "Janus Pflege", en: "Janus Pflege" },
+    "work-6-calendar": { de: "Mai 2026 - Heute", en: "May 2026 - Today" },
+    "work-6-description": {
+        de: "Beratung zu KI- und Data-Science-Lösungen: Analyse von Daten und Prozessen sowie Konzeption und Einführung KI-gestützter Anwendungen.",
+        en: "Consulting on AI and data science solutions: analysing data and processes and designing and introducing AI-powered applications."
+    },
+
+    // Work experience - PawPro / Pawsitive Care Foundation internship
+    "work-title-5": { de: "Praktikum", en: "Internship" },
+    "work-5-title": { de: "Chief of Staff Intern", en: "Chief of Staff Intern" },
+    "work-5-subtitle": { de: "Pawsitive Care Foundation", en: "Pawsitive Care Foundation" },
+    "work-5-calendar": { de: "März 2026 - Mai 2026", en: "March 2026 - May 2026" },
+    "work-5-description": {
+        de: "Eigenverantwortliche Entwicklung der Foundation-Website (React/Vite, 11 Seiten, 120+ Commits) sowie Mitarbeit an der KI-Plattform (Next.js 14, TypeScript, Supabase, Stripe, Claude API). Zusätzlich Aufbau der DevOps-Pipelines und Strategie- und Roadmap-Arbeit.",
+        en: "Independently designed and built the Foundation's website (React/Vite, 11 pages, 120+ commits) and contributed to the AI platform (Next.js 14, TypeScript, Supabase, Stripe, Claude API). Also set up the DevOps pipelines and led strategy and roadmap work."
+    },
+
+    // Document download labels (CV / Werdegang)
+    "doc-masterschool-zeugnis": { de: "Abschlusszertifikat", en: "Course certificate" },
+    "doc-pawpro-zeugnis": { de: "Praktikumszeugnis", en: "Internship certificate" },
+    "doc-pawpro-empfehlung": { de: "Empfehlungsschreiben", en: "Recommendation letter" },
+
     // Portfolio section
     // Portfolio section
     "portfolio-title": {
@@ -191,6 +216,35 @@ export const translations = {
         de: "Webseite",
         en: "Website"
     },
+
+    // Portfolio 4 - Pawsitive Care Foundation
+    "portfolio4-title": {
+        de: "Pawsitive Care Foundation",
+        en: "Pawsitive Care Foundation"
+    },
+    "portfolio4-description": {
+        de: "Öffentliche Web-Präsenz der gemeinnützigen Pawsitive Care Foundation – eigenverantwortlich als React/Vite-Single-Page-App mit 11 Seiten, Stripe-Spenden-Flow und Admin-Dashboard entwickelt.",
+        en: "Public web presence of the non-profit Pawsitive Care Foundation – independently built as a React/Vite single-page app with 11 pages, a Stripe donation flow and an admin dashboard."
+    },
+    "website4-text": {
+        de: "Website besuchen",
+        en: "Visit website"
+    },
+
+    // Portfolio 5 - PawCare AI health platform
+    "portfolio5-title": {
+        de: "PawCare – KI-Gesundheitsplattform",
+        en: "PawCare – AI Health Platform"
+    },
+    "portfolio5-description": {
+        de: "KI-gestützte Plattform für die Mikrobiom-Gesundheit von Hunden. Mitentwicklung des Frontends mit Next.js 14, TypeScript, Supabase, Stripe und der Anthropic-Claude-API – inklusive Auth-Flow, Microbiom-Dashboard und Checkout.",
+        en: "AI-powered platform for canine microbiome health. Co-developed the frontend with Next.js 14, TypeScript, Supabase, Stripe and the Anthropic Claude API – including auth flow, microbiome dashboard and checkout."
+    },
+    "website5-text": {
+        de: "Website besuchen",
+        en: "Visit website"
+    },
+
     // job references
     "job-ref": {
         de: "Feedback meiner Arbeitgeber",

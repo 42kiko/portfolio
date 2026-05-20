@@ -830,6 +830,27 @@ img {
   font-size: 1.3em;
 }
 
+.timeline-docs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.timeline-doc {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: var(--first-color);
+  transition: all 0.3s ease;
+}
+
+.timeline-doc:hover {
+  transform: translateY(-2px);
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .timeline::before {
       left: 30px;

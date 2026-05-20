@@ -53,11 +53,32 @@ export const content = {
   ],
   experience: [
     {
+      periodKey: "work-6-calendar",
+      titleKey: "work-6-title",
+      descKey: "work-6-description",
+      tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-6" },
+      tagRight: { icon: "uil uil-building", labelKey: "work-6-subtitle", href: "https://www.janus-pflege.de" },
+    },
+    {
+      periodKey: "work-5-calendar",
+      titleKey: "work-5-title",
+      descKey: "work-5-description",
+      tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-5" },
+      tagRight: { icon: "uil uil-building", labelKey: "work-5-subtitle", href: "https://pawsitive.fund/" },
+      docs: [
+        { de: "assets/docs/pawpro-zeugnis-de.pdf", en: "assets/docs/pawpro-zeugnis-en.pdf", labelKey: "doc-pawpro-zeugnis" },
+        { de: "assets/docs/pawpro-empfehlung-en.pdf", en: "assets/docs/pawpro-empfehlung-en.pdf", labelKey: "doc-pawpro-empfehlung" },
+      ],
+    },
+    {
       periodKey: "edu-2-period",
       titleKey: "edu-2-title",
       descKey: "edu-2-desc",
       tagLeft: { icon: "uil uil-graduation-cap", key: "education-title-2" },
       tagRight: { icon: "uil uil-university", labelKey: "edu-2-subtitle", href: "https://masterschool.com/" },
+      docs: [
+        { de: "assets/docs/masterschool-zeugnis-de.pdf", en: "assets/docs/masterschool-zeugnis-en.pdf", labelKey: "doc-masterschool-zeugnis" },
+      ],
     },
     {
       periodKey: "work-4-calendar",
@@ -96,6 +117,20 @@ export const content = {
     },
   ],
   portfolio: [
+    {
+      img: "assets/img/pawsitive-fund.jpeg",
+      titleKey: "portfolio4-title",
+      descKey: "portfolio4-description",
+      ctaKey: "website4-text",
+      href: "https://pawsitive.fund/",
+    },
+    {
+      img: "assets/img/pawcare-fund.jpeg",
+      titleKey: "portfolio5-title",
+      descKey: "portfolio5-description",
+      ctaKey: "website5-text",
+      href: "https://pawcare.fund/",
+    },
     {
       img: "assets/img/car3.webp",
       titleKey: "portfolio1-title",

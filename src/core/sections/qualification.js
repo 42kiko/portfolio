@@ -1,9 +1,20 @@
 import { content } from "../../config/content.config.js";
 import { $ } from "../../utils/dom.js";
+import { LanguageStore } from "../language.js";
 
 export function renderQualification() {
   const app = $("#app");
-  const timelineItems = content.experience.map((e) => `
+  const lang = LanguageStore.get();
+
+  const timelineItems = content.experience.map((e) => {
+    const docs = (e.docs && e.docs.length)
+      ? `<div class="timeline-docs">${e.docs.map((d) => `
+          <a href="${d[lang] || d.de}" target="_blank" rel="noopener" class="timeline-doc link">
+            <i class="uil uil-file-download-alt tag-icon"></i><span id="${d.labelKey}"></span>
+          </a>`).join("")}</div>`
+      : "";
+
+    return `
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-content">
@@ -14,8 +25,10 @@ export function renderQualification() {
           <span class="timeline-tag tag-education"><i class="${e.tagLeft.icon} tag-icon"></i><div id="${e.tagLeft.key}"></div></span>
           <a href="${e.tagRight.href}" target="_blank" class="timeline-tag tag-employer link"><i class="${e.tagRight.icon} tag-icon"></i><div id="${e.tagRight.labelKey}"></div></a>
         </div>
+        ${docs}
       </div>
-    </div>`).join("");
+    </div>`;
+  }).join("");
 
   app.insertAdjacentHTML("beforeend", `
     <section class="qualification__section" id="qualification">

@@ -12,7 +12,7 @@ test.describe("Content – Werdegang & Portfolio", () => {
   test("timeline includes the PawPro and Janus stations", async ({ page }) => {
     const timeline = page.locator("#qualification .timeline");
     await expect(timeline).toContainText("Chief of Staff Intern");
-    await expect(timeline).toContainText("Janus Pflege");
+    await expect(timeline).toContainText("Janus Pflegedienst");
   });
 
   test("timeline entries expose document download links", async ({ page }) => {

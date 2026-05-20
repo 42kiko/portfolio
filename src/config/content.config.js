@@ -57,7 +57,7 @@ export const content = {
       titleKey: "work-6-title",
       descKey: "work-6-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-6" },
-      tagRight: { icon: "uil uil-building", labelKey: "work-6-subtitle", href: "https://www.janus-pflege.de" },
+      tagRight: { icon: "uil uil-building", labelKey: "work-6-subtitle" },
     },
     {
       periodKey: "work-5-calendar",

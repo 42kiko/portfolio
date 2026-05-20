@@ -142,11 +142,11 @@ export const translations = {
     // Work experience - Janus (current)
     "work-title-6": { de: "Berufserfahrung", en: "Work experience" },
     "work-6-title": { de: "Berater für AI & Data Science", en: "AI & Data Science Consultant" },
-    "work-6-subtitle": { de: "Janus Pflege", en: "Janus Pflege" },
+    "work-6-subtitle": { de: "Janus Pflegedienst", en: "Janus Pflegedienst" },
     "work-6-calendar": { de: "Mai 2026 - Heute", en: "May 2026 - Today" },
     "work-6-description": {
-        de: "Beratung zu KI- und Data-Science-Lösungen: Analyse von Daten und Prozessen sowie Konzeption und Einführung KI-gestützter Anwendungen.",
-        en: "Consulting on AI and data science solutions: analysing data and processes and designing and introducing AI-powered applications."
+        de: "Leitung der unternehmensweiten KI-Initiative: Analyse von Prozessen und Daten, um Abläufe in Pflege und Verwaltung zu verbessern. Konzeption und Pilotierung KI-gestützter Lösungen – konsequent datenschutzkonform und mit klarem, messbarem Nutzen.",
+        en: "Leading the company-wide AI initiative: analysing processes and data to improve workflows in care and administration. Designing and piloting AI-powered solutions – strictly data-protection-compliant and with clear, measurable benefit."
     },
 
     // Work experience - PawPro / Pawsitive Care Foundation internship

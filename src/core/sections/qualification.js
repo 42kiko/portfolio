@@ -14,6 +14,12 @@ export function renderQualification() {
           </a>`).join("")}</div>`
       : "";
 
+    // Arbeitgeber-Tag: verlinkt, falls eine href vorhanden ist – sonst statisch
+    const tr = e.tagRight;
+    const employer = tr.href
+      ? `<a href="${tr.href}" target="_blank" class="timeline-tag tag-employer link"><i class="${tr.icon} tag-icon"></i><div id="${tr.labelKey}"></div></a>`
+      : `<span class="timeline-tag tag-employer"><i class="${tr.icon} tag-icon"></i><div id="${tr.labelKey}"></div></span>`;
+
     return `
     <div class="timeline-item">
       <div class="timeline-dot"></div>
@@ -23,7 +29,7 @@ export function renderQualification() {
         <p class="timeline-description" id="${e.descKey}"></p>
         <div class="timeline-tags">
           <span class="timeline-tag tag-education"><i class="${e.tagLeft.icon} tag-icon"></i><div id="${e.tagLeft.key}"></div></span>
-          <a href="${e.tagRight.href}" target="_blank" class="timeline-tag tag-employer link"><i class="${e.tagRight.icon} tag-icon"></i><div id="${e.tagRight.labelKey}"></div></a>
+          ${employer}
         </div>
         ${docs}
       </div>

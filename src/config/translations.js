@@ -155,8 +155,8 @@ export const translations = {
     "work-5-subtitle": { de: "Pawsitive Care Foundation", en: "Pawsitive Care Foundation" },
     "work-5-calendar": { de: "März 2026 - Mai 2026", en: "March 2026 - May 2026" },
     "work-5-description": {
-        de: "Eigenverantwortliche Entwicklung der Foundation-Website (React/Vite, 11 Seiten, 120+ Commits) sowie Mitarbeit an der KI-Plattform (Next.js 14, TypeScript, Supabase, Stripe, Claude API). Zusätzlich Aufbau der DevOps-Pipelines und Strategie- und Roadmap-Arbeit.",
-        en: "Independently designed and built the Foundation's website (React/Vite, 11 pages, 120+ commits) and contributed to the AI platform (Next.js 14, TypeScript, Supabase, Stripe, Claude API). Also set up the DevOps pipelines and led strategy and roadmap work."
+        de: "Cross-funktionale Rolle zwischen Strategie, Technik und Organisation: Erarbeitung der Wachstums-Roadmap und des Business Cases inkl. Personal- und Kostenplanung, eigenverantwortliche Entwicklung der Foundation-Website, Mitarbeit an der KI-Plattform sowie Koordination eines externen Teams.",
+        en: "Cross-functional role spanning strategy, engineering and operations: built the growth roadmap and business case including headcount and cost planning, independently developed the Foundation's website, contributed to the AI platform, and coordinated an external team."
     },
 
     // Document download labels (CV / Werdegang)
@@ -175,18 +175,18 @@ export const translations = {
         en: "Recent Projects"
     },
 
-    // Portfolio 1 - Vehicle Data Analysis
-    "portfolio1-title": {
-        de: "Fahrzeug-Datenanalyse",
-        en: "Vehicle Data Analysis"
+    // Portfolio 6 - CNN / CIFAR-10 Computer Vision
+    "portfolio6-title": {
+        de: "CNN – Bildklassifikation (CIFAR-10)",
+        en: "CNN – Image Classification (CIFAR-10)"
     },
-    "portfolio1-description": {
-        de: "Exploratives Data Science Projekt zur Untersuchung von Mustern in Fahrzeugeffizienz, Motorgröße und Preisen. Identifizierung von Korrelationen und Visualisierung von Schlüsseltrends für Markt- und Effizienzeinblicke.",
-        en: "Exploratory Data Science project to uncover patterns in vehicle efficiency, engine size, and pricing. Identified correlations and visualized key trends for market and efficiency insights."
+    "portfolio6-description": {
+        de: "Computer-Vision-Projekt: ein schlankes CNN auf dem CIFAR-10-Datensatz mit Fokus auf Interpretierbarkeit – interaktive Visualisierungen und Klassen-Auswertungen statt nur roher Genauigkeit.",
+        en: "Computer vision project: a lightweight CNN on the CIFAR-10 dataset focused on interpretability – interactive visualisations and per-class breakdowns rather than raw accuracy alone."
     },
-    "github1-text": {
+    "website6-text": {
         de: "Projekt ansehen",
-        en: "View Project"
+        en: "View project"
     },
 
     // Portfolio 2 - Digital Climate Roadmap
@@ -223,8 +223,8 @@ export const translations = {
         en: "Pawsitive Care Foundation"
     },
     "portfolio4-description": {
-        de: "Öffentliche Web-Präsenz der gemeinnützigen Pawsitive Care Foundation – eigenverantwortlich als React/Vite-Single-Page-App mit 11 Seiten, Stripe-Spenden-Flow und Admin-Dashboard entwickelt.",
-        en: "Public web presence of the non-profit Pawsitive Care Foundation – independently built as a React/Vite single-page app with 11 pages, a Stripe donation flow and an admin dashboard."
+        de: "Öffentliche Web-Präsenz der gemeinnützigen Pawsitive Care Foundation – von mir eigenverantwortlich konzipiert und umgesetzt: 11 Seiten, Spenden-Flow und ein Admin-Dashboard zur Spendenverwaltung.",
+        en: "Public web presence of the non-profit Pawsitive Care Foundation – fully designed and built by me: 11 pages, a donation flow and an admin dashboard for managing donations."
     },
     "website4-text": {
         de: "Website besuchen",
@@ -237,8 +237,8 @@ export const translations = {
         en: "PawCare – AI Health Platform"
     },
     "portfolio5-description": {
-        de: "KI-gestützte Plattform für die Mikrobiom-Gesundheit von Hunden. Mitentwicklung des Frontends mit Next.js 14, TypeScript, Supabase, Stripe und der Anthropic-Claude-API – inklusive Auth-Flow, Microbiom-Dashboard und Checkout.",
-        en: "AI-powered platform for canine microbiome health. Co-developed the frontend with Next.js 14, TypeScript, Supabase, Stripe and the Anthropic Claude API – including auth flow, microbiome dashboard and checkout."
+        de: "KI-gestützte Plattform für die Mikrobiom-Gesundheit von Hunden. Mitentwicklung der Anwendung – von der Nutzer-Anmeldung über das Gesundheits-Dashboard bis zum Checkout.",
+        en: "AI-powered platform for canine microbiome health. Co-developed the application – from user onboarding through the health dashboard to checkout."
     },
     "website5-text": {
         de: "Website besuchen",

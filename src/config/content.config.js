@@ -136,11 +136,11 @@ export const content = {
       href: "https://pawcare.fund/",
     },
     {
-      img: "assets/img/car3.webp",
-      titleKey: "portfolio1-title",
-      descKey: "portfolio1-description",
-      ctaKey: "github1-text",
-      href: "https://github.com/42kiko/Fahrzeugdatenanalyse/blob/main/Fahrzeugdatenanalyse.ipynb",
+      img: "assets/img/cnn-cifar10.jpeg",
+      titleKey: "portfolio6-title",
+      descKey: "portfolio6-description",
+      ctaKey: "website6-text",
+      href: "https://42kiko.github.io/Computer-Vision-CIFAR10/",
     },
     {
       img: "assets/img/Klimaschutz-Roadmap-2.0-1080x608.png",

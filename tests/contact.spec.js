@@ -29,4 +29,12 @@ test.describe("Contact Form", () => {
     const isInvalid = await nameField.evaluate((el) => !el.validity.valid);
     expect(isInvalid).toBe(true);
   });
+
+  // Regression: commit 5b6775f entfernte das EmailJS-SDK-Script aus
+  // index.html. Ohne window.emailjs zeigt das Formular bei jedem
+  // Absenden das Fehler-Popup (contact.js -> showStatus(false)).
+  test("EmailJS SDK is loaded", async ({ page }) => {
+    const emailjsType = await page.evaluate(() => typeof window.emailjs);
+    expect(emailjsType).toBe("object");
+  });
 });

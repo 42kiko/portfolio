@@ -9,7 +9,7 @@ export function renderAbout() {
       <h2 class="section__title" id="about-title"></h2>
       <span class="section__subtitle" id="about-subtitle"></span>
       <div class="about__container container grid">
-        <video class="about__img" autoplay loop muted><source src="${content.about.video}" type="video/mp4" /></video>
+        <video class="about__img" autoplay loop muted playsinline preload="metadata"><source src="${content.about.video}" type="video/mp4" /></video>
         <div class="about__data">
           <p class="about__description" id="about-text"></p>
           <div class="about__info">

@@ -15,81 +15,92 @@ export const content = {
       x: "130",
       y: "70",
     },
-    // Roles for the typewriter effect on the home subtitle
-    typedRoles: {
-      de: ["Data-Driven Software Engineer", "Full-Stack Developer", "Data Scientist", "Problem Solver"],
-      en: ["Data-Driven Software Engineer", "Full-Stack Developer", "Data Scientist", "Problem Solver"],
+    // Rotierende Titel im Hero (Schreibmaschinen-Effekt)
+    titles: {
+      de: ["AI & Data Science Consultant", "Datengetriebener Software-Ingenieur", "Machine Learning Practitioner", "Full-Stack Developer"],
+      en: ["AI & Data Science Consultant", "Data-Driven Software Engineer", "Machine Learning Practitioner", "Full-Stack Developer"],
     },
   },
   about: {
-    video: "assets/img/me/video6.mp4",
-    cv: {
-      // Files must be placed in assets/cv/<lang>/Kiko-DS-<lang>-<suffix>.pdf
-      colorSuffixes: ["v", "t", "b", "p", "y", "g", "o"],
-    },
+    video: "assets/img/me/about-video.mp4",
     stats: [
-      { titleKey: "years-title",    nameKey: "years-name",    count: 7 },
-      { titleKey: "projects-title", nameKey: "projects-name", count: 8 },
-      { titleKey: "companies-title",nameKey: "companies-name",count: 6 },
+      { titleKey: "years-title", nameKey: "years-name" },
+      { titleKey: "projects-title", nameKey: "projects-name" },
+      { titleKey: "companies-title", nameKey: "companies-name" },
     ],
   },
+  // level (0-100): Schwerpunkt-Gewichtung, steuert die Radar-Flaeche
   skills: [
     {
       icon: "uil uil-brackets-curly",
       titleKey: "frontend-title",
       subtitleKey: "frontend-subtitle",
-      open: true,
-      items: [
-        { name: "HTML",       level: 95 },
-        { name: "CSS",        level: 88 },
-        { name: "JavaScript", level: 85 },
-        { name: "TypeScript", level: 78 },
-        { name: "React",      level: 72 },
-        { name: "Angular",    level: 82 },
-      ],
+      level: 85,
+      items: ["HTML / CSS", "JavaScript", "TypeScript", "React", "Next.js", "Angular"],
     },
     {
       icon: "uil uil-server-network",
       titleKey: "backend-title",
       subtitleKey: "backend-subtitle",
-      items: [
-        { name: "Java",    level: 88 },
-        { name: "Python",  level: 85 },
-        { name: "C#",      level: 72 },
-        { name: "Node.js", level: 65 },
-        { name: "Kotlin",  level: 55 },
-      ],
+      level: 80,
+      items: ["Python", "Node.js", "Java", "C#", "SQL", "Supabase", "REST APIs"],
     },
     {
       icon: "uil uil-swatchbook",
       titleKey: "design-title",
       subtitleKey: "design-subtitle",
-      items: [
-        { name: "Canva",      level: 80 },
-        { name: "Photoshop",  level: 52 },
-        { name: "Figma",      level: 68 },
-      ],
+      level: 60,
+      items: ["UI/UX-Design", "Branding & Logo", "Figma", "Photoshop"],
     },
     {
       icon: "uil uil-flask",
       titleKey: "ds-title",
       subtitleKey: "ds-subtitle",
-      items: [
-        { name: "Pandas, NumPy",         level: 82 },
-        { name: "SQL",                   level: 95 },
-        { name: "Scikit-learn",          level: 72 },
-        { name: "TensorFlow, PyTorch",   level: 45 },
-        { name: "Matplotlib, Seaborn",   level: 80 },
-      ],
+      level: 90,
+      items: ["Machine Learning", "Deep Learning", "Computer Vision (CNN)", "NLP & LLMs", "Generative AI", "Hugging Face", "TensorFlow / PyTorch", "scikit-learn"],
     },
   ],
   experience: [
+    {
+      current: true,
+      periodKey: "work-7-calendar",
+      titleKey: "work-7-title",
+      descKey: "work-7-description",
+      tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-7" },
+      tagRight: { icon: "uil uil-building", labelKey: "work-7-subtitle", href: "https://pawcare.fund/" },
+      tags: { de: ["Freiberuflich", "Next.js", "Supabase", "Claude API", "Strategie"], en: ["Freelance", "Next.js", "Supabase", "Claude API", "Strategy"] },
+    },
+    {
+      current: true,
+      periodKey: "work-6-calendar",
+      titleKey: "work-6-title",
+      descKey: "work-6-description",
+      tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-6" },
+      tagRight: { icon: "uil uil-building", labelKey: "work-6-subtitle" },
+      tags: { de: ["KI-Strategie", "Datenanalyse", "Prozessoptimierung", "Datenschutz"], en: ["AI Strategy", "Data Analysis", "Process Optimisation", "Data Privacy"] },
+    },
+    {
+      periodKey: "work-5-calendar",
+      titleKey: "work-5-title",
+      descKey: "work-5-description",
+      tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-5" },
+      tagRight: { icon: "uil uil-building", labelKey: "work-5-subtitle", href: "https://pawsitive.fund/" },
+      docs: [
+        { de: "assets/docs/pawpro-zeugnis-de.pdf", en: "assets/docs/pawpro-zeugnis-en.pdf", labelKey: "doc-pawpro-zeugnis" },
+        { de: "assets/docs/pawpro-empfehlung-en.pdf", en: "assets/docs/pawpro-empfehlung-en.pdf", labelKey: "doc-pawpro-empfehlung" },
+      ],
+      tags: { de: ["Roadmap", "Business Case", "React", "CI/CD", "Team-Leitung"], en: ["Roadmap", "Business Case", "React", "CI/CD", "Team Lead"] },
+    },
     {
       periodKey: "edu-2-period",
       titleKey: "edu-2-title",
       descKey: "edu-2-desc",
       tagLeft: { icon: "uil uil-graduation-cap", key: "education-title-2" },
       tagRight: { icon: "uil uil-university", labelKey: "edu-2-subtitle", href: "https://masterschool.com/" },
+      docs: [
+        { de: "assets/docs/masterschool-zeugnis-de.pdf", en: "assets/docs/masterschool-zeugnis-en.pdf", labelKey: "doc-masterschool-zeugnis" },
+      ],
+      tags: { de: ["Machine Learning", "Computer Vision", "NLP & LLMs", "Python", "Generative AI"], en: ["Machine Learning", "Computer Vision", "NLP & LLMs", "Python", "Generative AI"] },
     },
     {
       periodKey: "work-4-calendar",
@@ -97,6 +108,7 @@ export const content = {
       descKey: "work-4-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-4" },
       tagRight: { icon: "uil uil-building", labelKey: "work-4-subtitle", href: "https://www.hannover.de/" },
+      tags: { de: ["Anwendungsbetreuung", "Fachbereich-Schnittstelle", "Optimierung"], en: ["Application Support", "Business Interface", "Optimisation"] },
     },
     {
       periodKey: "work-3-calendar",
@@ -104,6 +116,7 @@ export const content = {
       descKey: "work-3-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-3" },
       tagRight: { icon: "uil uil-building", labelKey: "work-3-subtitle", href: "https://www.ottogroup.com" },
+      tags: { de: ["Fullstack", "React", "Angular", "C#", "Hexagonale Architektur"], en: ["Fullstack", "React", "Angular", "C#", "Hexagonal Architecture"] },
     },
     {
       periodKey: "work-2-calendar",
@@ -111,6 +124,7 @@ export const content = {
       descKey: "work-2-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-2" },
       tagRight: { icon: "uil uil-building", labelKey: "work-2-subtitle", href: "https://www.nt.ag/" },
+      tags: { de: ["Kreditbearbeitung", "Softwareentwicklung", "FinProcess"], en: ["Loan Processing", "Software Development", "FinProcess"] },
     },
     {
       periodKey: "work-1-calendar",
@@ -118,6 +132,7 @@ export const content = {
       descKey: "work-1-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-1" },
       tagRight: { icon: "uil uil-building", labelKey: "work-1-subtitle", href: "https://www.frobese.de/" },
+      tags: { de: ["Web-Entwicklung", "JavaScript", "React", "EESSI"], en: ["Web Development", "JavaScript", "React", "EESSI"] },
     },
     {
       periodKey: "edu-1-period",
@@ -125,15 +140,33 @@ export const content = {
       descKey: "edu-1-desc",
       tagLeft: { icon: "uil uil-graduation-cap", key: "education-title-1" },
       tagRight: { icon: "uil uil-university", labelKey: "edu-1-subtitle", href: "https://www.tecracer.com/" },
+      tags: { de: ["Software Engineering", "Clean Code", "Ausbildung"], en: ["Software Engineering", "Clean Code", "Apprenticeship"] },
     },
   ],
   portfolio: [
     {
-      img: "assets/img/car3.webp",
-      titleKey: "portfolio1-title",
-      descKey: "portfolio1-description",
-      ctaKey: "github1-text",
-      href: "https://github.com/42kiko/Fahrzeugdatenanalyse/blob/main/Fahrzeugdatenanalyse.ipynb",
+      img: "assets/img/pawsitive-fund.jpeg",
+      titleKey: "portfolio4-title",
+      descKey: "portfolio4-description",
+      ctaKey: "website4-text",
+      href: "https://pawsitive.fund/",
+      tags: ["React", "Vite", "Stripe", "CI/CD-Deployment", "Admin-Dashboard"],
+    },
+    {
+      img: "assets/img/pawcare-fund.jpeg",
+      titleKey: "portfolio5-title",
+      descKey: "portfolio5-description",
+      ctaKey: "website5-text",
+      href: "https://pawcare.fund/",
+      tags: ["Next.js", "TypeScript", "Supabase", "Claude API", "Stripe"],
+    },
+    {
+      img: "assets/img/cnn-cifar10.jpeg",
+      titleKey: "portfolio6-title",
+      descKey: "portfolio6-description",
+      ctaKey: "website6-text",
+      href: "https://42kiko.github.io/Computer-Vision-CIFAR10/",
+      tags: ["Computer Vision", "CNN", "TensorFlow", "CIFAR-10", "Plotly"],
     },
     {
       img: "assets/img/Klimaschutz-Roadmap-2.0-1080x608.png",
@@ -141,6 +174,7 @@ export const content = {
       descKey: "portfolio2-description",
       ctaKey: "website2-text",
       href: "https://www.parentsforfuture.de/de/buendnis/employees-for-future",
+      tags: { de: ["Nachhaltigkeit", "Roadmap", "Tool"], en: ["Sustainability", "Roadmap", "Tool"] },
     },
     {
       img: "assets/img/frorum-logo.svg",
@@ -148,23 +182,11 @@ export const content = {
       descKey: "portfolio3-description",
       ctaKey: "website3-text",
       href: "https://www.frobese.de/frorum/articles/201908_mit-okr-ziele-fokussiert-erreichen/",
-    },
-    {
-      img: "assets/img/traveltide.png",  // TODO: Vorschaubild hinzufügen
-      titleKey: "portfolio4-title",
-      descKey: "portfolio4-description",
-      ctaKey: "github4-text",
-      href: "https://github.com/42kiko/traveltide",
-    },
-    {
-      img: "assets/img/cifar10.png",     // TODO: Vorschaubild hinzufügen
-      titleKey: "portfolio5-title",
-      descKey: "portfolio5-description",
-      ctaKey: "github5-text",
-      href: "https://42kiko.github.io/Computer-Vision-CIFAR10/",
+      tags: { de: ["OKR", "Wissensmanagement", "Fachartikel"], en: ["OKR", "Knowledge Management", "Article"] },
     },
   ],
   testimonials: [
+    { logo: "assets/img/companys/pawsitive-care.png", titleKey: "pcf-title", posKey: "pcf-pos", subKey: "pcf-sub" },
     { logo: "assets/img/companys/otto_group.png", titleKey: "eos-title", posKey: "eos-pos", subKey: "eos-sub" },
     { logo: "assets/img/companys/ntag.png", titleKey: "ntag-title", posKey: "ntag-pos", subKey: "ntag-sub" },
     { logo: "assets/img/companys/frobese_favicon_256.png", titleKey: "frobese-title", posKey: "frobese-pos", subKey: "frobese-sub" },
@@ -183,7 +205,6 @@ export const content = {
       summaryKey: "cv-profile-summary",
       linkedIn: "https://www.linkedin.com/in/kiko97/",
       github: "https://github.com/42kiko",
-      website: "https://42kiko.github.io/portfolio/",
     },
 
     // Sidebar sections (left column) - generic, can be extended
@@ -199,22 +220,27 @@ export const content = {
       {
         titleKey: "cv-section-certifications",
         items: [
+          { nameKey: "cv-cert-masterschool-name", issuerKey: "cv-cert-masterschool-issuer", dateKey: "cv-cert-masterschool-date" },
           { nameKey: "cv-cert-scrum-name", issuerKey: "cv-cert-scrum-issuer", dateKey: "cv-cert-scrum-date" },
           { nameKey: "cv-cert-sapui5-name", issuerKey: "cv-cert-sapui5-issuer", dateKey: "cv-cert-sapui5-date" },
           { nameKey: "cv-cert-aws-name", issuerKey: "cv-cert-aws-issuer", dateKey: "cv-cert-aws-date" },
         ],
       },
       {
+        titleKey: "cv-skill-cat-genai",
+        chips: ["LLMs", "Computer Vision", "NLP", "RAG", "Prompt Engineering", "Claude API"],
+      },
+      {
         titleKey: "cv-skill-cat-data-analytics",
-        chips: ["Exploratory Data Analysis", "Probability Visualization", "Pandas", "Seaborn"],
+        chips: ["Exploratory Data Analysis", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly", "TensorFlow", "PyTorch", "Hugging Face", "scikit-learn"],
       },
       {
         titleKey: "cv-skill-cat-programming",
-        chips: ["Python", "Java", "JavaScript", "C#", "TypeScript", "SQL"],
+        chips: ["Python", "SQL", "TypeScript", "JavaScript", "C#", "Java"],
       },
       {
         titleKey: "cv-skill-cat-tools",
-        chips: ["Git/GitHub", "Jenkins", "VS Code", "IntelliJ", "Excel (Pivot)", "Confluence", "Trello"],
+        chips: ["Git/GitHub", "Jupyter Notebook", "VS Code", "Tableau", "Excel (Pivot)", "Confluence", "n8n"],
       },
       {
         titleKey: "cv-skill-cat-methodologies",
@@ -222,17 +248,18 @@ export const content = {
       },
       {
         titleKey: "cv-skill-cat-web-dev",
-        chips: ["Angular", "React", "Node.js", "RESTful APIs"],
+        chips: ["React", "Next.js", "Vite", "Angular", "Supabase", "Node.js", "RESTful APIs"],
       },
       {
         titleKey: "cv-skill-cat-cloud",
-        chips: ["Docker", "CI/CD"],
+        chips: ["GitHub Actions", "CI/CD", "Docker", "Stripe", "IONOS"],
       },
       {
         titleKey: "cv-section-soft-skills",
         chips: [
           { textKey: "cv-soft-analytical" },
           { textKey: "cv-soft-problem-solving" },
+          { textKey: "cv-soft-strategic" },
           { textKey: "cv-soft-collaboration" },
           { textKey: "cv-soft-adaptability" },
           { textKey: "cv-soft-learning" },
@@ -242,6 +269,30 @@ export const content = {
 
     // Main content sections (right column)
     experience: [
+      {
+        company: "PawPro GmbH",
+        roleKey: "work-7-title",
+        location: "Remote",
+        fromKey: "work-7-calendar",
+        toKey: "work-7-calendar",
+        bulletKeys: ["cv-exp-pawpro-freelance-bullet-1", "cv-exp-pawpro-freelance-bullet-2", "cv-exp-pawpro-freelance-bullet-3"],
+      },
+      {
+        company: "Janus Pflegedienst",
+        roleKey: "work-6-title",
+        location: "Hannover",
+        fromKey: "work-6-calendar",
+        toKey: "work-6-calendar",
+        bulletKeys: ["cv-exp-janus-bullet-1", "cv-exp-janus-bullet-2", "cv-exp-janus-bullet-3"],
+      },
+      {
+        company: "Pawsitive Care Foundation",
+        roleKey: "work-5-title",
+        location: "Remote",
+        fromKey: "work-5-calendar",
+        toKey: "work-5-calendar",
+        bulletKeys: ["cv-exp-pawpro-bullet-1", "cv-exp-pawpro-bullet-2", "cv-exp-pawpro-bullet-3"],
+      },
       {
         company: "Landeshauptstadt Hannover (LHH)",
         roleKey: "work-4-title",
@@ -297,38 +348,21 @@ export const content = {
 
     projects: [
       {
-        nameKey: "cv-project-traveltide-name",
-        dateKey: "cv-project-traveltide-date",
-        stackKey: "cv-project-traveltide-stack",
-        url: "https://github.com/42kiko/traveltide",
-        bulletKeys: ["cv-project-traveltide-bullet-1", "cv-project-traveltide-bullet-2"],
-      },
-      {
-        nameKey: "cv-project-cifar10-name",
-        dateKey: "cv-project-cifar10-date",
-        stackKey: "cv-project-cifar10-stack",
-        url: "https://42kiko.github.io/Computer-Vision-CIFAR10/",
-        bulletKeys: ["cv-project-cifar10-bullet-1", "cv-project-cifar10-bullet-2"],
-      },
-      {
-        nameKey: "cv-project-vehicle-name",
-        dateKey: "cv-project-vehicle-date",
-        stackKey: "cv-project-vehicle-stack",
-        url: "https://github.com/42kiko/Fahrzeugdatenanalyse",
-        bulletKeys: ["cv-project-vehicle-bullet-1", "cv-project-vehicle-bullet-2"],
+        nameKey: "cv-project-cnn-name",
+        dateKey: "cv-project-cnn-date",
+        stackKey: "cv-project-cnn-stack",
+        bulletKeys: ["cv-project-cnn-bullet-1", "cv-project-cnn-bullet-2"],
       },
       {
         nameKey: "cv-project-climate-name",
         dateKey: "cv-project-climate-date",
         stackKey: "cv-project-climate-stack",
-        url: "https://www.parentsforfuture.de/de/buendnis/employees-for-future",
         bulletKeys: ["cv-project-climate-bullet-1", "cv-project-climate-bullet-2"],
       },
       {
         nameKey: "cv-project-knowledge-name",
         dateKey: "cv-project-knowledge-date",
         stackKey: "cv-project-knowledge-stack",
-        url: "https://www.frobese.de/frorum/articles/201908_mit-okr-ziele-fokussiert-erreichen/",
         bulletKeys: ["cv-project-knowledge-bullet-1", "cv-project-knowledge-bullet-2"],
       },
     ],

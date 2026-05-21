@@ -5,6 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- SEO -->
+    <meta name="description"
+        content="Portfolio von Kiko Ramon Lukas – Berater für AI & Data Science. Werdegang, Projekte und Kontakt: Datenanalyse, Machine Learning und KI-gestützte Anwendungen." />
+    <meta name="author" content="Kiko Ramon Lukas" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://42kiko.github.io/portfolio/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kiko Ramon Lukas" />
+    <meta property="og:title" content="Kiko Ramon Lukas – AI & Data Science" />
+    <meta property="og:description"
+        content="Berater für AI & Data Science. Werdegang, Projekte und Kontakt." />
+    <meta property="og:url" content="https://42kiko.github.io/portfolio/" />
+    <meta property="og:image" content="https://42kiko.github.io/portfolio/assets/img/og-image.jpg" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kiko Ramon Lukas – AI & Data Science" />
+    <meta name="twitter:description"
+        content="Berater für AI & Data Science. Werdegang, Projekte und Kontakt." />
+    <meta name="twitter:image" content="https://42kiko.github.io/portfolio/assets/img/og-image.jpg" />
+
     <!-- Fonts & icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +52,22 @@
     <link id="icon-16x16" rel="icon" type="image/png" sizes="16x16"
         href="assets/img/favicon/kiko-favicon/favicon-y/favicon-16x16.png" />
 
-    <title>Kiko Portfolio</title>
+    <title>Kiko Ramon Lukas – AI & Data Science</title>
+
+    <!-- Structured data (schema.org Person) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kiko Ramon Lukas",
+      "jobTitle": "AI & Data Science Consultant",
+      "url": "https://42kiko.github.io/portfolio/",
+      "sameAs": [
+        "https://github.com/42kiko",
+        "https://www.linkedin.com/in/kiko97/"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -100,6 +140,7 @@
     <!-- Vendor JS -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- App entry -->
     <script type="module" src="src/main.js"></script>
 </body>

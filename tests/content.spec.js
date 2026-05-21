@@ -1,0 +1,40 @@
+import { test, expect } from "@playwright/test";
+
+test.describe("Content – Werdegang & Portfolio", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() =>
+      localStorage.setItem("portfolio-onboarding-completed", "true")
+    );
+    await page.goto("/");
+    await page.waitForSelector("#app section");
+  });
+
+  test("timeline includes the PawPro and Janus stations", async ({ page }) => {
+    const timeline = page.locator("#qualification .timeline");
+    await expect(timeline).toContainText("Chief of Staff Intern");
+    await expect(timeline).toContainText("Janus Pflegedienst");
+  });
+
+  test("timeline entries expose document download links", async ({ page }) => {
+    const docs = page.locator(".timeline-doc");
+    expect(await docs.count()).toBeGreaterThanOrEqual(3);
+    const href = await docs.first().getAttribute("href");
+    expect(href).toMatch(/assets\/docs\/.+\.pdf$/);
+  });
+
+  test("portfolio features the PawPro projects", async ({ page }) => {
+    const portfolio = page.locator("#portfolio");
+    await expect(portfolio).toContainText("Pawsitive Care Foundation");
+    await expect(portfolio).toContainText("PawCare");
+  });
+
+  test("skills section renders the radar chart and category cards", async ({
+    page,
+  }) => {
+    await expect(page.locator("#skills .radar__svg")).toBeVisible();
+    expect(await page.locator("#skills .radar__dot").count()).toBe(4);
+    expect(await page.locator("#skills .skillcard").count()).toBe(4);
+    // Chips tragen die konkreten Skill-Namen
+    await expect(page.locator("#skills")).toContainText("Python");
+  });
+});

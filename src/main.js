@@ -6,7 +6,7 @@ import { initTimelineAnimations } from "./core/timeline.js";
 import { initContactForm } from "./core/contact.js";
 import { renderAll } from "./core/renderer.js";
 import { initOnboarding } from "./core/onboarding.js";
-import { initEffects, initDomEffects } from "./core/effects.js";
+import { initTextScramble, initCounterAnimations, initSectionTitleAnimations } from "./core/animations.js";
 
 // Initial render of the whole app
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,11 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAll();
   applyTranslations();
   initTimelineAnimations();
+  initSectionTitleAnimations();
+  initCounterAnimations();
+  initTextScramble();
   initScrollHandlers();
   initContactForm();
   initOnboarding();
-  initEffects();
-  initDomEffects();
 
   const langBtn = document.getElementById("lang-toggle-btn");
   langBtn?.addEventListener("click", () => {
@@ -29,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     LanguageStore.set(next);
     document.getElementById("app").innerHTML = ""; // re-render all sections
     renderAll();
-    /* Trigger CV href sync after re-render (lazy, without changing exports) */
     try {
       if (window.requestAnimationFrame) requestAnimationFrame(() => {
         const evt = new Event('kiko-sync-cv');
@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     } catch { }
     initTimelineAnimations();
-    initDomEffects();
+    initSectionTitleAnimations();
+    initCounterAnimations();
+    initTextScramble();
   });
 });

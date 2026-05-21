@@ -1,18 +1,28 @@
 import { content } from "../../config/content.config.js";
 import { $ } from "../../utils/dom.js";
+import { LanguageStore } from "../language.js";
 
 export function renderPortfolio() {
-  const slides = content.portfolio.map((p) => `
+  const lang = LanguageStore.get();
+  const slides = content.portfolio.map((p) => {
+    const tagArray = Array.isArray(p.tags) ? p.tags : (p.tags?.[lang] || p.tags?.de || []);
+    const hashtags = tagArray.length
+      ? `<div class="entry-tags">${tagArray.map((t) => `<span class="hashtag">#${t.replace(/\s+/g, "")}</span>`).join("")}</div>`
+      : "";
+
+    return `
     <div class="portfolio__content grid swiper-slide">
-      <img src="${p.img}" alt="" class="portfolio__img" />
+      <img src="${p.img}" alt="" class="portfolio__img" loading="lazy" decoding="async" />
       <div class="portfolio__data">
         <h3 class="portfolio__title" id="${p.titleKey}"></h3>
         <p class="portfolio__description" id="${p.descKey}"></p>
         <a href="${p.href}" target="_blank" class="button button--flex button--small portfolio__button" id="${p.ctaKey}">
           <i class="uil uil-arrow-right button__icon"></i>
         </a>
+        ${hashtags}
       </div>
-    </div>`).join("");
+    </div>`;
+  }).join("");
 
   const app = $("#app");
   app.insertAdjacentHTML("beforeend", `

@@ -6,7 +6,7 @@ export function renderTestimonials() {
     <div class="testimonial__content swiper-slide">
       <div class="testimonial__data">
         <div class="testimonial__header">
-          <img src="${tst.logo}" alt="" class="testimonial__img" />
+          <img src="${tst.logo}" alt="" class="testimonial__img" loading="lazy" decoding="async" />
           <div>
             <h3 class="testimonial__name" id="${tst.titleKey}"></h3>
             <span class="testimonial__client" id="${tst.posKey}"></span>

@@ -12,8 +12,8 @@ export const translations = {
     "home-title": { de: "Hi, ich bin Kiko", en: "Hi, I’m Kiko" },
     "home-subtitle": { de: "Data-Driven Software Engineer", en: "Data-Driven Software Engineer" },
     "home-text": {
-        de: "Ich entwickle datengetriebene Softwarelösungen, die moderne Technologien, KI und Analyse verbinden, um intelligente und skalierbare Anwendungen zu schaffen.",
-        en: "I develop data-driven software solutions that combine modern technologies, AI and analytics to create intelligent and scalable applications."
+        de: "Ich bin AI Data Scientist und Consultant – ich verbinde technische Tiefe mit strategischem Denken, um Daten in intelligente, wirksame KI-Lösungen zu verwandeln.",
+        en: "I'm an AI Data Scientist and consultant – combining technical depth with strategic thinking to turn data into intelligent, impactful AI solutions."
     },
     "home-button": { de: "Kontaktiere mich", en: "Contact me" },
 
@@ -22,18 +22,18 @@ export const translations = {
     "about-title": { de: "Alles über mich", en: "About Me" },
     "about-subtitle": { de: "Ein kleiner Überblick über meine Person", en: "A short overview about me" },
     "about-text": {
-        de: "Ich bin Data Scientist mit Erfahrung in Softwareentwicklung und Beratung, aktuell mit Fokus auf Data Science. Im Rahmen des Masterschool-Programms vertiefe ich meine Kenntnisse in Python, Datenanalyse und Machine Learning, um komplexe Daten in intelligente Lösungen und greifbare Erkenntnisse zu verwandeln.",
-        en: "I’m a Data Scientist with experience in software development and consulting, currently focusing on Data Science. Through the Masterschool program, I’m deepening my expertise in Python, data analysis, and machine learning to turn complex data into intelligent solutions and actionable insights."
+        de: "Ich bin Data Scientist und AI Consultant – mit einem starken Fundament in Softwareentwicklung und über sieben Jahren Berufserfahrung. Ich verbinde technische Tiefe mit strategischem Blick und überführe Daten in KI-Lösungen, die messbar etwas bewirken. Aktuell leite ich die KI-Initiative bei Janus Pflegedienst und unterstütze PawPro freiberuflich in Strategie und Entwicklung.",
+        en: "I’m a Data Scientist and AI consultant – with a strong foundation in software development and over seven years of professional experience. I combine technical depth with strategic thinking to turn data into AI solutions that deliver measurable results. Currently leading the AI initiative at Janus Pflegedienst and supporting PawPro as a freelance consultant and developer."
     },
     "about-button": { de: "Download CV", en: "Download CV" },
     "about-button-hint": { de: "Aktuelles Design", en: "Current theme" },
 
     // Info Cards on About
-    "years-title": { de: "07+", en: "07+" },
+    "years-title": { de: "08+", en: "08+" },
     "years-name": { de: "Jahre <br> an Erfahrung", en: "Years <br> of experience" },
     "projects-title": { de: "08+", en: "08+" },
     "projects-name": { de: "Abgeschlossene <br> Projekte", en: "Completed <br> Projects" },
-    "companies-title": { de: "06+", en: "06+" },
+    "companies-title": { de: "07+", en: "07+" },
     "companies-name": { de: "Unternehmen, <br> bei denen ich tätig war", en: "Companies <br> I’ve worked with" },
 
     // Skills Tab
@@ -43,30 +43,31 @@ export const translations = {
 
     // Frontend Skills
     "frontend-title": { de: "Frontend Entwickler", en: "Frontend Developer" },
-    "frontend-subtitle": { de: "Mehr als 5 Jahre", en: "More than 4 years" },
+    "frontend-subtitle": { de: "Mehr als 5 Jahre", en: "More than 5 years" },
 
-    // Backend &
+    // Backend
     "backend-title": { de: "Backend Entwickler", en: "Backend Developer" },
-    "backend-subtitle": { de: "Mehr als 6 Jahre", en: "More than 5 years" },
+    "backend-subtitle": { de: "Mehr als 6 Jahre", en: "More than 6 years" },
 
     // Design Skills
     "design-title": { de: "Designer", en: "Designer" },
     "design-subtitle": { de: "Mehr als 2 Jahre", en: "More than 2 years" },
 
-    // Design Skills
+    // Data Science
     "ds-title": { de: "Data Science", en: "Data Science" },
     "ds-subtitle": { de: "Mehr als 1 Jahr", en: "More than 1 year" },
 
     // Qualifications
     "qualification-title": { de: "Qualifikationen", en: "Qualifications" },
     "qualification-subtitle": { de: "Mein Lebenslauf", en: "My CV" },
+    "now-heading": { de: "Aktuell", en: "Now" },
 
 
     // Education
     "education-title-2": { de: "Bildung", en: "Education" },
     "education-title-1": { de: "Bildung", en: "Education" },
     "edu-2-title": {
-        de: "Zertifizerte Weiterbildung als AI Data Scientist",
+        de: "Zertifizierte Weiterbildung als AI Data Scientist",
         en: "Training Program as AI Data Scientist"
     },
     "edu-2-subtitle": {
@@ -74,12 +75,12 @@ export const translations = {
         en: "Masterschool"
     },
     "edu-2-desc": {
-        de: "14-monatige Fortbildung bei Masterschool mit Fokus auf Python, EDA und Machine Learning",
-        en: "14-month training at Masterschool focusing on Python, EDA and Machine Learning"
+        de: "Intensive Weiterbildung über 3000 Stunden (56 Wochen) mit Spezialisierung AI Data Science – von SQL und Python über Machine Learning, Computer Vision und NLP bis zu Generative AI.",
+        en: "Intensive 3000-hour (56-week) program specialising in AI Data Science – from SQL and Python through machine learning, computer vision and NLP to generative AI."
     },
     "edu-2-period": {
-        de: "März 2025 - Heute",
-        en: "March 2025 - Today"
+        de: "März 2025 - Mai 2026",
+        en: "March 2025 - May 2026"
     },
 
     "edu-1-title": {
@@ -139,6 +140,41 @@ export const translations = {
         en: "Developed web applications for EESSI and internal tools using JavaScript and React."
     },
 
+    // Freelance - PawPro GmbH (current, after internship)
+    "work-title-7": { de: "Freiberuflich", en: "Freelance" },
+    "work-7-title": { de: "Freelancer – Strategie & Entwicklung", en: "Freelancer – Strategy & Development" },
+    "work-7-subtitle": { de: "PawPro GmbH", en: "PawPro GmbH" },
+    "work-7-calendar": { de: "Mai 2026 – Heute", en: "May 2026 – Present" },
+    "work-7-description": {
+        de: "Freiberufliche Fortsetzung des Internships: strategische und technische Mitarbeit an der KI-Gesundheitsplattform PawCare sowie laufende Beratung der Foundation in Produkt- und Architektur-Fragen.",
+        en: "Freelance continuation of the internship: strategic and technical contributions to the PawCare AI health platform and ongoing advisory for the Foundation on product and architecture questions."
+    },
+
+    // Work experience - Janus (current)
+    "work-title-6": { de: "Berufserfahrung", en: "Work experience" },
+    "work-6-title": { de: "Berater für AI & Data Science", en: "AI & Data Science Consultant" },
+    "work-6-subtitle": { de: "Janus Pflegedienst", en: "Janus Pflegedienst" },
+    "work-6-calendar": { de: "Mai 2026 - Heute", en: "May 2026 - Today" },
+    "work-6-description": {
+        de: "Leitung der unternehmensweiten KI-Initiative: Analyse von Prozessen und Daten, um Abläufe in Pflege und Verwaltung zu verbessern. Konzeption und Pilotierung KI-gestützter Lösungen – konsequent datenschutzkonform und mit klarem, messbarem Nutzen.",
+        en: "Leading the company-wide AI initiative: analysing processes and data to improve workflows in care and administration. Designing and piloting AI-powered solutions – strictly data-protection-compliant and with clear, measurable benefit."
+    },
+
+    // Work experience - PawPro / Pawsitive Care Foundation internship
+    "work-title-5": { de: "Praktikum", en: "Internship" },
+    "work-5-title": { de: "Chief of Staff Intern", en: "Chief of Staff Intern" },
+    "work-5-subtitle": { de: "Pawsitive Care Foundation", en: "Pawsitive Care Foundation" },
+    "work-5-calendar": { de: "März 2026 - Mai 2026", en: "March 2026 - May 2026" },
+    "work-5-description": {
+        de: "Cross-funktionale Rolle zwischen Strategie, Technik und Organisation: Erarbeitung der Wachstums-Roadmap und des Business Cases inkl. Personal- und Kostenplanung, eigenverantwortliche Entwicklung der Foundation-Website, Mitarbeit an der KI-Plattform sowie Koordination eines externen Teams.",
+        en: "Cross-functional role spanning strategy, engineering and operations: built the growth roadmap and business case including headcount and cost planning, independently developed the Foundation's website, contributed to the AI platform, and coordinated an external team."
+    },
+
+    // Document download labels (CV / Werdegang)
+    "doc-masterschool-zeugnis": { de: "Abschlusszertifikat", en: "Course certificate" },
+    "doc-pawpro-zeugnis": { de: "Praktikumszeugnis", en: "Internship certificate" },
+    "doc-pawpro-empfehlung": { de: "Empfehlungsschreiben", en: "Recommendation letter" },
+
     // Portfolio section
     // Portfolio section
     "portfolio-title": {
@@ -150,18 +186,18 @@ export const translations = {
         en: "Recent Projects"
     },
 
-    // Portfolio 1 - Vehicle Data Analysis
-    "portfolio1-title": {
-        de: "Fahrzeug-Datenanalyse",
-        en: "Vehicle Data Analysis"
+    // Portfolio 6 - CNN / CIFAR-10 Computer Vision
+    "portfolio6-title": {
+        de: "CNN – Bildklassifikation (CIFAR-10)",
+        en: "CNN – Image Classification (CIFAR-10)"
     },
-    "portfolio1-description": {
-        de: "Exploratives Data Science Projekt zur Untersuchung von Mustern in Fahrzeugeffizienz, Motorgröße und Preisen. Identifizierung von Korrelationen und Visualisierung von Schlüsseltrends für Markt- und Effizienzeinblicke.",
-        en: "Exploratory Data Science project to uncover patterns in vehicle efficiency, engine size, and pricing. Identified correlations and visualized key trends for market and efficiency insights."
+    "portfolio6-description": {
+        de: "Computer-Vision-Projekt: ein schlankes CNN auf dem CIFAR-10-Datensatz mit Fokus auf Interpretierbarkeit – interaktive Visualisierungen und Klassen-Auswertungen statt nur roher Genauigkeit.",
+        en: "Computer vision project: a lightweight CNN on the CIFAR-10 dataset focused on interpretability – interactive visualisations and per-class breakdowns rather than raw accuracy alone."
     },
-    "github1-text": {
+    "website6-text": {
         de: "Projekt ansehen",
-        en: "View Project"
+        en: "View project"
     },
 
     // Portfolio 2 - Digital Climate Roadmap
@@ -191,6 +227,35 @@ export const translations = {
         de: "Webseite",
         en: "Website"
     },
+
+    // Portfolio 4 - Pawsitive Care Foundation
+    "portfolio4-title": {
+        de: "Pawsitive Care Foundation",
+        en: "Pawsitive Care Foundation"
+    },
+    "portfolio4-description": {
+        de: "Öffentliche Web-Präsenz der gemeinnützigen Pawsitive Care Foundation – von mir eigenverantwortlich konzipiert und umgesetzt: 11 Seiten, Spenden-Flow und ein Admin-Dashboard zur Spendenverwaltung.",
+        en: "Public web presence of the non-profit Pawsitive Care Foundation – fully designed and built by me: 11 pages, a donation flow and an admin dashboard for managing donations."
+    },
+    "website4-text": {
+        de: "Website besuchen",
+        en: "Visit website"
+    },
+
+    // Portfolio 5 - PawCare AI health platform
+    "portfolio5-title": {
+        de: "PawCare – KI-Gesundheitsplattform",
+        en: "PawCare – AI Health Platform"
+    },
+    "portfolio5-description": {
+        de: "KI-gestützte Plattform für die Mikrobiom-Gesundheit von Hunden. Mitentwicklung der Anwendung – von der Nutzer-Anmeldung über das Gesundheits-Dashboard bis zum Checkout.",
+        en: "AI-powered platform for canine microbiome health. Co-developed the application – from user onboarding through the health dashboard to checkout."
+    },
+    "website5-text": {
+        de: "Website besuchen",
+        en: "Visit website"
+    },
+
     // job references
     "job-ref": {
         de: "Feedback meiner Arbeitgeber",
@@ -199,6 +264,18 @@ export const translations = {
     "job-ref-subtitle": {
         de: "Die folgenden Aussagen fassen die Kernbewertungen aus meinen originalen Arbeitszeugnissen zusammen. Das vollständige Dokument stelle ich Ihnen gerne auf Anfrage im weiteren Bewerbungsprozess zur Verfügung.",
         en: "The following testimonials summarize the key feedback from my original job references. The full documentation is gladly available upon request as we progress in the application process."
+    },
+    "pcf-title": {
+        de: "Pawsitive Care Foundation",
+        en: "Pawsitive Care Foundation"
+    },
+    "pcf-pos": {
+        de: "Chief of Staff Intern",
+        en: "Chief of Staff Intern"
+    },
+    "pcf-sub": {
+        de: "Herr Lukas verfügt über ein außergewöhnlich breites Spektrum – von strategischer Konzeption über technische Umsetzung bis zur operativen Steuerung. Er erschloss sein Aufgabengebiet eigenständig, lieferte auch unter Termindruck durchgängig hohe Qualität und erledigte alle Aufgaben stets zu unserer vollsten Zufriedenheit.",
+        en: "Mr. Lukas has an exceptionally wide professional range – from strategic conception through technical implementation to operational execution. He took ownership of his remit independently, delivered consistently high quality even under time pressure, and performed all tasks to our complete and full satisfaction."
     },
     "eos-title": {
         de: "Otto Gruppe",
@@ -316,8 +393,8 @@ export const translations = {
         en: "Kiko"
     },
     "footer-subtitle": {
-        de: "Data Scientist & Softwareentwickler",
-        en: "Data Scientist & Software Developer"
+        de: "AI Data Scientist & Consultant",
+        en: "AI Data Scientist & Consultant"
     },
 
 
@@ -358,8 +435,8 @@ export const translations = {
         en: "The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, processing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator."
     },
     "impressum-update": {
-        de: "Stand: September 2024",
-        en: "Last updated: September 2024"
+        de: "Stand: Mai 2026",
+        en: "Last updated: May 2026"
     },
 
     // Privacy Policy
@@ -398,15 +475,15 @@ export const translations = {
         en: "If you have any questions about data protection, you can contact us at any time at the address given in the legal notice."
     },
     "privacy-update": {
-        de: "Stand: September 2024",
-        en: "Last updated: September 2024"
+        de: "Stand: Mai 2026",
+        en: "Last updated: May 2026"
     },
 
     // Links
     "back-to-home": { de: "Zurück zur Startseite", en: "Back to Home" },
 
     // copy
-    "footer-copy": { de: "© 2025 Kiko – Handgefertigt mit ☕ & Quellcode.", en: "© 2025 Kiko – Crafted with ☕ & Code." },
+    "footer-copy": { de: "© 2026 Kiko – Handgefertigt mit ☕ & Quellcode.", en: "© 2026 Kiko – Crafted with ☕ & Code." },
 
     // Status messages
     "status-success-title": {
@@ -430,13 +507,13 @@ export const translations = {
 
     // CV Profile
     "cv-full-name": { de: "Kiko Ramon Lukas", en: "Kiko Ramon Lukas" },
-    "cv-title": { de: "Data Scientist", en: "Data Scientist" },
+    "cv-title": { de: "AI Data Scientist & Consultant", en: "AI Data Scientist & Consultant" },
     "cv-location": { de: "Hannover, Deutschland", en: "Hannover, Germany" },
     "cv-phone": { de: "+49 1577 3664735", en: "+49 1577 3664735" },
     "cv-email": { de: "kiko97@tuta.io", en: "kiko97@tuta.io" },
     "cv-profile-summary": {
-        de: "Data Scientist mit Erfahrung in der Softwareentwicklung und Beratung, der sich derzeit auf den Bereich Data Science spezialisiert. Momentan nehme ich an einem Data-Science-Weiterbildungsprogramm bei Masterschool teil, mit Fokus auf Python, explorative Datenanalyse und maschinelles Lernen. Mein Ziel ist es, meine Fähigkeiten einzusetzen, um komplexe Daten in verwertbare Erkenntnisse zu verwandeln, Machine-Learning-Modelle zu implementieren und datenbasierte Strategien zu unterstützen.",
-        en: "Data Scientist with a background in software development and consulting, currently transitioning into the data science field. Currently enrolled in the Data Science training program at Masterschool with a focus on Python, Exploratory Data Analysis and Machine Learning. Eager to leverage my skills to transform complex data into actionable insights, implement ML models and support data-driven strategies."
+        de: "Data Scientist und AI Consultant mit über 7 Jahren Erfahrung in Softwareentwicklung und Beratung. Abgeschlossene Weiterbildung als AI Data Scientist (Masterschool, 3000 Stunden, 56 Wochen) mit Schwerpunkten in Python, Machine Learning, Computer Vision, NLP und Generativer KI. Derzeit Leitung der unternehmensweiten KI-Initiative bei Janus Pflegedienst – von der Prozessanalyse über Pilotprojekte bis zur datenschutzkonformen Umsetzung.",
+        en: "Data Scientist and AI consultant with 7+ years of experience in software development and consulting. Completed AI Data Scientist training (Masterschool, 3,000 hours, 56 weeks) with expertise in Python, machine learning, computer vision, NLP, and generative AI. Currently leading the company-wide AI initiative at Janus Pflegedienst – from process analysis and piloting through to privacy-compliant implementation."
     },
 
     // CV Section Titles
@@ -458,6 +535,10 @@ export const translations = {
     "cv-lang-spanish-level": { de: "A1", en: "A1" },
 
     // CV Certifications
+    "cv-cert-masterschool-name": { de: "AI Data Scientist", en: "AI Data Scientist" },
+    "cv-cert-masterschool-issuer": { de: "Masterschool", en: "Masterschool" },
+    "cv-cert-masterschool-date": { de: "Mai 2026", en: "May 2026" },
+
     "cv-cert-scrum-name": { de: "Scrum Master", en: "Scrum Master" },
     "cv-cert-scrum-issuer": { de: "Scrum.org", en: "Scrum.org" },
     "cv-cert-scrum-date": { de: "Okt 2018", en: "Oct 2018" },
@@ -473,17 +554,61 @@ export const translations = {
     // CV Soft Skills
     "cv-soft-analytical": { de: "Analytisches Denken", en: "Analytical Thinking" },
     "cv-soft-problem-solving": { de: "Problemlösungsfähigkeit", en: "Problem-Solving" },
+    "cv-soft-strategic": { de: "Strategisches Denken", en: "Strategic Thinking" },
     "cv-soft-collaboration": { de: "Teamarbeit & Kollaboration", en: "Collaboration" },
     "cv-soft-adaptability": { de: "Anpassungsfähigkeit", en: "Adaptability" },
     "cv-soft-learning": { de: "Lernbereitschaft", en: "Continuous Learning" },
 
     // CV Skills Categories
-    "cv-skill-cat-data-analytics": { de: "Datenanalyse und Visualisierung", en: "Data Analytics and Visualization" },
-    "cv-skill-cat-programming": { de: "Programmier- & Datenbank-Sprachen", en: "Programming and Query Languages" },
-    "cv-skill-cat-tools": { de: "Tools und Software", en: "Tools and Software" },
+    "cv-skill-cat-genai": { de: "Generative AI & LLMs", en: "Generative AI & LLMs" },
+    "cv-skill-cat-data-analytics": { de: "Datenanalyse & Visualisierung", en: "Data Analytics & Visualization" },
+    "cv-skill-cat-programming": { de: "Programmier- & Datenbanksprachen", en: "Programming & Query Languages" },
+    "cv-skill-cat-tools": { de: "Tools & Software", en: "Tools & Software" },
     "cv-skill-cat-methodologies": { de: "Methodiken & Frameworks", en: "Methodologies & Frameworks" },
     "cv-skill-cat-web-dev": { de: "Webentwicklung", en: "Web Development" },
     "cv-skill-cat-cloud": { de: "Cloud & Deployment", en: "Cloud & Deployment" },
+
+    // CV Experience Bullets - PawPro GmbH (freelance, current)
+    "cv-exp-pawpro-freelance-bullet-1": {
+        de: "Freiberufliche Fortsetzung der Internship-Tätigkeit als direkter strategischer und technischer Ansprechpartner für PawPro GmbH und Pawsitive Care Foundation.",
+        en: "Freelance continuation of the internship as direct strategic and technical point of contact for PawPro GmbH and Pawsitive Care Foundation."
+    },
+    "cv-exp-pawpro-freelance-bullet-2": {
+        de: "Weiterentwicklung der KI-Gesundheitsplattform PawCare (Next.js 14, TypeScript, Supabase, Anthropic Claude API) sowie Beratung zu Produkt-Roadmap und technischer Architektur.",
+        en: "Ongoing development of the PawCare AI health platform (Next.js 14, TypeScript, Supabase, Anthropic Claude API) and advisory on product roadmap and technical architecture."
+    },
+    "cv-exp-pawpro-freelance-bullet-3": {
+        de: "Cross-funktionale Unterstützung in Strategie, Entwicklung und Organisation – remote und auf Projektbasis.",
+        en: "Cross-functional support across strategy, engineering and operations – remote and project-based."
+    },
+
+    // CV Experience Bullets - Janus (current)
+    "cv-exp-janus-bullet-1": {
+        de: "Analyse von Unternehmens- und Pflegeprozessen sowie der bestehenden Datenlage als Grundlage für die unternehmensweite KI-Initiative.",
+        en: "Analysing company and care processes as well as the existing data landscape as the foundation for the company-wide AI initiative."
+    },
+    "cv-exp-janus-bullet-2": {
+        de: "Konzeption und Pilotierung KI-gestützter Lösungen – konsequent datenschutzkonform und mit klar messbarem Nutzen für Pflege und Verwaltung.",
+        en: "Designing and piloting AI-powered solutions – strictly GDPR-compliant and with a clearly measurable benefit for care and administration."
+    },
+    "cv-exp-janus-bullet-3": {
+        de: "Aufbau von Monitoring- und Reporting-Strukturen, die datenbasierte Entscheidungen im Management gezielt unterstützen.",
+        en: "Building monitoring and reporting structures that support management decision-making with data."
+    },
+
+    // CV Experience Bullets - Pawsitive Care Foundation (internship)
+    "cv-exp-pawpro-bullet-1": {
+        de: "Cross-funktionale Rolle zwischen Strategie, Technik und Organisation: Erarbeitung der Wachstums-Roadmap und des Business Cases inkl. Personal- und Kostenplanung.",
+        en: "Cross-functional role spanning strategy, engineering and operations: built the growth roadmap and business case including headcount and cost planning."
+    },
+    "cv-exp-pawpro-bullet-2": {
+        de: "Eigenverantwortliche Konzeption und Entwicklung der Foundation-Website (React + Vite, 11 Seiten, Spenden-Flow, Admin-Dashboard).",
+        en: "Independently designed and developed the Foundation's website (React + Vite, 11 pages, donation flow, admin dashboard)."
+    },
+    "cv-exp-pawpro-bullet-3": {
+        de: "Mitarbeit an der KI-Gesundheitsplattform sowie Koordination eines externen Entwicklungsteams.",
+        en: "Contributed to the AI health platform and coordinated an external development team."
+    },
 
     // CV Experience Bullets - Job 1 (LHH)
     "cv-exp-lhh-bullet-1": {
@@ -566,22 +691,22 @@ export const translations = {
     },
 
     // CV Projects
-    "cv-project-vehicle-name": {
-        de: "Fahrzeug-Datenanalyse (Exploratives Data-Science-Projekt)",
-        en: "Vehicle Data Analysis (Exploratory Data Science Project)"
+    "cv-project-cnn-name": {
+        de: "CNN – Bildklassifikation (CIFAR-10)",
+        en: "CNN – Image Classification (CIFAR-10)"
     },
-    "cv-project-vehicle-date": { de: "Jul 2025", en: "Jul 2025" },
-    "cv-project-vehicle-stack": {
-        de: "Python (Pandas, NumPy, Matplotlib, Seaborn), Jupyter Notebook",
-        en: "Python (Pandas, NumPy, Matplotlib, Seaborn), Jupyter Notebook"
+    "cv-project-cnn-date": { de: "Apr 2026", en: "Apr 2026" },
+    "cv-project-cnn-stack": {
+        de: "Python, TensorFlow, Plotly, CIFAR-10, Jupyter Notebook",
+        en: "Python, TensorFlow, Plotly, CIFAR-10, Jupyter Notebook"
     },
-    "cv-project-vehicle-bullet-1": {
-        de: "Analyse eines Fahrzeugdatensatzes zur Aufdeckung von Mustern in Effizienz, Motorgröße und Preisgestaltung.",
-        en: "Explored a vehicle dataset to uncover patterns in efficiency, engine size, and pricing."
+    "cv-project-cnn-bullet-1": {
+        de: "Entwicklung eines schlanken CNN auf dem CIFAR-10-Datensatz mit Fokus auf Modell-Interpretierbarkeit statt roher Genauigkeit.",
+        en: "Built a lightweight CNN on the CIFAR-10 dataset with a focus on model interpretability rather than raw accuracy."
     },
-    "cv-project-vehicle-bullet-2": {
-        de: "Identifizierung von Korrelationen und Visualisierung zentraler Trends für Markt- und Effizienz-Einblicke.",
-        en: "Identified correlations and visualized key trends for market and efficiency insights."
+    "cv-project-cnn-bullet-2": {
+        de: "Interaktive Klassen-Auswertungen und Visualisierungen mit Plotly, veröffentlicht auf GitHub Pages.",
+        en: "Interactive per-class breakdowns and visualisations with Plotly, published on GitHub Pages."
     },
 
     "cv-project-climate-name": {

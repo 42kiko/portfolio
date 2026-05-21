@@ -1,10 +1,13 @@
 import { content } from "../../config/content.config.js";
 import { $ } from "../../utils/dom.js";
+import { LanguageStore } from "../language.js";
 
 export function renderPortfolio() {
+  const lang = LanguageStore.get();
   const slides = content.portfolio.map((p) => {
-    const hashtags = (p.tags && p.tags.length)
-      ? `<div class="entry-tags">${p.tags.map((t) => `<span class="hashtag">#${t.replace(/\s+/g, "")}</span>`).join("")}</div>`
+    const tagArray = Array.isArray(p.tags) ? p.tags : (p.tags?.[lang] || p.tags?.de || []);
+    const hashtags = tagArray.length
+      ? `<div class="entry-tags">${tagArray.map((t) => `<span class="hashtag">#${t.replace(/\s+/g, "")}</span>`).join("")}</div>`
       : "";
 
     return `

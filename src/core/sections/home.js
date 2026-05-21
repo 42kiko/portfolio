@@ -1,5 +1,6 @@
 import { content } from "../../config/content.config.js";
 import { $ } from "../../utils/dom.js";
+import { LanguageStore } from "../language.js";
 
 // Schreibmaschinen-Effekt: tippt jeden Titel, haelt kurz, loescht, naechster.
 // Bricht von selbst ab, sobald das Element nach einem Re-Render abgehaengt ist.
@@ -115,7 +116,9 @@ export function renderHome() {
   // Rotierende Titel im Hero
   const tw = document.querySelector("#home .typewriter");
   if (tw) {
-    const phrases = content.home.titles || [];
+    const lang = LanguageStore.get();
+    const titlesData = content.home.titles || [];
+    const phrases = Array.isArray(titlesData) ? titlesData : (titlesData[lang] || titlesData.en || []);
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
       tw.textContent = phrases[0] || "";

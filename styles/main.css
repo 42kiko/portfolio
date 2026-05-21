@@ -719,14 +719,113 @@ img {
 .section-title::after {
   content: '';
   position: absolute;
-  width: 60px;
+  width: 0;
   height: 3px;
   background: var(--first-color);
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
+  transition: width 0.7s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+.section-title.title-visible::after {
+  width: 60px;
+}
+
+/* ===== NOW BLOCK (inside .timeline, married to the center line) ===== */
+.timeline-now {
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* Badge sits directly ON the center line */
+.timeline-now__marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  z-index: 2;
+  background: var(--body-color);
+  padding: .1rem .6rem;
+  white-space: nowrap;
+}
+
+.timeline-now__pulse {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--first-color);
+  flex-shrink: 0;
+  animation: pulse-now 2s ease-in-out infinite;
+}
+
+@keyframes pulse-now {
+  0%, 100% { box-shadow: 0 0 0 0 hsla(var(--hue-color), 69%, 61%, .45); }
+  50%       { box-shadow: 0 0 0 8px hsla(var(--hue-color), 69%, 61%, 0); }
+}
+
+@keyframes counter-flash {
+  0%   { color: inherit; text-shadow: none; }
+  30%  { color: var(--first-color); text-shadow: 0 0 18px hsla(var(--hue-color), 69%, 61%, 0.55); }
+  100% { color: inherit; text-shadow: none; }
+}
+
+.counter-flash {
+  animation: counter-flash 0.65s ease-out forwards;
+}
+
+.timeline-now__badge {
+  color: var(--first-color);
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* Two columns matching the odd/even timeline item spacing */
+.timeline-now__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 2.5rem;
+}
+
+.timeline-now__col:first-child {
+  padding-right: 70px;
+  padding-left: 0;
+}
+
+.timeline-now__col:last-child {
+  padding-left: 70px;
+  padding-right: 0;
+}
+
+/* Mobile: match single-column timeline */
+@media (max-width: 768px) {
+  .timeline-now__marker {
+    left: 30px;
+    transform: none;
+  }
+
+  .timeline-now__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-now__col:first-child,
+  .timeline-now__col:last-child {
+    padding-right: 20px;
+    padding-left: 70px;
+  }
+
+  .timeline-now__col + .timeline-now__col {
+    margin-top: 1.5rem;
+  }
+}
+
+/* ===== TIMELINE ===== */
 .timeline {
   position: relative;
   max-width: 800px;

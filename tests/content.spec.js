@@ -22,6 +22,24 @@ test.describe("Content – Werdegang & Portfolio", () => {
     expect(href).toMatch(/assets\/docs\/.+\.pdf$/);
   });
 
+  test("timeline cards show a small company logo", async ({ page }) => {
+    const logos = page.locator("#qualification .tag-logo");
+    // Jede der 9 Stationen traegt ein Firmenlogo zur Unterscheidung
+    expect(await logos.count()).toBe(9);
+    const src = await logos.first().getAttribute("src");
+    expect(src).toMatch(/assets\/img\/companys\/.+\.png$/);
+  });
+
+  test("Janus station links to its current website", async ({ page }) => {
+    const janus = page.locator("#qualification a.tag-employer", {
+      hasText: "Janus",
+    });
+    await expect(janus).toHaveAttribute(
+      "href",
+      "https://janus-beratungs-point.de/"
+    );
+  });
+
   test("portfolio features the PawPro projects", async ({ page }) => {
     const portfolio = page.locator("#portfolio");
     await expect(portfolio).toContainText("Pawsitive Care Foundation");

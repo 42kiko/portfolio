@@ -984,6 +984,16 @@ img {
   font-size: 1.3em;
 }
 
+/* Kleines Firmenlogo im Employer-Tag, zur schnellen visuellen Unterscheidung */
+.tag-logo {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  border-radius: 3px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .timeline-docs {
   display: flex;
   flex-wrap: wrap;

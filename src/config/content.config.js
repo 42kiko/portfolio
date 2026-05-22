@@ -67,7 +67,7 @@ export const content = {
       titleKey: "work-7-title",
       descKey: "work-7-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-7" },
-      tagRight: { icon: "uil uil-building", labelKey: "work-7-subtitle", href: "https://pawcare.fund/" },
+      tagRight: { icon: "uil uil-building", logo: "assets/img/companys/pawpro.png", labelKey: "work-7-subtitle", href: "https://paw-pro.com/" },
       tags: { de: ["Freiberuflich", "Next.js", "Supabase", "Claude API", "Strategie"], en: ["Freelance", "Next.js", "Supabase", "Claude API", "Strategy"] },
     },
     {
@@ -76,7 +76,7 @@ export const content = {
       titleKey: "work-6-title",
       descKey: "work-6-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-6" },
-      tagRight: { icon: "uil uil-building", labelKey: "work-6-subtitle" },
+      tagRight: { icon: "uil uil-building", logo: "assets/img/companys/janus.png", labelKey: "work-6-subtitle", href: "https://janus-beratungs-point.de/" },
       tags: { de: ["KI-Strategie", "Datenanalyse", "Prozessoptimierung", "Datenschutz"], en: ["AI Strategy", "Data Analysis", "Process Optimisation", "Data Privacy"] },
     },
     {
@@ -84,7 +84,7 @@ export const content = {
       titleKey: "work-5-title",
       descKey: "work-5-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-5" },
-      tagRight: { icon: "uil uil-building", labelKey: "work-5-subtitle", href: "https://pawsitive.fund/" },
+      tagRight: { icon: "uil uil-building", logo: "assets/img/companys/pawsitive-care.png", labelKey: "work-5-subtitle", href: "https://pawsitive.fund/" },
       docs: [
         { de: "assets/docs/pawpro-zeugnis-de.pdf", en: "assets/docs/pawpro-zeugnis-en.pdf", labelKey: "doc-pawpro-zeugnis" },
         { de: "assets/docs/pawpro-empfehlung-en.pdf", en: "assets/docs/pawpro-empfehlung-en.pdf", labelKey: "doc-pawpro-empfehlung" },
@@ -96,7 +96,7 @@ export const content = {
       titleKey: "edu-2-title",
       descKey: "edu-2-desc",
       tagLeft: { icon: "uil uil-graduation-cap", key: "education-title-2" },
-      tagRight: { icon: "uil uil-university", labelKey: "edu-2-subtitle", href: "https://masterschool.com/" },
+      tagRight: { icon: "uil uil-university", logo: "assets/img/companys/masterschool.png", labelKey: "edu-2-subtitle", href: "https://masterschool.com/" },
       docs: [
         { de: "assets/docs/masterschool-zeugnis-de.pdf", en: "assets/docs/masterschool-zeugnis-en.pdf", labelKey: "doc-masterschool-zeugnis" },
       ],
@@ -107,7 +107,7 @@ export const content = {
       titleKey: "work-4-title",
       descKey: "work-4-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-4" },
-      tagRight: { icon: "uil uil-building", labelKey: "work-4-subtitle", href: "https://www.hannover.de/" },
+      tagRight: { icon: "uil uil-building", logo: "assets/img/companys/hannover.png", labelKey: "work-4-subtitle", href: "https://www.hannover.de/" },
       tags: { de: ["Anwendungsbetreuung", "Fachbereich-Schnittstelle", "Optimierung"], en: ["Application Support", "Business Interface", "Optimisation"] },
     },
     {
@@ -115,7 +115,7 @@ export const content = {
       titleKey: "work-3-title",
       descKey: "work-3-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-3" },
-      tagRight: { icon: "uil uil-building", labelKey: "work-3-subtitle", href: "https://www.ottogroup.com" },
+      tagRight: { icon: "uil uil-building", logo: "assets/img/companys/otto_group.png", labelKey: "work-3-subtitle", href: "https://www.ottogroup.com" },
       tags: { de: ["Fullstack", "React", "Angular", "C#", "Hexagonale Architektur"], en: ["Fullstack", "React", "Angular", "C#", "Hexagonal Architecture"] },
     },
     {
@@ -123,7 +123,7 @@ export const content = {
       titleKey: "work-2-title",
       descKey: "work-2-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-2" },
-      tagRight: { icon: "uil uil-building", labelKey: "work-2-subtitle", href: "https://www.nt.ag/" },
+      tagRight: { icon: "uil uil-building", logo: "assets/img/companys/ntag.png", labelKey: "work-2-subtitle", href: "https://www.nt.ag/" },
       tags: { de: ["Kreditbearbeitung", "Softwareentwicklung", "FinProcess"], en: ["Loan Processing", "Software Development", "FinProcess"] },
     },
     {
@@ -131,7 +131,7 @@ export const content = {
       titleKey: "work-1-title",
       descKey: "work-1-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-1" },
-      tagRight: { icon: "uil uil-building", labelKey: "work-1-subtitle", href: "https://www.frobese.de/" },
+      tagRight: { icon: "uil uil-building", logo: "assets/img/companys/frobese_favicon_256.png", labelKey: "work-1-subtitle", href: "https://www.frobese.de/" },
       tags: { de: ["Web-Entwicklung", "JavaScript", "React", "EESSI"], en: ["Web Development", "JavaScript", "React", "EESSI"] },
     },
     {
@@ -139,7 +139,7 @@ export const content = {
       titleKey: "edu-1-title",
       descKey: "edu-1-desc",
       tagLeft: { icon: "uil uil-graduation-cap", key: "education-title-1" },
-      tagRight: { icon: "uil uil-university", labelKey: "edu-1-subtitle", href: "https://www.tecracer.com/" },
+      tagRight: { icon: "uil uil-university", logo: "assets/img/companys/tecRacer-fav.png", labelKey: "edu-1-subtitle", href: "https://www.tecracer.com/" },
       tags: { de: ["Software Engineering", "Clean Code", "Ausbildung"], en: ["Software Engineering", "Clean Code", "Apprenticeship"] },
     },
   ],
@@ -157,7 +157,7 @@ export const content = {
       titleKey: "portfolio5-title",
       descKey: "portfolio5-description",
       ctaKey: "website5-text",
-      href: "https://pawcare.fund/",
+      href: "http://pawcare.fund/",
       tags: ["Next.js", "TypeScript", "Supabase", "Claude API", "Stripe"],
     },
     {

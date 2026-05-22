@@ -16,10 +16,18 @@ function buildHashtags(e, lang) {
   return `<div class="entry-tags">${tagArray.map(t => `<span class="hashtag">#${t.replace(/\s+/g, "")}</span>`).join("")}</div>`;
 }
 
+// Firmenlogo, falls vorhanden; sonst Fallback auf das generische uil-Icon.
+function buildEmployerMark(tr) {
+  return tr.logo
+    ? `<img src="${tr.logo}" alt="" class="tag-logo" loading="lazy" />`
+    : `<i class="${tr.icon} tag-icon"></i>`;
+}
+
 function buildEmployerTag(tr) {
+  const mark = buildEmployerMark(tr);
   return tr.href
-    ? `<a href="${tr.href}" target="_blank" class="timeline-tag tag-employer link"><i class="${tr.icon} tag-icon"></i><div id="${tr.labelKey}"></div></a>`
-    : `<span class="timeline-tag tag-employer"><i class="${tr.icon} tag-icon"></i><div id="${tr.labelKey}"></div></span>`;
+    ? `<a href="${tr.href}" target="_blank" rel="noopener" class="timeline-tag tag-employer link">${mark}<div id="${tr.labelKey}"></div></a>`
+    : `<span class="timeline-tag tag-employer">${mark}<div id="${tr.labelKey}"></div></span>`;
 }
 
 function buildCardBody(e, lang) {

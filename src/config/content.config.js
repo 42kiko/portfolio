@@ -67,7 +67,7 @@ export const content = {
       titleKey: "work-7-title",
       descKey: "work-7-description",
       tagLeft: { icon: "uil uil-briefcase-alt", key: "work-title-7" },
-      tagRight: { icon: "uil uil-building", logo: "assets/img/companys/pawpro-paw.png", labelKey: "work-7-subtitle", href: "https://paw-pro.com/" },
+      tagRight: { icon: "uil uil-building", logo: "assets/img/companys/pawpro-paw.svg", labelKey: "work-7-subtitle", href: "https://paw-pro.com/" },
       tags: { de: ["Freiberuflich", "Next.js", "Supabase", "Claude API", "Strategie"], en: ["Freelance", "Next.js", "Supabase", "Claude API", "Strategy"] },
     },
     {

@@ -145,6 +145,16 @@ export const content = {
   ],
   portfolio: [
     {
+      // Bewusst kein Repo- und kein Live-Link: Info-PDF erklaert die Anwendung
+      // (Quellen + Generator: tools/nachhall-info/build.mjs)
+      img: "assets/img/nachhall-home.jpeg",
+      titleKey: "portfolio7-title",
+      descKey: "portfolio7-description",
+      ctaKey: "website7-text",
+      href: { de: "assets/docs/nachhall-info-de.pdf", en: "assets/docs/nachhall-info-en.pdf" },
+      tags: ["Next.js", "LiveKit", "Lokale LLMs", "PostgreSQL", "Self-Hosted"],
+    },
+    {
       img: "assets/img/pawsitive-fund.jpeg",
       titleKey: "portfolio4-title",
       descKey: "portfolio4-description",

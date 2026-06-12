@@ -16,3 +16,6 @@ test-results/
 playwright-report/
 .playwright/
 .playwright-mcp/
+
+# Nachhall-Info-PDF: Zwischen-HTML des Generators
+tools/nachhall-info/_render-*.html

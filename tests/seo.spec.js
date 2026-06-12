@@ -22,6 +22,21 @@ test.describe("SEO & Meta", () => {
     ).toHaveAttribute("content", /og-image/);
   });
 
+  test("canonical, OG and sitemap URLs point to the live domain", async ({ page }) => {
+    await expect(page.locator('head link[rel="canonical"]')).toHaveAttribute(
+      "href",
+      "https://42kiko.space/"
+    );
+    await expect(page.locator('head meta[property="og:url"]')).toHaveAttribute(
+      "content",
+      "https://42kiko.space/"
+    );
+    const robots = await page.request.get("/robots.txt");
+    expect(await robots.text()).toContain("https://42kiko.space/sitemap.xml");
+    const sitemap = await page.request.get("/sitemap.xml");
+    expect(await sitemap.text()).toContain("<loc>https://42kiko.space/</loc>");
+  });
+
   test("structured data is valid JSON-LD", async ({ page }) => {
     const raw = await page
       .locator('script[type="application/ld+json"]')

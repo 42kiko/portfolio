@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://42kiko.github.io/portfolio/sitemap.xml
+Sitemap: https://42kiko.space/sitemap.xml

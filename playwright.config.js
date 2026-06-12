@@ -7,7 +7,9 @@ export default defineConfig({
   reporter: "html",
 
   use: {
-    baseURL: "http://localhost:3000",
+    // 4321 statt 3000: auf der Devbox laufen parallel andere Apps auf 3000,
+    // reuseExistingServer wuerde sonst gegen die falsche App testen
+    baseURL: "http://localhost:4321",
     trace: "on-first-retry",
   },
 
@@ -18,8 +20,8 @@ export default defineConfig({
   ],
 
   webServer: {
-    command: "npx serve . --listen 3000",
-    url: "http://localhost:3000",
+    command: "npx serve . --listen 4321",
+    url: "http://localhost:4321",
     reuseExistingServer: !process.env.CI,
   },
 });

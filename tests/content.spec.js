@@ -27,7 +27,8 @@ test.describe("Content – Werdegang & Portfolio", () => {
     // Jede der 9 Stationen traegt ein Firmenlogo zur Unterscheidung
     expect(await logos.count()).toBe(9);
     const src = await logos.first().getAttribute("src");
-    expect(src).toMatch(/assets\/img\/companys\/.+\.png$/);
+    // PawPro-Logo ist seit 087a28f ein SVG, die uebrigen sind PNGs
+    expect(src).toMatch(/assets\/img\/companys\/.+\.(png|svg)$/);
   });
 
   test("Janus station links to its current website", async ({ page }) => {
@@ -44,6 +45,26 @@ test.describe("Content – Werdegang & Portfolio", () => {
     const portfolio = page.locator("#portfolio");
     await expect(portfolio).toContainText("Pawsitive Care Foundation");
     await expect(portfolio).toContainText("PawCare");
+  });
+
+  test("portfolio features Nachhall with info PDF but no repo or live link", async ({ page }) => {
+    const portfolio = page.locator("#portfolio");
+    await expect(portfolio).toContainText("Nachhall");
+    // CTA ist das sprachabhaengige Info-PDF (Default: Deutsch)
+    expect(
+      await portfolio.locator('a[href="assets/docs/nachhall-info-de.pdf"]').count()
+    ).toBeGreaterThan(0);
+    // Bewusst weder Repo- noch Live-Link auf der Karte
+    expect(
+      await portfolio.locator('a[href*="github.com/true-vector"], a[href*="nachhall.42kiko.space"]').count()
+    ).toBe(0);
+  });
+
+  test("experience years are computed from the career start (2018)", async ({ page }) => {
+    const years = new Date().getFullYear() - 2018;
+    const badge = String(years).padStart(2, "0") + "+";
+    await expect(page.locator("#years-title")).toHaveText(badge);
+    await expect(page.locator("#about-text")).toContainText(`über ${years} Jahren`);
   });
 
   test("skills section renders the radar chart and category cards", async ({

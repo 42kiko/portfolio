@@ -3,6 +3,7 @@
 import { chromium } from "@playwright/test";
 import { fileURLToPath } from "url";
 import path from "path";
+import { writeFileSync } from "fs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(here, "../../assets/docs");
@@ -14,22 +15,33 @@ const t = {
       "Nachhall ist eine selbst gehostete Meeting-Intelligence-Plattform: Browser-Meetings werden aufgezeichnet, transkribiert und von einer KI-Pipeline zu strukturiertem Wissen destilliert &ndash; Zusammenfassungen, Aufgaben, Entscheidungen und Ideen, automatisch dort abgelegt, wo man sie wiederfindet.",
     howTitle: "So funktioniert es",
     steps: [
-      ["Aufnehmen", "Meetings direkt im Browser &ndash; ohne Installation, Teilnehmende treten per persönlichem Einladungslink mit einem Klick bei."],
+      ["Aufnehmen", "Meetings direkt im Browser &ndash; ohne Installation, Beitritt per persönlichem Link mit einem Klick."],
       ["Transkribieren", "Automatische Spracherkennung mit Sprecher-Zuordnung, direkt nach Meeting-Ende."],
-      ["Verstehen", "Lokale KI-Modelle destillieren Aufgaben, Entscheidungen, Ideen und eine Zusammenfassung &ndash; inklusive Konfidenz-Angabe."],
-      ["Wiederfinden", "Durchsuchbares Archiv, Kanban-Board pro Projekt, Zusammenfassung per E-Mail und PDF-Export."],
+      ["Verstehen", "Lokale KI-Modelle destillieren Aufgaben, Entscheidungen, Ideen und eine Zusammenfassung &ndash; mit Konfidenz-Angabe."],
+      ["Wiederfinden", "Durchsuchbares Archiv, Kanban-Board, Kalender, E-Mail-Zusammenfassung und PDF-Export."],
     ],
+    overviewTitle: "Alles im Blick",
     shotHomeCaption: "Die Startseite: laufende Räume, geplante Termine mit Countdown und alle Kennzahlen auf einen Blick.",
+    digestTitle: "Vom Gespräch zum Ergebnis",
     shotMeetingCaption:
       "Jedes Meeting wird zur strukturierten Auswertung: Zusammenfassung, Aufgaben mit Verantwortlichen, Fälligkeit und Priorität, Entscheidungen &ndash; jeweils mit Konfidenz der KI.",
-    featTitle: "Funktionen",
+    galleryTitle: "Ein Werkzeug f&uuml;r den ganzen Arbeitsalltag",
+    gallery: [
+      ["shot-kalender.jpeg", "Kalender", "Geplante Termine, Regeltermine und fällige Aufgaben &ndash; mit Einladungs-Mail (ICS) und One-Click-RSVP."],
+      ["shot-board.jpeg", "Kanban-Board", "KI-extrahierte Aufgaben pro Projekt bestätigen, zuweisen, abhaken &ndash; jede Karte verlinkt ihr Quell-Meeting."],
+    ],
+    learnTitle: "Lernt mit jedem Meeting",
+    learn:
+      "Nachhall führt eine interne Wissensdatenbank: Personen, Projekte, Aufgaben und Entscheidungen werden über Meetings hinweg verknüpft. Neues landet nicht isoliert im Archiv, sondern über Aliases und Routing-Keywords automatisch beim richtigen Projekt &ndash; Unklares wartet in der Triage. So kennt das System jederzeit den aktuellen Stand jedes Projekts und wird mit jedem Gespräch besser.",
+    shotProjectsCaption: "Projekte mit Aliases &amp; Routing-Keywords: das Ged&auml;chtnis, das jedes neue Meeting einsortiert.",
+    featTitle: "Funktionen kompakt",
     features: [
-      "Kalender mit Einladungen (ICS) und One-Click-RSVP",
-      "Geplante Termine, Regeltermine und spontane Räume",
+      "Browser-Meetings ohne Installation, Multi-Screenshare",
+      "Kalender mit ICS-Einladungen und One-Click-RSVP",
+      "Benachrichtigungen: Einladungs- &amp; Zusammenfassungs-Mails",
+      "Kanban-Board pro Projekt (Tasks, Ideen, Entscheidungen)",
       "Projekte &amp; Personen mit eigener Farbe und Icon",
-      "Kanban-Board: Aufgaben bestätigen, zuweisen, abhaken",
-      "Zusammenfassungs-Mail an alle Teilnehmenden",
-      "PDF-Export jeder Meeting-Auswertung",
+      "Durchsuchbares Archiv und PDF-Export jeder Auswertung",
     ],
     privacyTitle: "Datenhoheit statt Cloud-Vendor",
     privacy:
@@ -42,22 +54,33 @@ const t = {
       "Nachhall is a self-hosted meeting intelligence platform: browser meetings are recorded, transcribed and distilled by an AI pipeline into structured knowledge &ndash; summaries, tasks, decisions and ideas, automatically filed where you will find them again.",
     howTitle: "How it works",
     steps: [
-      ["Record", "Meetings right in the browser &ndash; no installs; participants join with one click via a personal invite link."],
+      ["Record", "Meetings right in the browser &ndash; no installs, one-click join via a personal link."],
       ["Transcribe", "Automatic speech recognition with speaker attribution, right after the meeting ends."],
       ["Understand", "Local AI models distil tasks, decisions, ideas and a summary &ndash; each with a confidence score."],
-      ["Retrieve", "Searchable archive, per-project Kanban board, summary e-mails and PDF export."],
+      ["Retrieve", "Searchable archive, Kanban board, calendar, summary e-mails and PDF export."],
     ],
+    overviewTitle: "Everything at a glance",
     shotHomeCaption: "The home screen: live rooms, scheduled meetings with countdown and all key figures at a glance.",
+    digestTitle: "From conversation to outcome",
     shotMeetingCaption:
       "Every meeting becomes a structured digest: summary, tasks with assignees, due dates and priority, decisions &ndash; each with the AI's confidence score.",
-    featTitle: "Features",
+    galleryTitle: "One tool for the whole workday",
+    gallery: [
+      ["shot-kalender.jpeg", "Calendar", "Scheduled and recurring meetings plus due tasks &ndash; with invitation e-mails (ICS) and one-click RSVP."],
+      ["shot-board.jpeg", "Kanban board", "Confirm, assign and complete AI-extracted tasks per project &ndash; every card links back to its source meeting."],
+    ],
+    learnTitle: "Gets smarter with every meeting",
+    learn:
+      "Nachhall maintains an internal knowledge base: people, projects, tasks and decisions are linked across meetings. New items are not filed away in isolation &ndash; aliases and routing keywords route them to the right project automatically, anything ambiguous waits in triage. The system always knows the current state of every project and gets better with every conversation.",
+    shotProjectsCaption: "Projects with aliases &amp; routing keywords: the memory that files every new meeting.",
+    featTitle: "Features at a glance",
     features: [
-      "Calendar with invitations (ICS) and one-click RSVP",
-      "Scheduled, recurring and ad-hoc meetings",
+      "Browser meetings without installs, multi-screenshare",
+      "Calendar with ICS invitations and one-click RSVP",
+      "Notifications: invitation &amp; summary e-mails",
+      "Per-project Kanban board (tasks, ideas, decisions)",
       "Projects &amp; people with their own colour and icon",
-      "Kanban board: confirm, assign and complete tasks",
-      "Summary e-mail to all participants",
-      "PDF export of every meeting digest",
+      "Searchable archive and PDF export of every digest",
     ],
     privacyTitle: "Data sovereignty instead of cloud vendors",
     privacy:
@@ -90,12 +113,17 @@ const html = (l) => `<!DOCTYPE html>
   .step span { color:var(--dim); }
   .shot { width:100%; border-radius:10px; border:1px solid var(--line); display:block; }
   .caption { color:var(--dim); font-size:9.5px; margin-top:6px; }
+  .duo { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:4px; }
+  .duo b { display:block; font-size:11px; margin:6px 0 2px; color:var(--ink); }
+  .duo .caption { margin-top:0; }
   .feats { columns:2; gap:18px; margin-top:6px; }
   .feats li { list-style:none; padding-left:14px; position:relative; margin-bottom:5px; color:var(--ink); break-inside:avoid; }
   .feats li::before { content:""; position:absolute; left:0; top:.45em; width:6px; height:6px; border-radius:50%; background:var(--accent); }
-  .privacy { background:linear-gradient(135deg, rgba(125,162,255,.10), rgba(186,125,255,.08)); border:1px solid #2c3550; border-radius:12px; padding:12px 14px; margin-top:14px; }
-  .privacy b { font-family:'Libre Baskerville',serif; font-style:italic; font-size:13px; display:block; margin-bottom:4px; }
-  .privacy p { color:var(--dim); }
+  .panel { border-radius:12px; padding:12px 14px; margin-top:14px; border:1px solid #2c3550; }
+  .panel.blue { background:linear-gradient(135deg, rgba(125,162,255,.10), rgba(186,125,255,.08)); }
+  .panel.green { background:linear-gradient(135deg, rgba(125,255,196,.08), rgba(125,162,255,.08)); border-color:#27433c; }
+  .panel b { font-family:'Libre Baskerville',serif; font-style:italic; font-size:13px; display:block; margin-bottom:4px; }
+  .panel p { color:var(--dim); }
   .contact { position:absolute; left:18mm; right:18mm; bottom:12mm; border-top:1px solid var(--line); padding-top:8px; color:var(--dim); font-size:10px; }
   .contact strong { color:var(--ink); }
   .pageno { position:absolute; right:18mm; bottom:12mm; color:#3a4158; font-size:9px; }
@@ -111,26 +139,38 @@ const html = (l) => `<!DOCTYPE html>
     <div class="steps">
       ${t[l].steps.map(([h, s], i) => `<div class="step"><b>${i + 1} &middot; ${h}</b><span>${s}</span></div>`).join("")}
     </div>
-    <h2 style="margin-top:18px;">${l === "de" ? "Alles im Blick" : "Everything at a glance"}</h2>
+    <h2 style="margin-top:18px;">${t[l].overviewTitle}</h2>
     <img class="shot" src="shot-home.jpeg" alt="">
     <div class="caption">${t[l].shotHomeCaption}</div>
-    <div class="pageno">1 / 2</div>
+    <div class="pageno">1 / 3</div>
   </div>
   <div class="page">
     <div class="aurora"></div>
-    <h2 style="margin-top:0;">${l === "de" ? "Vom Gespräch zum Ergebnis" : "From conversation to outcome"}</h2>
+    <h2 style="margin-top:0;">${t[l].digestTitle}</h2>
     <img class="shot" src="shot-meeting.jpeg" alt="">
     <div class="caption">${t[l].shotMeetingCaption}</div>
+    <h2>${t[l].galleryTitle}</h2>
+    <div class="duo">
+      ${t[l].gallery.map(([img, h, s]) => `<div><img class="shot" src="${img}" alt=""><b>${h}</b><div class="caption">${s}</div></div>`).join("")}
+    </div>
+    <div class="pageno">2 / 3</div>
+  </div>
+  <div class="page">
+    <div class="aurora"></div>
+    <div class="panel green" style="margin-top:0;"><b>${t[l].learnTitle}</b><p>${t[l].learn}</p></div>
+    <div style="margin-top:12px;">
+      <img class="shot" src="shot-projekte.jpeg" alt="">
+      <div class="caption">${t[l].shotProjectsCaption}</div>
+    </div>
     <h2>${t[l].featTitle}</h2>
     <ul class="feats">${t[l].features.map((f) => `<li>${f}</li>`).join("")}</ul>
-    <div class="privacy"><b>${t[l].privacyTitle}</b><p>${t[l].privacy}</p></div>
+    <div class="panel blue"><b>${t[l].privacyTitle}</b><p>${t[l].privacy}</p></div>
     <div class="contact">${t[l].contact}</div>
-    <div class="pageno">2 / 2</div>
+    <div class="pageno">3 / 3</div>
   </div>
 </body>
 </html>`;
 
-import { writeFileSync } from "fs";
 const browser = await chromium.launch();
 const page = await browser.newPage();
 for (const l of ["de", "en"]) {

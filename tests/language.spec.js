@@ -22,10 +22,15 @@ test.describe("Language Switch", () => {
   });
 
   test("toggling language twice returns to German", async ({ page }) => {
+    // Chromium-Mobile-Emulation stallt Touch-Dispatch nach dem #app-Rebuild
+    // teils 15-35s (Page selbst gesund: keine Long-Tasks, Element stabil).
+    // Daher Settle-Assertion zwischen den Klicks + 3x-Budget statt Robo-Doppelklick.
+    test.slow();
     const langBtn = page.locator("#lang-toggle-btn");
     await langBtn.click();
-    await langBtn.click();
+    await expect(page.locator("html")).toHaveAttribute("lang", "en", { timeout: 60000 });
 
-    await expect(page.locator("html")).toHaveAttribute("lang", "de");
+    await langBtn.click();
+    await expect(page.locator("html")).toHaveAttribute("lang", "de", { timeout: 60000 });
   });
 });

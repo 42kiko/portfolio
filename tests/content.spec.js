@@ -27,7 +27,8 @@ test.describe("Content – Werdegang & Portfolio", () => {
     // Jede der 9 Stationen traegt ein Firmenlogo zur Unterscheidung
     expect(await logos.count()).toBe(9);
     const src = await logos.first().getAttribute("src");
-    expect(src).toMatch(/assets\/img\/companys\/.+\.png$/);
+    // PawPro-Logo ist seit 087a28f ein SVG, die uebrigen sind PNGs
+    expect(src).toMatch(/assets\/img\/companys\/.+\.(png|svg)$/);
   });
 
   test("Janus station links to its current website", async ({ page }) => {

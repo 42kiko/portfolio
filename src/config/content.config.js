@@ -145,6 +145,15 @@ export const content = {
   ],
   portfolio: [
     {
+      // Closed Source – bewusst nur Live-Link, kein Repo
+      img: "assets/img/nachhall-home.jpeg",
+      titleKey: "portfolio7-title",
+      descKey: "portfolio7-description",
+      ctaKey: "website7-text",
+      href: "https://nachhall.42kiko.space/",
+      tags: ["Next.js", "LiveKit", "LLM-Pipeline", "PostgreSQL", "Self-Hosted"],
+    },
+    {
       img: "assets/img/pawsitive-fund.jpeg",
       titleKey: "portfolio4-title",
       descKey: "portfolio4-description",

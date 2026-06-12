@@ -1,3 +1,9 @@
+// Berufsstart (frobese, Oktober 2018) – die Jahre rechnen sich zur Laufzeit
+// selbst aus und muessen nie wieder von Hand gepflegt werden.
+const CAREER_START_YEAR = 2018;
+export const careerYears = Math.max(1, new Date().getFullYear() - CAREER_START_YEAR);
+const careerYearsBadge = String(careerYears).padStart(2, "0") + "+";
+
 export const translations = {
     // Header
     "header-name": { de: "Kiko", en: "Kiko" },
@@ -22,14 +28,14 @@ export const translations = {
     "about-title": { de: "Alles über mich", en: "About Me" },
     "about-subtitle": { de: "Ein kleiner Überblick über meine Person", en: "A short overview about me" },
     "about-text": {
-        de: "Ich bin Data Scientist und AI Consultant – mit einem starken Fundament in Softwareentwicklung und über sieben Jahren Berufserfahrung. Ich verbinde technische Tiefe mit strategischem Blick und überführe Daten in KI-Lösungen, die messbar etwas bewirken. Aktuell leite ich die KI-Initiative bei Janus Pflegedienst und unterstütze PawPro freiberuflich in Strategie und Entwicklung.",
-        en: "I’m a Data Scientist and AI consultant – with a strong foundation in software development and over seven years of professional experience. I combine technical depth with strategic thinking to turn data into AI solutions that deliver measurable results. Currently leading the AI initiative at Janus Pflegedienst and supporting PawPro as a freelance consultant and developer."
+        de: `Ich bin Data Scientist und AI Consultant – mit einem starken Fundament in Softwareentwicklung und über ${careerYears} Jahren Berufserfahrung. Ich verbinde technische Tiefe mit strategischem Blick und überführe Daten in KI-Lösungen, die messbar etwas bewirken. Aktuell leite ich die KI-Initiative bei Janus Pflegedienst und unterstütze PawPro freiberuflich in Strategie und Entwicklung.`,
+        en: `I’m a Data Scientist and AI consultant – with a strong foundation in software development and over ${careerYears} years of professional experience. I combine technical depth with strategic thinking to turn data into AI solutions that deliver measurable results. Currently leading the AI initiative at Janus Pflegedienst and supporting PawPro as a freelance consultant and developer.`
     },
     "about-button": { de: "Download CV", en: "Download CV" },
     "about-button-hint": { de: "Aktuelles Design", en: "Current theme" },
 
     // Info Cards on About
-    "years-title": { de: "08+", en: "08+" },
+    "years-title": { de: careerYearsBadge, en: careerYearsBadge },
     "years-name": { de: "Jahre <br> an Erfahrung", en: "Years <br> of experience" },
     "projects-title": { de: "08+", en: "08+" },
     "projects-name": { de: "Abgeschlossene <br> Projekte", en: "Completed <br> Projects" },
@@ -184,6 +190,20 @@ export const translations = {
     "portfolio-subtitle": {
         de: "Aktuelle Projekte",
         en: "Recent Projects"
+    },
+
+    // Portfolio 7 - Nachhall (Meeting Intelligence, Closed Source)
+    "portfolio7-title": {
+        de: "Nachhall – Meeting-Intelligence-Plattform",
+        en: "Nachhall – Meeting Intelligence Platform"
+    },
+    "portfolio7-description": {
+        de: "Selbst gehostete Meeting-Intelligence-Plattform: zeichnet Browser-Meetings auf, transkribiert sie und destilliert per LLM-Pipeline Aufgaben, Entscheidungen und Zusammenfassungen in eine durchsuchbare Wissensbasis – komplett auf eigener Infrastruktur, ohne Cloud-Vendor. (Closed Source)",
+        en: "Self-hosted meeting intelligence platform: records browser meetings, transcribes them and uses an LLM pipeline to distil tasks, decisions and summaries into a searchable knowledge base – running entirely on my own infrastructure, no cloud vendor. (Closed source)"
+    },
+    "website7-text": {
+        de: "Website besuchen",
+        en: "Visit website"
     },
 
     // Portfolio 6 - CNN / CIFAR-10 Computer Vision
@@ -512,8 +532,8 @@ export const translations = {
     "cv-phone": { de: "+49 1577 3664735", en: "+49 1577 3664735" },
     "cv-email": { de: "kiko97@tuta.io", en: "kiko97@tuta.io" },
     "cv-profile-summary": {
-        de: "Data Scientist und AI Consultant mit über 7 Jahren Erfahrung in Softwareentwicklung und Beratung. Abgeschlossene Weiterbildung als AI Data Scientist (Masterschool, 3000 Stunden, 56 Wochen) mit Schwerpunkten in Python, Machine Learning, Computer Vision, NLP und Generativer KI. Derzeit Leitung der unternehmensweiten KI-Initiative bei Janus Pflegedienst – von der Prozessanalyse über Pilotprojekte bis zur datenschutzkonformen Umsetzung.",
-        en: "Data Scientist and AI consultant with 7+ years of experience in software development and consulting. Completed AI Data Scientist training (Masterschool, 3,000 hours, 56 weeks) with expertise in Python, machine learning, computer vision, NLP, and generative AI. Currently leading the company-wide AI initiative at Janus Pflegedienst – from process analysis and piloting through to privacy-compliant implementation."
+        de: `Data Scientist und AI Consultant mit über ${careerYears} Jahren Erfahrung in Softwareentwicklung und Beratung. Abgeschlossene Weiterbildung als AI Data Scientist (Masterschool, 3000 Stunden, 56 Wochen) mit Schwerpunkten in Python, Machine Learning, Computer Vision, NLP und Generativer KI. Derzeit Leitung der unternehmensweiten KI-Initiative bei Janus Pflegedienst – von der Prozessanalyse über Pilotprojekte bis zur datenschutzkonformen Umsetzung.`,
+        en: `Data Scientist and AI consultant with ${careerYears}+ years of experience in software development and consulting. Completed AI Data Scientist training (Masterschool, 3,000 hours, 56 weeks) with expertise in Python, machine learning, computer vision, NLP, and generative AI. Currently leading the company-wide AI initiative at Janus Pflegedienst – from process analysis and piloting through to privacy-compliant implementation.`
     },
 
     // CV Section Titles

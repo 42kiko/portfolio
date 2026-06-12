@@ -47,15 +47,16 @@ test.describe("Content – Werdegang & Portfolio", () => {
     await expect(portfolio).toContainText("PawCare");
   });
 
-  test("portfolio features Nachhall with live link but no repo link", async ({ page }) => {
+  test("portfolio features Nachhall with info PDF but no repo or live link", async ({ page }) => {
     const portfolio = page.locator("#portfolio");
     await expect(portfolio).toContainText("Nachhall");
+    // CTA ist das sprachabhaengige Info-PDF (Default: Deutsch)
     expect(
-      await portfolio.locator('a[href="https://nachhall.42kiko.space/"]').count()
+      await portfolio.locator('a[href="assets/docs/nachhall-info-de.pdf"]').count()
     ).toBeGreaterThan(0);
-    // Closed Source: die Karte darf nicht auf ein Repo verlinken
+    // Bewusst weder Repo- noch Live-Link auf der Karte
     expect(
-      await portfolio.locator('a[href*="github.com/true-vector"]').count()
+      await portfolio.locator('a[href*="github.com/true-vector"], a[href*="nachhall.42kiko.space"]').count()
     ).toBe(0);
   });
 

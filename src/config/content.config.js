@@ -145,13 +145,14 @@ export const content = {
   ],
   portfolio: [
     {
-      // Closed Source – bewusst nur Live-Link, kein Repo
+      // Bewusst kein Repo- und kein Live-Link: Info-PDF erklaert die Anwendung
+      // (Quellen + Generator: tools/nachhall-info/build.mjs)
       img: "assets/img/nachhall-home.jpeg",
       titleKey: "portfolio7-title",
       descKey: "portfolio7-description",
       ctaKey: "website7-text",
-      href: "https://nachhall.42kiko.space/",
-      tags: ["Next.js", "LiveKit", "LLM-Pipeline", "PostgreSQL", "Self-Hosted"],
+      href: { de: "assets/docs/nachhall-info-de.pdf", en: "assets/docs/nachhall-info-en.pdf" },
+      tags: ["Next.js", "LiveKit", "Lokale LLMs", "PostgreSQL", "Self-Hosted"],
     },
     {
       img: "assets/img/pawsitive-fund.jpeg",

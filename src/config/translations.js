@@ -198,12 +198,12 @@ export const translations = {
         en: "Nachhall – Meeting Intelligence Platform"
     },
     "portfolio7-description": {
-        de: "Selbst gehostete Meeting-Intelligence-Plattform: zeichnet Browser-Meetings auf, transkribiert sie und destilliert per LLM-Pipeline Aufgaben, Entscheidungen und Zusammenfassungen in eine durchsuchbare Wissensbasis – komplett auf eigener Infrastruktur, ohne Cloud-Vendor. (Closed Source)",
-        en: "Self-hosted meeting intelligence platform: records browser meetings, transcribes them and uses an LLM pipeline to distil tasks, decisions and summaries into a searchable knowledge base – running entirely on my own infrastructure, no cloud vendor. (Closed source)"
+        de: "Selbst gehostete Meeting-Intelligence-Plattform: zeichnet Browser-Meetings auf, transkribiert sie und destilliert per KI-Pipeline Aufgaben, Entscheidungen und Zusammenfassungen in eine durchsuchbare Wissensbasis. Die KI-Auswertung läuft mit lokalen Modellen auf eigenen Servern in Deutschland – volle Datenhoheit statt Abhängigkeit von US-Cloud-Diensten.",
+        en: "Self-hosted meeting intelligence platform: records browser meetings, transcribes them and uses an AI pipeline to distil tasks, decisions and summaries into a searchable knowledge base. AI processing runs on local models on my own servers in Germany – full data sovereignty instead of relying on US cloud services."
     },
     "website7-text": {
-        de: "Website besuchen",
-        en: "Visit website"
+        de: "Info-PDF ansehen",
+        en: "View info PDF"
     },
 
     // Portfolio 6 - CNN / CIFAR-10 Computer Vision

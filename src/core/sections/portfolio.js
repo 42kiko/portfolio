@@ -6,6 +6,8 @@ export function renderPortfolio() {
   const lang = LanguageStore.get();
   const slides = content.portfolio.map((p) => {
     const tagArray = Array.isArray(p.tags) ? p.tags : (p.tags?.[lang] || p.tags?.de || []);
+    // href darf sprachabhaengig sein ({de, en}), z.B. fuer Info-PDFs
+    const href = typeof p.href === "string" ? p.href : (p.href?.[lang] || p.href?.de || "#");
     const hashtags = tagArray.length
       ? `<div class="entry-tags">${tagArray.map((t) => `<span class="hashtag">#${t.replace(/\s+/g, "")}</span>`).join("")}</div>`
       : "";
@@ -16,7 +18,7 @@ export function renderPortfolio() {
       <div class="portfolio__data">
         <h3 class="portfolio__title" id="${p.titleKey}"></h3>
         <p class="portfolio__description" id="${p.descKey}"></p>
-        <a href="${p.href}" target="_blank" class="button button--flex button--small portfolio__button" id="${p.ctaKey}">
+        <a href="${href}" target="_blank" class="button button--flex button--small portfolio__button" id="${p.ctaKey}">
           <i class="uil uil-arrow-right button__icon"></i>
         </a>
         ${hashtags}
